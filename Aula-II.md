@@ -3,12 +3,20 @@
       
   - Transparencia
       
-      * Grau de Transparencia X Desempenho
-        * Falha
-        * Acesso
-        * Localização
-        * Migração
-        * Realocação
-        * Replicação
-        * Concorrência
+   * Grau de Transparencia X Desempenho
+       * Qual seria melhor?
+   
+   * Tipos de Transparencia 
+   
+       * Falha
+       * Acesso
+       * Localização
+       * Migração
+       * Realocação
+       * Replicação
+       * Concorrência
+   
    - Escabilidade
+   - Flexibilidade
+   - Expansivel
+   - 
