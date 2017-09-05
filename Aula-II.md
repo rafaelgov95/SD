@@ -17,7 +17,12 @@
        * Concorrência
    
    - Escabilidade
+      - Uma das princioais etad de projeto para desenvolvedores de sistmas discribuidos.
+      - Três dimemensões diferentes (Geografica e usúarios, recursos facil de ajudar, gerencar mesmo que abrange muitas organizações admnistrativas diferentes ) 
+   
    - Flexibilidade
    - Expansivel
+   
    - Interoperável
+        
    - Portável
