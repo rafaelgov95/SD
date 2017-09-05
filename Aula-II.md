@@ -19,8 +19,12 @@
    - Escabilidade
       - Uma das princioais etad de projeto para desenvolvedores de sistmas discribuidos.
       - Três dimemensões diferentes (Geografica e usúarios, recursos facil de ajudar, gerencar mesmo que abrange muitas organizações admnistrativas diferentes ) 
-   
-   - Flexibilidade
+      - Problema Serviçoes (centralizados)
+      - a flaha de uma maquina não arruina o algoritmo
+      - Nenhuma maquina e toda de toda informação.
+      - As maquina somente toman decises locais
+      - Flexibilidade
+     
    - Expansivel
    - Interoperável
    - Portável
