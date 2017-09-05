@@ -19,4 +19,5 @@
    - Escabilidade
    - Flexibilidade
    - Expansivel
-   - 
+   - Interoperável
+   - Portável
