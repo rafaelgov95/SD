@@ -1,13 +1,12 @@
 # Conceitos Básicos.
-  - Acesso ao recurso
+  ## Acesso ao recurso
       
-  - Transparencia
+  ## Transparencia
       
-   * Grau de Transparencia X Desempenho
+  ## Grau de Transparencia X Desempenho
        * Qual seria melhor?
    
-   * Tipos de Transparencia 
-   
+  ## Tipos de Transparencia 
        * Falha
        * Acesso
        * Localização
@@ -15,16 +14,17 @@
        * Realocação
        * Replicação
        * Concorrência
-   
-   - Escabilidade
-      - Uma das princioais etad de projeto para desenvolvedores de sistmas discribuidos.
-      - Três dimemensões diferentes (Geografica e usúarios, recursos facil de ajudar, gerencar mesmo que abrange muitas organizações admnistrativas diferentes ) 
-      - Problema Serviçoes (centralizados)
-      - a flaha de uma maquina não arruina o algoritmo
-      - Nenhuma maquina e toda de toda informação.
-      - As maquina somente toman decises locais
-      - Flexibilidade
+       
+   ## Escabilidade
+       * Uma das princioais etad de projeto para desenvolvedores de sistmas discribuidos.
+       * Problema Serviçoes (centralizados)
+       * a flaha de uma maquina não arruina o algoritmo
+       * Nenhuma maquina e toda de toda informação.
+       * As maquina somente toman decises locais
+       * Flexibilidade
      
-   - Expansivel
-   - Interoperável
-   - Portável
+   ## Expansivel
+   ## Interoperável
+   ## Portável
+        *  Três dimemensões diferentes (Geografica e usúarios, recursos facil de ajudar, gerencar mesmo que abrange muitas organizações admnistrativas diferentes ) 
+     
