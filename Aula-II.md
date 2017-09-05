@@ -22,7 +22,5 @@
    
    - Flexibilidade
    - Expansivel
-   
    - Interoperável
-        
    - Portável
