@@ -25,4 +25,10 @@
     - Rede de Sensores 
         - Pardal na rodovia.
         - 
-            
+# Estilos Arquitetônicos
+    - Arquitetura em cadamas
+    - Beseada em objetos.
+    - Centrado a dados.
+    - Baseadas eventos.
+    
+    
