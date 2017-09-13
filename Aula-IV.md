@@ -20,5 +20,9 @@
             - Autoconfiguravel
             - Autogerenciavel
             - Obtem automaticamente endereços IP
-            
+    - Sistemas eletrônicos para tratamento de saúde
+        - Body Area NetWork
+    - Rede de Sensores 
+        - Pardal na rodovia.
+        - 
             
