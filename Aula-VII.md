@@ -1,3 +1,3 @@
 # Arquitetura Pipes e Filters
-## Componentes
-## Conectores
+## Componentes - Filters
+## Conectores - Pipes
