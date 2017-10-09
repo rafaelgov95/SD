@@ -35,9 +35,6 @@ app.use(function (req, res, next) {
  * Rota padrão, com informaçõa do app e versão
  */
 
-app.use('/',function (req, res) {
-    res.sendFile(__dirname + '/public/index.html');
-});
 
 app.get("/info", function (req, res) {
     return res.status(HTTPStatus.OK).json({
@@ -99,6 +96,9 @@ app.get('/:type/:code', function (req, res) {
 });
 
 
+app.use('/*',function (req, res) {
+    res.sendFile(__dirname + '/public/index.html');
+});
 
 
 module.exports = app;
