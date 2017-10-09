@@ -4,7 +4,7 @@
   "version": "1.0.2",
   "private": true,
   "scripts": {
-    "start": "forever start -c ./bin/www"
+    "start": "forever start -c nodemon ./bin/www"
   },
   "author": "Rafael Viana<rafael.viana@aluno.ufms.br>",
   "license": "MIT",
