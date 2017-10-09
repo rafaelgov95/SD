@@ -1,12 +1,12 @@
 {
-  "name": "rastrojs",
-  "description": "Rastro - API Rastreamento de objetos - Correios",
-  "version": "1.0.3",
+  "name": "RastJS",
+  "description": "Rastreamento de objetos - Correios",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "start": "forever start -c ./bin/www"
   },
-  "author": "Tales Luna <tales.ferreira.luna@gmail.com>",
+  "author": "Rafael Viana<rafael.viana@aluno.ufms.br>",
   "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
