@@ -4,7 +4,7 @@
   "version": "1.0.3",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "forever start -c ./bin/www"
   },
   "author": "Tales Luna <tales.ferreira.luna@gmail.com>",
   "license": "MIT",
