@@ -14,6 +14,7 @@ import { Http, HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './shared';
 import { AppComponent } from './app.component';
+import {ToastModule} from 'ng2-toastr/ng2-toastr';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule,
     BrowserModule,
+    ToastModule.forRoot(),
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

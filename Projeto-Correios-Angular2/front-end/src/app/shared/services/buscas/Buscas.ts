@@ -1,4 +1,4 @@
-import { Usuario } from './../../models/usuario';
+import { Cep } from './../../models/Cep';
 import { Observable } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 import { Http, Headers, RequestOptions, Response, URLSearchParams } from '@angular/http';
@@ -22,7 +22,7 @@ export class Buscas {
     
   }
 
-  getCEP(cep: string): Observable<Usuario> {
+  getCEP(cep: string): Observable<Cep> {
     let options = new RequestOptions({ headers: this.headers });
     return this.http.get('https://viacep.com.br/ws/'+cep+'/json/',options)
       .map((response: Response) => response.json());

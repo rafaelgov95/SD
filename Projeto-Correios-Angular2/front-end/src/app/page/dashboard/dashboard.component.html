@@ -6,11 +6,21 @@
 
         <div class="row">
             <div class="col-lg-12">
+                <div *ngIf="formErrors.cep && type=='CEP'" class="alert alert-danger">
+                    {{ formErrors.cep }}
+                </div>
+                <div *ngIf="formErrors.rast && type=='Rastreio'"  class="alert alert-danger">
+                        {{ formErrors.rast }}
+                    </div>
                 <div class="input-group">
-                    <input type="text" [(ngModel)]="input" class="form-control" aria-label="...">
+                    <form [formGroup]="UserForm" >
+                        <input type="text" disabled  placeholder="Por favor escolha uma opcão ao lado.!!" class="form-control" aria-label="..." required *ngIf="type=='Tipo'">                             
+                        <input type="text" id="cep" formControlName="cep" placeholder="CEP Ex:79400000" class="form-control" aria-label="..." required *ngIf="type=='CEP'"> 
+                        <input type="text" id="rast" formControlName="rast" placeholder="Código de Rastreiamento Ex:RY908347422SG" class="form-control" aria-label="..." required *ngIf="type=='Rastreio'">
+                    </form>
                     <div class="input-group-btn">
 
-                        <button type="button" class="btn btn-default" (click)="buscar()"><span class="glyphicon glyphicon-search"></span></button>
+                        <button type="button" class="btn btn-default" (click)="buscar()"  ><span class="glyphicon glyphicon-search"></span></button>
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{type}} <span class="caret"></span></button>
 
                         <ul class="dropdown-menu dropdown-menu-right">
@@ -32,7 +42,7 @@
 
 
 
-<div class="panel panel-default"  *ngIf="resultCEP !=null || resultRast!=null" >
+<div class="panel panel-default" *ngIf="resultCEP !=null || resultRast!=null">
     <div class="panel-heading">
         <h3 class="panel-title">Resultado do {{type}}</h3>
     </div>

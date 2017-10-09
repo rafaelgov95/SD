@@ -1,4 +1,5 @@
-import { Usuario } from './../../../shared/models/usuario';
+import { Cep } from './../../../shared/models/Cep';
+
 import { Component } from '@angular/core';
 import { Buscas } from './../../../shared/services/buscas/Buscas';
 import { Subscription } from 'rxjs/Rx';
@@ -17,19 +18,19 @@ import 'rxjs/add/operator/map';
 })
 export class CepComponent {
   cep: string
-  resultCEP:Usuario
+  resultCEP:Cep
   textoCEP : string;
 
   constructor(private buscas: Buscas) {
     this.cep=""
-    this.resultCEP = new Usuario("","","","","","","","","") 
+    this.resultCEP = new Cep("","","","","","","","","") 
    }
 
 
    buscacep() {
     this.buscas.getCEP(this.cep).subscribe(data => {
       console.log(data)
-      this.resultCEP = new Usuario(data.cep,data.logradouro,data.complemento,data.bairro,data.localidade,data.uf,data.unidade,data.ibge,data.gia)
+      this.resultCEP = new Cep(data.cep,data.logradouro,data.complemento,data.bairro,data.localidade,data.uf,data.unidade,data.ibge,data.gia)
     }, err => console.log("Erro"))
 
   }
