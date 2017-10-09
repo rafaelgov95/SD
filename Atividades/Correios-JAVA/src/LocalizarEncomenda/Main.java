@@ -37,7 +37,7 @@ public class Main {
                 + "         <tipo>L</tipo>\n"
                 + "         <resultado>T</resultado>\n"
                 + "         <lingua>101</lingua>\n"
-                + "          <objetos>JF598971235BR</objetos>\n"
+                + "          <objetos>RY907728402SG</objetos>\n"
                 + "      </res:buscaEventos>\n"
                 + "    </soapenv:Body>\n"
                 + "</soapenv:Envelope>";
