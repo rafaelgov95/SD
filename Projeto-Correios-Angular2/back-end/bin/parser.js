@@ -19,7 +19,9 @@ var WebSRO = {
             method: 'POST',
             headers: {}
         };
-        return requestPromise(correios);
+        response = requestPromise(correios);
+        console.log(response)
+        return response
     },
 
     /**
@@ -52,7 +54,7 @@ var WebSRO = {
                     rastreio.situacao   = 'Objeto ainda não consta no sistema'
                 }
 
-                objetos[rastreio.codigo] = rastreio;
+                objetos['rast'] = rastreio;
             }
         });
 

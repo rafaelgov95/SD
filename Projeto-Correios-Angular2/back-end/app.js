@@ -2,11 +2,12 @@
     @name      API Rastreamendo de objetos - Correios - NodeJS
     @author    Rafael Viana <rafael.viana@aluno.ufms.br>
 
-    Meio alternativo ao WebService dos correios
-    para consultar rastreio de objetos com retorno em XML e JSON
+    Meio de acessar o servidor do correios por meio de Web Scraping e Web Crawler.
 
  */
 
+'use strict'
+var path = require('path');
 var express     = require('express');
 var configs     = require('./configs/config');
 var WebSRO      = require('./bin/parser');
@@ -14,6 +15,8 @@ var HTTPStatus  = require('http-status-codes');
 var responses   = require("./bin/responses");
 
 var app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 /**
  * Configurações básicas de cabeçalhos HTTP
@@ -66,7 +69,7 @@ app.get('/:type/:code', function (req, res) {
              */
             var response = WebSRO.parser(data);
             responses(req.params.type,response,HTTPStatus.OK,res);
-
+    
         }).catch(function (err) {
 
         /**
@@ -89,5 +92,10 @@ app.get('/:type/:code', function (req, res) {
             responses(req.params.type,error,error.code,res);
         });
 });
+
+app.use('/*',function (req, res) {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
 
 module.exports = app;
