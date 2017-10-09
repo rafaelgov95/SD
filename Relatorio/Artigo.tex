@@ -1,117 +1,132 @@
-\documentclass[12pt]{article}
+\documentclass[a4paper, 12pt]{article}
 
-\usepackage{sbc-template}
-\usepackage{graphicx,url}
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{multicol,lipsum}
 \usepackage{float}
-\usepackage[brazil]{babel}   
-%\usepackage[latin1]{inputenc}  
-\usepackage[utf8]{inputenc}  
-\usepackage{url}
+\begin{document}
+%\maketitle
 
-\usepackage{textcomp}
+\begin{titlepage}
+	\begin{center}
+	
+	%\begin{figure}[!ht]
+	%\centering
+	%\includegraphics[width=2cm]{c:/ufba.jpg}
+	%\end{figure}
 
+		\Huge{Universidade/Faculdade/Instituto}\\
+		\large{Departamento}\\ 
+		\large{Programa}\\ 
+		\vspace{15pt}
+        \vspace{95pt}
+        \textbf{\LARGE{Relatório (título) }}\\
+		%\title{{\large{Título}}}
+		\vspace{3,5cm}
+	\end{center}
+	
+	\begin{flushleft}
+		\begin{tabbing}
+			Aluno: \\
+			Professor orientador: \\
+			Professor co-orientador: \\
+	\end{tabbing}
+ \end{flushleft}
+	\vspace{1cm}
+	
+	\begin{center}
+		\vspace{\fill}
+			 mês\\
+		 ano
+			\end{center}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% % % % % % % % %FOLHA DE ROSTO % % % % % % % % % %
 
-\usepackage{xcolor}
-% Definindo novas cores
-\definecolor{verde}{rgb}{0.25,0.5,0.35}
-\definecolor{jpurple}{rgb}{0.5,0,0.35}
-% Configurando layout para mostrar codigos Java
-\usepackage{listings}
+\begin{titlepage}
+	\begin{center}
+	
+	%\begin{figure}[!ht]
+	%\centering
+	%\includegraphics[width=2cm]{c:/ufba.jpg}
+	%\end{figure}
 
-\bibliographystyle{ieeetr}
+		\Huge{Universidade}\\
+		\large{Departamento}\\ 
+		\large{Programa}\\ 
+\vspace{15pt}
+        
+        \vspace{85pt}
+        
+		\textbf{\LARGE{Relatório}}
+		\title{\large{Título}}
+	%	\large{Modelo\\
+     %   		Validação do modelo clássico}
+			
+	\end{center}
+\vspace{1,5cm}
+	
+	\begin{flushright}
 
-\definecolor{lightgray}{rgb}{.9,.9,.9}
-\definecolor{darkgray}{rgb}{.4,.4,.4}
-\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+   \begin{list}{}{
+      \setlength{\leftmargin}{4.5cm}
+      \setlength{\rightmargin}{0cm}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\labelsep}{\leftmargin}}
 
-\lstdefinelanguage{JavaScript}{
-	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-	keywordstyle=\color{blue}\bfseries,
-	ndkeywords={class, export, boolean, throw, implements, import, this},
-	ndkeywordstyle=\color{darkgray}\bfseries,
-	identifierstyle=\color{black},
-	sensitive=false,
-	comment=[l]{//},
-	morecomment=[s]{/*}{*/},
-	commentstyle=\color{purple}\ttfamily,
-	stringstyle=\color{red}\ttfamily,
-	morestring=[b]',
-	morestring=[b]"
-}
+      \item Primeiro Relatório de Projeto de Pesquisa apresentado ao Programa XXX do Curso XXXX da Universidade XXX, como requisito parcial para .
 
-\lstset{
-	language=JavaScript,
-	backgroundcolor=\color{lightgray},
-	extendedchars=true,
-	basicstyle=\footnotesize\ttfamily,
-	showstringspaces=false,
-	showspaces=false,
-	numbers=left,
-	numberstyle=\footnotesize,
-	numbersep=6pt,
-	tabsize=1,
-	breaklines=true,
-	showtabs=false,
-	captionpos=b
-}
+      \begin{list}{}{
+      \setlength{\leftmargin}{0cm}
+      \setlength{\rightmargin}{0cm}
+      \setlength{\labelwidth}{0pt}
+      \setlength{\labelsep}{\leftmargin}}
 
-\lstset{
-	language=Java,
-	basicstyle=\ttfamily\small, 
-	keywordstyle=\color{jpurple}\bfseries,
-	stringstyle=\color{red},
-	commentstyle=\color{verde},
-	morecomment=[s][\color{blue}]{/**}{*/},
-	extendedchars=true, 
-	showspaces=false, 
-	showstringspaces=false, 
-	numbers=left,
-	numberstyle=\tiny,
-	breaklines=true, 
-	backgroundcolor=\color{cyan!10}, 
-	breakautoindent=true, 
-	captionpos=b,
-	xleftmargin=0pt,
-	tabsize=4
-}
-\pagestyle{empty}
+			\item Aluno: \
+            \item Professor orientador: \
+      		\item Professor co-orientador: \
+
+      \end{list}
+   \end{list}
+\end{flushright}
+\vspace{1cm}
+\begin{center}
+		\vspace{\fill}
+		 mês\\
+		 ano
+			\end{center}
+\end{titlepage}
+\newpage
+% % % % % % % % % % % % % % % % % % % % % % % % % %
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\pagenumbering{arabic}
+% % % % % % % % % % % % % % % % % % % % % % % % % % %
+
      
-
-\sloppy
-	\title{Web Service de Consulta de CEP e Rastreamento de Encomendas dos Correios  \\ Exercício Computacional I - Sistemas Distribuídos}
-
-\author{Rafael Gonçalves de Oliveira Viana\inst{1} \\\vspace*{10pt} \normalsize  \today{} }
-
-
-\address{Sistemas de Informação -- Universidade Federal do Mato Grosso do Sul
-	(UFMS)\\
-  	Caixa Postal 79400-000 -- Coxim -- MS -- Brazil
-  \email{rafael.viana@aluno.ufms.br}
-}
-
-\begin{document} 
-
-\maketitle
-
-     
-\begin{resumo} 	
-  Este relatório introduz a arquitetura de um \textit{Web Service} assim como seus componentes, o mesmo relata como foi implementado um Web Server que possui uma página web e serviços para busca de cidade e bairro através do CEP e rastreamento de encomendas dos correios.
+\section{Resumo}
+	Este relatório introduz a arquitetura de um \textit{Web Service} assim como seus componentes, o mesmo relata como foi implementado um Web Server que possui uma página web e serviços para busca de cidade e bairro através do CEP e rastreamento de encomendas dos correios.
 \end{resumo}
-
-
-
 \section{Introdução}
-	  Com a disseminação de dispositivos com conexão a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web, estes necessarios para atender as mais diversas funções como exemplo, salas de bate-papo, e-commerces e serviços meteorológicos entre outros.
-  
-  Este relatório apresenta brevemente a arquitetura de um \textit{Web Service} e como foi implementado, serviços de consulta de cidade e barrio através do CEP e rastreamento de encomendas dos correios, juntamente com uma página web e um aplicativo Android que oferece uma interface para os serviços disponíveis pelo \textit{Web Server} Rafael Buscas.
-  
-  O código deste relatório está em sua totalidade no endereço http://github.com/rafaelgov95/SD/Projeto-Correios-CEP, e o mesmo pode ser reutilizado sobre a licença MIT.
+Com a disseminação de dispositivos com conexão a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web, estes necessarios para atender as mais diversas funções como exemplo, salas de bate-papo, e-commerces e serviços meteorológicos entre outros.
+
+Este relatório apresenta brevemente a arquitetura de um \textit{Web Service} e como foi implementado, serviços de consulta de cidade e barrio através do CEP e rastreamento de encomendas dos correios, juntamente com uma página web e um aplicativo androido que oferece uma interface para os serviços disponíveis.
+
+O código deste relatório está em sua totalidade no endereço http://github.
+com/rafaelgov95/SD/Projeto-Correios-CEP, e o mesmo pode ser reutilizado sobre a licença MIT.
+\newpage
 \section{Web Service}
 Webservice é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes, como pode ser objservado na figura \ref{wbs}, um \textit{Data Server}, disponibiliza serviços para os mais diversos tipos de dispositivos, em diferentes formatos de objetos.
 
 Com está tecnologia é possível que novas aplicações possam interagir com aquelas que já existem e que sistemas desenvolvidos em plataformas diferentes sejam compatíveis. 
- \cite{webservece}.
+\cite{webservece}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.14]{Imagens/webservice.png}
@@ -200,38 +215,38 @@ Requisições SOAP serão utilizadas nas sessões \ref{web:cep} e \ref{web:soap}
 	\item Os dados podem ser colocados em cache, retornando sempre a mesma resposta para a mesma requisição.
 	\item Mais rápido pois precisa de menos processamento que o SOAP.
 \end{enumerate}
- 
- Como os correios não disponibiliza serviços por REST, foi desenvolvido um serviço alternativo  que será detalhado na sessão \ref{web:alt}.  
+
+Como os correios não disponibiliza serviços por REST, foi desenvolvido um serviço alternativo  que será detalhado na sessão \ref{web:alt}.  
 
 \section{\textit{Web Service} - Rafael Buscas }
 Nesta sessão relato como foi o desenvolvimento e a implantação de um \textit{Web Service} em um \textit{Web Server}, que promove serviços de busca de CEPs e rastreamento de encomendas dos correios, utilizando uma página web e um aplicativo android como interface para consultas.
- 
+
 \subsection{\textit{Web Server}}
-	O \textit{Web Server} foi implementado utilizando o NodeJS com o framework ExpressJs, onde se cria um ambiente de desenvolvimento para criação de serviços web.
-	\begin{quote}
+O \textit{Web Server} foi implementado utilizando o NodeJS com o framework ExpressJs, onde se cria um ambiente de desenvolvimento para criação de serviços web.
+\begin{quote}
 	O Node.js usa um modelo de E/S não bloqueante, que o torna leve e eficiente. O ecossistema de pacotes Node.js, npm , é o maior ecossistema de bibliotecas de código aberto do mundo \cite{nodejs}.
-	\end{quote}
-	\begin{quote}
+\end{quote}
+\begin{quote}
 	O Express é um framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos para aplicativos web e móvel \cite{expressjs}.
-	\end{quote}
+\end{quote}
 
 \subsection{\textit{Web Service} de Busca de CEP}\label{web:cep}
-	A busca de cidade e bairro pelo CEP está sendo realiza por um serviço disponível, no WSDL dos 
-	correios com a url https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl.
-	
-	Conforme pode-se observar na figura \ref{c33}, existem diversos serviços neste WSDL, porém só será utilizado o serviço de consulta de cep, com o nome \textit{consultaCEP}.
-	
-	 \begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.58]{Imagens/wsdlcep.png}
-		\caption{Um pedaço dos serviços do WSDL dos correios, com o serviço consultaCEP em azul escuro.}
-		\label{c33}
-	\end{figure}
+A busca de cidade e bairro pelo CEP está sendo realiza por um serviço disponível, no WSDL dos 
+correios com a url https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl.
+
+Conforme pode-se observar na figura \ref{c33}, existem diversos serviços neste WSDL, porém só será utilizado o serviço de consulta de cep, com o nome \textit{consultaCEP}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.58]{Imagens/wsdlcep.png}
+	\caption{Um pedaço dos serviços do WSDL dos correios, com o serviço consultaCEP em azul escuro.}
+	\label{c33}
+\end{figure}
 
 Utilizando o node-soap (já comentado na sessão \ref{soapt}), uma requisição HTTP-GET de consulta de cep encaminhada para \textit{Web Serve} Rafael Buscas, na url http://rafaelbuscas.ddns.net/api/correios/json/cep/Codigo e recebida por um serviço web, que dispara uma requisição de consulta de cep, por SOAP para o serviço de consulta dos correios, onde após retorno da mesma as informações são repassadas para a requisição inicial.
 
 As linhas de código que recebe a requisição incial, conecta-se ao WSDL dos correios e reenvia a consulta, pode ser objservada na figura \ref{c22}. 
-	
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.48]{Imagens/codigocep.png}
@@ -242,9 +257,9 @@ As linhas de código que recebe a requisição incial, conecta-se ao WSDL dos co
 Para mais informações sobre consulta de cep e outros serviços disponíveis por esse WSDL consultar a referência \cite{correiosapp}.
 
 \subsection{Web Service para rastreamento de encomendas dos Correios}
-	O rastreamento por encomendas dos correios, desenvolvido nesta sessão, dispõe de duas tecnologias diferentes de empacotamento.
-	
-	A primeira utiliza a tecnologia SOAP e será apresentada na sessão \ref{web:soap} , a segunda funcional porém alternativa utiliza uma requisição REST HTTP-POST, para obter uma requisição da página oficial dos correios, após receber a resposta em um objeto HTML, é realizado um parsear na resposta para extrair os dados da encomenda, está forma de rastreamento será apresentada na sessão \ref{web:alt}.
+O rastreamento por encomendas dos correios, desenvolvido nesta sessão, dispõe de duas tecnologias diferentes de empacotamento.
+
+A primeira utiliza a tecnologia SOAP e será apresentada na sessão \ref{web:soap} , a segunda funcional porém alternativa utiliza uma requisição REST HTTP-POST, para obter uma requisição da página oficial dos correios, após receber a resposta em um objeto HTML, é realizado um parsear na resposta para extrair os dados da encomenda, está forma de rastreamento será apresentada na sessão \ref{web:alt}.
 \subsubsection{Serviço de Rastreamento Encomenda via SOAP}\label{web:soap}
 O WSDL dos correios que fornece o serviço de rastreamento de encomenda conhecido como BuscaEventos, demostrado na figura \ref{wsdl:1}, está disponível na url http://webservice.correios.com.br/service/rastro/Rastro.wsdl.
 \begin{figure}[H]
@@ -257,7 +272,7 @@ O WSDL dos correios que fornece o serviço de rastreamento de encomenda conhecid
 Na figura \ref{en:1} utilizando o NodeJS ea biblioteca node-soap, uma solicitação para o \textit{Web Servece} Rafael Buscas com a url http://rafaelbuscas.ddns.net/api/correios/json/objeto/CodigoDoRastreamento, cria uma requisição SOAP, que essa é enviada para o \textit{Web Service} de rastreamento de encomendas, fornecido pelos correios, que retorna uma mesagem JSON que posteriormente e repassada para requisição incial.
 
 
- Para mais informações referente a API de serviços dos correios, incentivo consultar a referência \cite{correios}.
+Para mais informações referente a API de serviços dos correios, incentivo consultar a referência \cite{correios}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{Imagens/codigor1.png}
@@ -265,77 +280,78 @@ Na figura \ref{en:1} utilizando o NodeJS ea biblioteca node-soap, uma solicitaç
 	\label{en:1}
 \end{figure}
 
- Esse serviço disponibilizado pelos correios apesar de ser gratuito, somente retorna a última atualização do objeto.
+Esse serviço disponibilizado pelos correios apesar de ser gratuito, somente retorna a última atualização do objeto.
 \subsubsection{Serviço de Rastreamento de Encomendas alternativo utilizando Crawling na Página dos Correios}\label{web:alt}
 
-	Existe um serviço disponível na página dos correios para rastreamento de encomendas, onde é possivel realizar um crawling na página, para obter um objetivo HTML, contendo as informações da encomenda buscada.
-	
-	O serviço está disponível na url "http://www2.correios.com.br/sistemas/rastreamento/", a imagem \ref{c1} demostra como pode-se utilizar a ferramenta \textit{Postman}, para realizar uma requisição REST HTTP-POST, direto para página de rastreamento, com objetivo de extrair informações da mesma.
-	
-	 \begin{figure}[H]
-	 	\centering
-	 	\includegraphics[scale=0.3]{Imagens/c1.jpg}
-	 	\caption{Postman realizando um requisição REST HTTP-POST.}
-	 	\label{c1}
-	 \end{figure}
-	
-	
-	Para consumir o serviço da página dos correios, primeiramente, foi desenvolvivdo um \textit{Web Service} com NodeJs e o framework ExpressJs, junto com a biblioteca request-promise para requisição JavaScript e a biblioteca cheerio para realizar o parse das tags "tr'' e ''td'' (onde estão as informações da encomenda, demostrado na figura  \ref{c1}, no campo body do response) do HTML.
-	
-	Na figura \ref{c3} consta um método que realiza uma requisição REST - HTTP-POST no \textit{Web Server} da página web dos correios.
-		 \begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.55]{Imagens/req.png}
-		\caption{Criando requisição em Java Script.}
-		\label{c3}
-	\end{figure}
+Existe um serviço disponível na página dos correios para rastreamento de encomendas, onde é possivel realizar um crawling na página, para obter um objetivo HTML, contendo as informações da encomenda buscada.
 
-	Após a requisição da figura \ref{c3}, teremos uma variável contendo todo o HTML da página web, que foi obtida pela requsição.
-	
-	Utilizando a função da figura \ref{c4}, realizamos um parse no HTML, com o objetivo de extrair as informações referente a encomenda.
-	
-	O parse percorre a tabela e extrai, algumas informações (código, localidade, data, situação) criando um objeto JSON, com as informações de rastreamento obtidas, que será consumido pela página web RafaelBuscas.
-	
-	Assim sendo, uma requisição através da página RafaelBuscas ou utilizando diretamente a url http://rafaelbuscas.ddns.bet/api/correios/json/aobjeto/"codigo-de-rastreamento", primeiramente a requisição é recebida pelo \textit{Web Service} (que está aguardando na rota da url acima), onde o mesmo envia uma requisição HTTP-POST, para a página de rastreamento dos correios com o código de encomenda fornecido, após o parse realizado as informações são encaminhandas em um objeto JSON, como resposta para requisição inicial.   
-	
-	
-			 \begin{figure}[H]
-		\centering
-		\includegraphics[scale=0.6]{Imagens/par1.png}
-		\caption{Criando um Crawling para parsear as tags do HTML.}
-		\label{c4}
-	\end{figure}
-	
-	  	
-	  	
-	  	\section{Página Rafael Buscas e Aplicativo Android Rafael Buscas}
-	  	Para fins didaticos, os serviços de rastreamento de encomendas e buscas de cep pelo código, relatados estão disponíveis na url http://rafaelbuscas.ddns.net, a mesma possui uma página web como interface para os serviços, estes que estão hospedados em uma máquina virtual do Google Cloud.
-	  	
-	  	Na página inical no canto inferior, existe um input para o código do CEP ou do Rastreamento (fornecidos pelos correios).
-	  	
-	  	Um componente para seleção de consulta entre Cep ou Rastremamento, com o nome de ''TIPO'', deve ser marcado como CEP, Rastreio REST ou Rastreio SOAP, antes da busca (botão com uma lupa) como demostrado na figura \ref{c2}.
-	  	
-	  	\begin{figure}[H]
-	  		\centering
-	  		\includegraphics[scale=0.23]{Imagens/c2.jpg}
-	  		\caption{Página Web Rafael Buscas, demostração de busca de encomendas via SOAP.}
-	  		\label{c2}
-	  	\end{figure}
-  	
-  	Além da página web, um aplicativo para plataforma Android (figura \ref{and}), foi desenvolvido pra demostração de portabilidade dos serviços desenvolvidos neste documento, o mesmo possui as mesmas funcionalidades da página web.
-  	
-  	\begin{figure}[H]
-  		\centering
-  		\includegraphics[scale=0.2]{Imagens/android.png}
-  		\caption{Aplicativo Android Rafael Buscas, demostração de busca de encomendas via SOAP.}
-  		\label{and}
-  	\end{figure}
-   
+O serviço está disponível na url "http://www2.correios.com.br/sistemas/rastreamento/", a imagem \ref{c1} demostra como pode-se utilizar a ferramenta \textit{Postman}, para realizar uma requisição REST HTTP-POST, direto para página de rastreamento, com objetivo de extrair informações da mesma.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{Imagens/c1.jpg}
+	\caption{Postman realizando um requsição REST HTTP-POST.}
+	\label{c1}
+\end{figure}
+
+
+Para consumir o serviço da página dos correios, primeiramente, foi desenvolvivdo um \textit{Web Service} com NodeJs e o framework ExpressJs, junto com a biblioteca request-promise para requisição JavaScript e a biblioteca cheerio para realizar o parse das tags "tr'' e ''td'' (onde estão as informações da encomenda, demostrado na figura  \ref{c1}, no campo body do response) do HTML.
+
+Na figura \ref{c3} consta um método que realiza uma requisição REST - HTTP-POST no \textit{Web Server} da página web dos correios.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{Imagens/req.png}
+	\caption{Criando Requisição em Java Script.}
+	\label{c3}
+\end{figure}
+
+Após a requisição da figura \ref{c3}, teremos uma variável contendo todo o HTML da página web, que foi obtida pela requsição.
+
+Utilizando a função da figura \ref{c4}, realizamos um parse no HTML, com o objetivo de extrair as informações referente a encomenda.
+
+O parse percorre a tabela e extrai, algumas informações (código, localidade, data, situação) criando um objeto JSON, com as informações de rastreamento obtidas, que será consumido pela página web RafaelBuscas.
+
+Assim sendo, uma requisição através da página RafaelBuscas ou utilizando diretamente a url http://rafaelbuscas.ddns.bet/api/correios/json/aobjeto/"codigo-de-rastreamento", primeiramente a requisição é recebida pelo \textit{Web Service} (que está aguardando na rota da url acima), onde o mesmo envia uma requisição HTTP-POST, para a página de rastreamento dos correios com o código de encomenda fornecido, após o parse realizado as informações são encaminhandas em um objeto JSON, como resposta para requisição inicial.   
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{Imagens/par1.png}
+	\caption{Criando um Crawling para parsear as tags do HTML.}
+	\label{c4}
+\end{figure}
+
+
+
+\section{Página Rafael Buscas e Aplicativo Android Rafael Buscas}
+Para fins didaticos, os serviços de rastreamento de encomendas e buscas de cep pelo código, relatados estão disponíveis na url http://rafaelbuscas.ddns.net, a mesma possui uma página web como interface para os serviços, estes que estão hospedados em uma máquina virtual do Google Cloud.
+
+Na página inical no canto inferior, existe um input para o código do CEP ou do Rastreamento (fornecidos pelos correios).
+
+Um componente para seleção de consulta entre Cep ou Rastremamento, com o nome de ''TIPO'', deve ser marcado como CEP, Rastreio REST ou Rastreio SOAP, antes da busca (botão com uma lupa) como demostrado na Figura \ref{c2}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.23]{Imagens/c2.jpg}
+	\caption{Página Web Rafael Buscas, demostração de busca de encomendas via SOAP.}
+	\label{c2}
+\end{figure}
+
+Além da página web, um aplicativo para plataforma Android (figura \ref{and}), foi desenvolvido pra demostração de portabilidade dos serviços desenvolvidos neste documento, o mesmo possui as mesmas funcionalidades da página web.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{Imagens/android.png}
+	\caption{Aplicativo Android Rafael Buscas, demostração de busca de encomendas via SOAP.}
+	\label{and}
+\end{figure}
+
 \section{Conclusão}
 Neste relatório foi apresentado a estrutura básica de um \textit{Web Service}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP.	  	
 
-	  \bibliography{bibli}
+\bibliography{bibli}
 
 \end{document}
+
 
 

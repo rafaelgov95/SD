@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  13 OCT 2017 02:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  9 OCT 2017 16:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -473,6 +473,162 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2017/02/22 v2.0g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -518,29 +674,28 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(./EC1-RafaelViana.aux
-
-LaTeX Warning: Label `c1' multiply defined.
-
-
-LaTeX Warning: Label `c2' multiply defined.
-
-)
+(./EC1-RafaelViana.aux)
 \openout1 = `EC1-RafaelViana.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 93.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 93.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -641,32 +796,32 @@ e
 ))
 \c@lstlisting=\count108
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 90.
+(Font)              <12> on input line 95.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 90.
+(Font)              <8> on input line 95.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 90.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 90.
+(Font)              <6> on input line 95.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 93.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-[]\OT1/ptm/m/n/12 O c[]odigo deste re-lat[]orio esta em sua to-ta-li-dade no en
-dere[]o
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+[]\OT1/ptm/m/n/12 O c[]odigo deste re-lat[]orio est[]a em sua to-ta-li-dade no 
+endere[]o
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 104--105
+Underfull \hbox (badness 1546) in paragraph at lines 109--110
 \OT1/ptm/m/n/12 http://github.com/rafaelgov95/SD/Projeto-Correios-CEP, e o mesm
 o pode ser reu-ti-
  []
@@ -675,93 +830,175 @@ o pode ser reu-ti-
 File: Imagens/webservice.png Graphic file (type png)
 
 <use Imagens/webservice.png>
-Package pdftex.def Info: Imagens/webservice.png used on input line 112.
+Package pdftex.def Info: Imagens/webservice.png used on input line 117.
 (pdftex.def)             Requested size: 323.20529pt x 238.89087pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 113.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 118.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 113.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 118.
 
 Underfull \vbox (badness 2495) has occurred while \output is active []
 
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./Imagens/webservice.p
-ng>]
-[3] <Imagens/pilhat.jpg, id=20, 702.625pt x 401.5pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<Imagens/pilhat.jpg, id=13, 702.625pt x 401.5pt>
 File: Imagens/pilhat.jpg Graphic file (type jpg)
  <use Imagens/pilhat.jpg>
-Package pdftex.def Info: Imagens/pilhat.jpg used on input line 200.
+Package pdftex.def Info: Imagens/pilhat.jpg used on input line 139.
 (pdftex.def)             Requested size: 351.31163pt x 200.7495pt.
 
-[4 <./Imagens/pilhat.jpg>] <Imagens/via.png, id=24, 451.6875pt x 401.5pt>
-File: Imagens/via.png Graphic file (type png)
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<use Imagens/via.png>
-Package pdftex.def Info: Imagens/via.png used on input line 225.
-(pdftex.def)             Requested size: 271.01459pt x 240.90184pt.
+ [2 <./Imagens/webservice.png>] [3 <./Imagens/pilhat.jpg>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <13> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 206.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
+\OT1/ptm/m/n/12 A busca de ci-dade e bairro pelo CEP est[]a sendo re-a-liza por
 
-Underfull \hbox (badness 1052) in paragraph at lines 222--228
-\OT1/ptm/m/n/12 HTTP-GET, com o c[]odigo do CEP, re-tor-nando uma res-posta em 
-JSON, com as
  []
 
-[5 <./Imagens/via.png>]
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-(./Codigo/codigo1.xml
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 1.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 1.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
-)
-(./Codigo/codigo2.xml
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
- [6])
-Overfull \hbox (24.77791pt too wide) in paragraph at lines 286--287
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
+\OT1/ptm/m/n/12 um servi[]o dis-pon[]^^Pvel, no WSDL dos cor-reios com a url
+ []
+
+
+Overfull \hbox (2.05894pt too wide) in paragraph at lines 219--221
+\OT1/ptm/m/n/12 https://apps.correios.com.br/SigepMasterJPA/AtendeClienteServic
+e/AtendeCliente?wsdl. 
+ []
+
+<Imagens/wsdlcep.png, id=24, 803.0pt x 200.75pt>
+File: Imagens/wsdlcep.png Graphic file (type png)
+ <use Imagens/wsdlcep.png>
+Package pdftex.def Info: Imagens/wsdlcep.png used on input line 226.
+(pdftex.def)             Requested size: 465.74033pt x 116.43507pt.
+
+Overfull \hbox (38.94897pt too wide) in paragraph at lines 226--227
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 231--232
+\OT1/ptm/m/n/12 GET de con-sulta de cep en-ca-mi-nhada para \OT1/ptm/m/it/12 We
+b Serve \OT1/ptm/m/n/12 Ra-fael Bus-cas, na url
+ []
+
+<Imagens/codigocep.png, id=26, 903.375pt x 501.875pt>
+File: Imagens/codigocep.png Graphic file (type png)
+
+<use Imagens/codigocep.png>
+Package pdftex.def Info: Imagens/codigocep.png used on input line 237.
+(pdftex.def)             Requested size: 433.61508pt x 240.89725pt.
+
+Overfull \hbox (6.82373pt too wide) in paragraph at lines 237--238
+ [][] 
+ []
+
+
+Underfull \vbox (badness 4779) has occurred while \output is active []
+
+ [5 <./Imagens/wsdlcep.png>] <Imagens/wsdlr1.png, id=31, 702.625pt x 200.75pt>
+File: Imagens/wsdlr1.png Graphic file (type png)
+
+<use Imagens/wsdlr1.png>
+Package pdftex.def Info: Imagens/wsdlr1.png used on input line 252.
+(pdftex.def)             Requested size: 421.57825pt x 120.45091pt.
+
+Underfull \hbox (badness 3148) in paragraph at lines 249--255
+\OT1/ptm/m/n/12 O WSDL dos cor-reios que for-nece o servi[]o de ras-tre-a-mento
+ de en-co-menda
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 249--255
+\OT1/ptm/m/n/12 co-nhe-cido como Bus-ca-E-ven-tos, de-mos-trado na fi-gura 5[],
+ est[]a dis-pon[]^^Pvel na url
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./Imagens/codigocep.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+[]\OT1/ptm/m/n/12 Na fi-gura 6[] uti-li-zando o No-deJS ea bi-bli-o-teca node-s
+oap,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+\OT1/ptm/m/n/12 uma solicita[][]ao para o \OT1/ptm/m/it/12 Web Ser-vece \OT1/pt
+m/m/n/12 Ra-fael Bus-cas com a url
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
+\OT1/ptm/m/n/12 http://rafaelbuscas.ddns.net/api/correios/json/objeto/CodigoDoR
+astreamento, cria
+ []
+
+<Imagens/codigor1.png, id=36, 752.8125pt x 351.3125pt>
+File: Imagens/codigor1.png Graphic file (type png)
+
+<use Imagens/codigor1.png>
+Package pdftex.def Info: Imagens/codigor1.png used on input line 263.
+(pdftex.def)             Requested size: 451.69098pt x 210.78911pt.
+
+Overfull \hbox (24.89963pt too wide) in paragraph at lines 263--264
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./Imagens/wsdlr1.png> <./Imagens/codigor1.png>]
+Overfull \hbox (24.77791pt too wide) in paragraph at lines 273--274
 []\OT1/ptm/m/n/12 O servi[]o est[]a dis-pon[]^^Pvel na url "http://www2.correio
 s.com.br/sistemas/rastreamento/",
  []
 
-<Imagens/c1.jpg, id=35, 1405.25pt x 602.25pt>
+<Imagens/c1.jpg, id=43, 1405.25pt x 602.25pt>
 File: Imagens/c1.jpg Graphic file (type jpg)
  <use Imagens/c1.jpg>
-Package pdftex.def Info: Imagens/c1.jpg used on input line 290.
+Package pdftex.def Info: Imagens/c1.jpg used on input line 277.
 (pdftex.def)             Requested size: 421.57826pt x 180.67639pt.
 
-Underfull \vbox (badness 6220) has occurred while \output is active []
+<Imagens/req.png, id=44, 712.6625pt x 250.9375pt>
+File: Imagens/req.png Graphic file (type png)
+ <use Imagens/req.png>
+Package pdftex.def Info: Imagens/req.png used on input line 288.
+(pdftex.def)             Requested size: 391.96559pt x 138.01604pt.
 
- [7]
-[8 <./Imagens/c1.jpg>] [9] <Imagens/c2.jpg, id=46, 1907.125pt x 1003.75pt>
+[8 <./Imagens/c1.jpg> <./Imagens/req.png>]
+Underfull \hbox (badness 3482) in paragraph at lines 299--300
+[]\OT1/ptm/m/n/12 Assim sendo, uma requisi[][]ao atrav[]es da p[]agina Ra-fa-el
+-Bus-cas ou uti-li-
+ []
+
+<Imagens/par1.png, id=49, 702.625pt x 562.1pt>
+File: Imagens/par1.png Graphic file (type png)
+ <use Imagens/par1.png>
+Package pdftex.def Info: Imagens/par1.png used on input line 304.
+(pdftex.def)             Requested size: 421.57825pt x 337.2626pt.
+ [9 <./Imagens/par1.png>] <Imagens/c2.jpg, id=54, 1806.75pt x 903.375pt>
 File: Imagens/c2.jpg Graphic file (type jpg)
 
 <use Imagens/c2.jpg>
-Package pdftex.def Info: Imagens/c2.jpg used on input line 369.
-(pdftex.def)             Requested size: 438.62953pt x 230.85764pt.
+Package pdftex.def Info: Imagens/c2.jpg used on input line 320.
+(pdftex.def)             Requested size: 415.54376pt x 207.77188pt.
+ <Imagens/android.png, id=55, 542.025pt x 963.6pt>
+File: Imagens/android.png Graphic file (type png)
 
-Overfull \hbox (11.83818pt too wide) in paragraph at lines 369--370
- [][] 
- []
-
+<use Imagens/android.png>
+Package pdftex.def Info: Imagens/android.png used on input line 329.
+(pdftex.def)             Requested size: 108.40308pt x 192.71658pt.
+ [10 <./Imagens/c2.jpg> <./Imagens/android.png>]
 (./EC1-RafaelViana.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
 []\OT1/ptm/m/n/12 SOAWebServices., ``Como fun-ci-o-nam os Web-Ser-vi-ces.'' $\O
@@ -793,37 +1030,50 @@ Underfull \hbox (badness 2409) in paragraph at lines 19--22
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--33
+Underfull \hbox (badness 4981) in paragraph at lines 24--28
+[]\OT1/ptm/m/n/12 CORREIOS, ``Sis-tema de Ge-ren-ci-a-mento de Pos-ta-gem dos C
+or-reios.'' $\OT1/pcr/m/n/12 http :
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
+\OT1/pcr/m/n/12 / / www . corporativo . correios . com . br / encomendas / sige
+pweb /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--28
+\OT1/pcr/m/n/12 doc / Manual _ de _ Implementacao _ do _ Web _ Service _ SIGEP 
+_ WEB . pdf$\OT1/ptm/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 \OT1/pcr/m/n/12 para-[]voce / correios-[]de-[]a-[]a-[]z / pdf / rastreamento-[]
 de-[]objetos /
  []
 
-[10 <./Imagens/c2.jpg>]) [11] (./EC1-RafaelViana.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+) [11] (./EC1-RafaelViana.aux) ) 
 Here is how much of TeX's memory you used:
- 6377 strings out of 493013
- 87551 string characters out of 6135682
- 277892 words of memory out of 5000000
- 9792 multiletter control sequences out of 15000+600000
- 24211 words of font info for 49 fonts, out of 8000000 for 9000
+ 6484 strings out of 493013
+ 91123 string characters out of 6135682
+ 183419 words of memory out of 5000000
+ 9901 multiletter control sequences out of 15000+600000
+ 23177 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,49p,557b,1601s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
-etic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EC1-RafaelViana.pdf (11 pages, 958853 bytes).
+ 43i,10n,40p,580b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on EC1-RafaelViana.pdf (11 pages, 1167099 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

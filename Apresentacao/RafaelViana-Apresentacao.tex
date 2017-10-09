@@ -210,10 +210,139 @@ o design do PRECO e o algoritmo de roteamento com redundância
 m, respectivamente. A seção V apresenta avaliação de desempenho.
 A seção VI conclui este artigo.
 
+\section{Trabalho relatado}
+\subsection{	Eliminação de redundância de tráfego em redes com fio}
+Várias técnicas de eliminação de redundância de tráfego (TRE)
+foram propostos para redes com fio nos últimos anos. UMA
+A abordagem TRE independente do protocolo foi proposta pela primeira vez em
+[20], que identifica pedaços duplicados no nível de sub-pacote
+com hash baseado em conteúdo. Vários vendedores comerciais têm
+desenvolveu tais técnicas em sua "otimização WAN"
+middle-boxes [21], [22], [23]. A implantação bem-sucedida de
+As soluções TRE em redes empresariais motivaram a exploração
+de implantação da TRE em toda a Internet e redundância -
+roteamento consciente foi proposto para melhorar ainda mais os benefícios de
+TRE de toda a rede [15], [18]. EndRE foi proposto [17] para
+eliminando a redundância do tráfego do servidor para o cliente. Há
+O método usado em [16] elimina a redundância do tráfego com o
+abordagem de compressão delta. Todas essas abordagens acima
+faça uso de caches bem sincronizados ou a mesma referência
+arquivo entre o remetente eo receptor, para que eles não possam ser usados
+com overhearing para RE em redes sem fio. PACK [19]
+foi proposto para o ambiente da nuvem [24]. Ele apresenta
+RE baseado em previsão, em que o receptor compara o
+dados recebidos com cadeias de partes previamente recebidas e
+notifica o remetente os pedaços correspondentes. Desta forma, PACK
+não requer sincronização de cache entre o remetente
+e receptor. No entanto, o PACK usa um tamanho grande
+8KB. Isso faz com que ele não identifique o conteúdo de granularidade mais fina
+redundância. Também leva a um conteúdo ineficaz que ouve demais
+uma vez que muitos nós podem não ouvir grandes pedaços na íntegra
+o ambiente sem fio. Yu et al. [25] cooperativa proposta
+eliminação de redundância de tráfego de ponta a ponta em ambos os lados da
+o remetente e receptor para grandes e pequenos pedaços para
+reduzindo o custo da largura de banda da nuvem.
+
+\subsection{TRE em redes sem fio}
 
 
+Em Cache Asimétrico (AC) [11], o receptor encontra em
+seu cache o segmento de fluxo combinado que tem o máximo
+número de partes correspondentes em comparação com o tráfego em curso
+fluxo recebido, e envia de volta seus pedaços de pedaços. O remetente
+em seguida, executa operações RE com base no seu cache de comentários
+armazenando os hashes recebidos e o cache normal. SmartEye [26]
+agrega imagens semelhantes ao mesmo grupo através de uma semântica
+hashing na nuvem e, em seguida, eliminar a redundância em
+a transmissão de dados para imagens coletadas do smart
+termina como imagens existentes na nuvem. Contudo,
+esses métodos não conseguem alavancar a audição excessiva. Vários métodos
+foram propostos para alavancar o overhearing sem fio para eliminar
+transmissões de dados redundantes. No RTS-id [9], o receptor
+armazena os pacotes ouvidos e o remetente adiciona um pacote especial
+ID para o pacote 802.11 RTS para que o receptor possa verificar se
+o pacote de dados a ser transmitido está em seu cache. Ditto [10] and
+REfactor [12] são duas abordagens RE baseadas em conteúdo. Em Ditto,
+os roteadores de malha sem fio reassemblem os fluxos TCP tocados
+o servidor para o cliente para reconstruir os pedaços de dados do aplicativo
+de tamanho aproximadamente 8KB, e armazenar pedaços em seus caches.
 
-\section{Conclusão}
+
+Evita transferências de dados ao atender os pedidos de clientes de
+os roteadores de malha em vez do servidor. REfactor explora mais fino-
+redundância de granularidade no nível de sub-pacote por camada IP RE
+com conteúdo que ouve demais. O remetente estima a sobreposição
+probabilidade de dados para o receptor, e remove duplicata
+pedaços apenas se a redução esperada do tempo de transmissão re-
+Sulting from the redundancy removal excede algum limite.
+No entanto, o ganho de desempenho do REfactor é vulnerável a
+estimativa imprecisa da probabilidade de overhearing, e também
+incorre em custos significativos de comunicação ao ser estendido
+para múltiplas infra-estruturas AP e redes de malha.
+
+\section{	RE com predição com Overhearing}
+\subsection{Visão geral e um exemplo}
+
+Em PRECO, um nó sem fio analisa a carga útil de um recebido
+ou salve o pacote em pedaços e calcula o valor de hash
+por cada pedaço. Os pedaços do mesmo fluxo de dados são
+ligados sequencialmente a uma corrente e armazenados com seu hash
+valores em um cache de bloco local (Figura 1). Quando um receptor
+recebe ou ouve um pacote de um remetente, ele compara
+os pedaços do pacote para o cache local. Se um
+O pedaço de correspondência é encontrado, o receptor recupera a sequência
+de pedaços subseqüentes após o pedaço de correspondência e envia seus
+hashes para o remetente como uma previsão.
+O remetente executa a fragmentação na carga útil do extrovertido
+pacotes e combina os pedaços contra as previsões de
+o receptor. Uma vez que encontre uma partida, o remetente remove o
+pedaço e substitui-lo por um item contendo uma identificação de previsão
+para confirmar a correspondente previsão de partes. O receptor
+em seguida, substitui o calço com o correspondente pedaço em sua
+cache do bloco local. PRECO é vantajoso do que o anterior
+RE aborda porque os pedaços previstos estão garantidos
+no cache local do destinatário, o que aumenta a
+precisão de previsão e, portanto, o rendimento da transmissão.
+Além disso, PRECO traz benefícios e eficiência em vários AP
+infra-estrutura, conforme explicado abaixo.
+
+
+Na Figura 2, o cliente C1 pode ouvir a transmissão de dados
+da AP2 ao Cliente C2. Para pedaços sucessivos a, b, c, d e
+e de várias cargas de pacotes em um fluxo de dados transferido
+de AP2 a C2, C1 com sucesso os pedaços ouvidos a, c, d e
+E, e colocou-os em uma corrente com seus hashes H a, H c, H d
+e ele . Observe que o pedaço b está faltando devido à probabilística
+barulho sem fio. AP1 mais tarde teve um objeto de dados semelhante
+com os pedaços a, b, c, d e f para enviar para C1. Quando o C1 recebeu
+Chunk a, descobriu que tinha um pedaço de correspondência na corrente,
+e depois enviou para AP1 as previsões do bloco que incluem hashes
+dos pedaços subsequentes c, d e e na corrente. No extrovertido
+dados, a AP1 descobriu que os pedaços c e d têm hashes correspondentes
+
+
+com as previsões, e as substituiu pelas calças "I c"
+e "eu d". C1 pode reconstruir o pacote completo usando o cache
+pedaços correspondentes às previsões. Como os tamanhos de
+A predição e a diferença são muito menores do que o tamanho do bloco, PRECO
+reduz o número de bytes transferidos no ar e melhora
+rendimento global da rede. Em contraste, REfactor [12] requer
+comunicação de notificação auditiva entre AP1 e
+AP2. O AP1 precisa obter periodicamente o conteúdo do cache do AP2
+para C1, que contém entradas e estimativas de audição excessiva
+probabilidades de todos os pedaços presumivelmente ouvidos por C1, que
+custou um monte de sobrecarga de rede.
+PRECO precisa resolver os seguintes problemas:
+\begin{enumerate}
+	\item 
+	• Como realizar a fragmentação e armazenamento em cache para uma redun-
+	Dant detecção de dados na transmissão de dados? (Seção III-B)
+		\item
+	• Como escolher um fluxo e um pedaço de correspondência para prever-
+	para aumentar a precisão da previsão? (Seção III-C)
+\end{enumerate}
+
+
 
 \bibliography{bibli}
 

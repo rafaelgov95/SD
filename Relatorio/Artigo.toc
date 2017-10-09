@@ -1,0 +1,16 @@
+\select@language {portuges}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {section}{\numberline {2}Web Service}{2}
+\contentsline {subsection}{\numberline {2.1}Tipos de Web Services}{3}
+\contentsline {subsection}{\numberline {2.2}Componentes de um \textit {Web Service}}{4}
+\contentsline {subsubsection}{\numberline {2.2.1}WSDL - \textit {Web Services Description Language} }{4}
+\contentsline {subsubsection}{\numberline {2.2.2}SOAP - \textit {Simple Object Access Protocol}}{4}
+\contentsline {subsubsection}{\numberline {2.2.3}REST - \textit {Representation State Transfer}}{5}
+\contentsline {section}{\numberline {3}\textit {Web Service} - Rafael Buscas }{5}
+\contentsline {subsection}{\numberline {3.1}\textit {Web Server}}{6}
+\contentsline {subsection}{\numberline {3.2}\textit {Web Service} de Busca de CEP}{6}
+\contentsline {subsection}{\numberline {3.3}Web Service para rastreamento de encomendas dos Correios}{7}
+\contentsline {subsubsection}{\numberline {3.3.1}Servi\IeC {\c c}o de Rastreamento Encomenda via SOAP}{7}
+\contentsline {subsubsection}{\numberline {3.3.2}Servi\IeC {\c c}o de Rastreamento de Encomendas alternativo utilizando Crawling na P\IeC {\'a}gina dos Correios}{9}
+\contentsline {section}{\numberline {4}P\IeC {\'a}gina Rafael Buscas e Aplicativo Android Rafael Buscas}{11}
+\contentsline {section}{\numberline {5}Conclus\IeC {\~a}o}{13}

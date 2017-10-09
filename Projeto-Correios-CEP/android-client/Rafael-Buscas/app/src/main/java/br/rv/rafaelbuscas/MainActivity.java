@@ -46,12 +46,13 @@ public class MainActivity extends AppCompatActivity {
     @BindView( R.id.td2) TextView td2;
     @BindView( R.id.code) TextView code;
     Context context;
+    int atual;
     private ArrayAdapter<CharSequence> adapter;
     private List<CharSequence> items;
     private String[] strings;
     private String urlCep = "http://rafaelbuscas.ddns.net/api/correios/json/cep/";
-    private String urlRastro1 = "http://www.json-generator.com/api/json/get/bQoNZLBLZu?indent=2";
-    private String urlRastro2 = "http://httpbin.org/get";
+    private String urlRastroSoap = "http://rafaelbuscas.ddns.net/api/correios/json/objeto/";
+    private String urlRastroalt = "http://rafaelbuscas.ddns.net/api/correios/json/aobjeto/";
     Map<String, String> params = new HashMap<>();
     JSONArray js = new JSONArray();
 
@@ -75,81 +76,154 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.botao_busca)
     public void buscar() {
-
-
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
-                Request.Method.GET,
-                urlCep+=input.getText().toString(),
-                null,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        // Process the JSON
-                        try{
+        if(atual==0){
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                    Request.Method.GET,
+                    urlCep+=input.getText().toString(),
+                    null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            // Process the JSON
+                            try{
                                 JSONObject cep = response.getJSONObject(0);
 
                                 // Get the current student (json object) data
                                 String cidade = cep.getString("cidade");
                                 String bairro = cep.getString("bairro");
                                 String uf = cep.getString("uf");
-                            th0.setText("Cidade");
-                            th1.setText("Bairro");
-                            th2.setText("UF");
-                            td0.setText(cidade);
-                            td1.setText(bairro);
-                            td2.setText(uf);
-                            code.setText(input.getText().toString());
-                            table.setVisibility(View.VISIBLE);
-                        }catch (JSONException e){
-                            e.printStackTrace();
+                                th0.setText("Cidade");
+                                th1.setText("Bairro");
+                                th2.setText("UF");
+                                td0.setText(cidade);
+                                td1.setText(bairro);
+                                td2.setText(uf);
+                                code.setText(input.getText().toString());
+                                table.setVisibility(View.VISIBLE);
+                                Toast.makeText(context, "Sucesso !", Toast.LENGTH_SHORT).show();
+
+                            }catch (JSONException e){
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener(){
+                        @Override
+                        public void onErrorResponse(VolleyError error){
+                            Toast.makeText(context, "Erro", Toast.LENGTH_SHORT).show();
                         }
                     }
-                },
-                new Response.ErrorListener(){
-                    @Override
-                    public void onErrorResponse(VolleyError error){
-                        Toast.makeText(context, "Erro", Toast.LENGTH_SHORT).show();
+            );
+            requestQueue.add(jsonArrayRequest);
+
+        }else if(atual==1){
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                    Request.Method.GET,
+                    urlRastroSoap+=input.getText().toString(),
+                    null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            // Process the JSON
+                            try{
+                                JSONObject soap = response.getJSONObject(0);
+                                JSONObject  evento = soap.getJSONObject("objeto").getJSONObject("evento");
+                                  // Get the current student (json object) data
+                                String descricao = evento.getString("descricao");
+                                String cidade = evento.getString("cidade");
+                                String data = evento.getString("data");
+                                th0.setText("Situação");
+                                th1.setText("Local");
+                                th2.setText("Data");
+                                td0.setText(descricao);
+                                td1.setText(cidade);
+                                td2.setText(data);
+                                code.setText(input.getText().toString());
+                                table.setVisibility(View.VISIBLE);
+                                Toast.makeText(context, "Sucesso !", Toast.LENGTH_SHORT).show();
+
+                            }catch (JSONException e){
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener(){
+                        @Override
+                        public void onErrorResponse(VolleyError error){
+                            Toast.makeText(context, "Erro", Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }
-        );
+            );
+            requestQueue.add(jsonArrayRequest);
+
+        }else if(atual==2){
+            JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+                    Request.Method.GET,
+                    urlRastroalt+=input.getText().toString(),
+                    null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            // Process the JSON
+                            try{
+                                JSONObject rest = response.getJSONObject(0);
+
+                                // Get the current student (json object) data
+                                String situacao = rest.getString("situacao");
+                                String local = rest.getString("local");
+                                String data = rest.getString("data");
+                                th0.setText("Situação");
+                                th1.setText("Local");
+                                th2.setText("Data");
+                                td0.setText(situacao);
+                                td1.setText(local);
+                                td2.setText(data);
+                                code.setText(input.getText().toString());
+                                table.setVisibility(View.VISIBLE);
+                                Toast.makeText(context, "Sucesso !", Toast.LENGTH_SHORT).show();
+
+                            }catch (JSONException e){
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener(){
+                        @Override
+                        public void onErrorResponse(VolleyError error){
+                            Toast.makeText(context, "Erro", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+            );
+            requestQueue.add(jsonArrayRequest);
+
+        }
+
+
+
 
         // Add JsonArrayRequest to the RequestQueue
-        requestQueue.add(jsonArrayRequest);
 
     }
 
-//    @OnClick(R.id.clear_spinner_data)
-//    void clearSpinnerData() {
-//        adapter.clear();
-//    }
-//
-//    @OnClick(R.id.set_spinner_data)
-//    void setSpinnerData() {
-//        items = new ArrayList<CharSequence>(Arrays.asList(strings));
-//        adapter.addAll(items);
-//
-//    }
-//
     @OnItemSelected(R.id.planets_spinner)
         //default callback : ITEM_SELECTED
     void onItemSelected(int position) {
+        code.setText("");
+        table.setVisibility(View.INVISIBLE);
+
         if(position==0){
+            atual=position;
             Toast.makeText(this, "CEP Selecionado", Toast.LENGTH_SHORT).show();
         }else if(position==1){
-            Toast.makeText(this, "Rastro1 Selecionado", Toast.LENGTH_SHORT).show();
-
+            atual=position;
+            Toast.makeText(this, "Rastreio SOAP Selecionado", Toast.LENGTH_SHORT).show();
         }else if(position==2){
-            Toast.makeText(this, "Rastro2 Selecionado", Toast.LENGTH_SHORT).show();
+            atual=position;
+            Toast.makeText(this, "Rastreio REST Selecionado", Toast.LENGTH_SHORT).show();
 
         }
 
     }
-//
-//    @OnItemSelected(value = R.id.my_spinner, callback = OnItemSelected.Callback.NOTHING_SELECTED)
-//    void onNothingSelected() {
-//        Toast.makeText(this, "Nothing", Toast.LENGTH_SHORT).show();
-//    }
 
 }

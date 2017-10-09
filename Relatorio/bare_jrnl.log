@@ -1,0 +1,1254 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  13 OCT 2017 15:28
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**bare_jrnl.tex
+(./bare_jrnl.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count94
+\float@exts=\toks15
+\float@box=\box28
+\@float@everytoks=\toks16
+\@floatcapt=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+(./bare_jrnl.aux)
+\openout1 = `bare_jrnl.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 352.
+LaTeX Font Info:    ... okay on input line 352.
+
+-- Lines per column: 58 (exact).
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count96
+\scratchdimen=\dimen128
+\scratchbox=\box30
+\nofMPsegments=\count97
+\nofMParguments=\count98
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count99
+\MPscratchDim=\dimen129
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no ³ in font ptmb7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no ¡ in font ptmb7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no © in font ptmb7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 439.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 439.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 439.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 439.
+Missing character: There is no Ã in font ptmrc7t!
+Missing character: There is no § in font ptmrc7t!
+Missing character: There is no Ã in font ptmrc7t!
+Missing character: There is no £ in font ptmrc7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+
+Underfull \hbox (badness 1424) in paragraph at lines 448--449
+[]\OT1/ptm/m/n/10 O cdigo deste re-la-trio est em sua to-tal-i-dade no en-
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+
+LaTeX Warning: Citation `webservece' on page 1 undefined on input line 453.
+
+<Imagens/webservice.png, id=1, 2308.625pt x 1706.375pt>
+File: Imagens/webservice.png Graphic file (type png)
+
+<use Imagens/webservice.png>
+Package pdftex.def Info: Imagens/webservice.png used on input line 456.
+(pdftex.def)             Requested size: 323.20529pt x 238.89087pt.
+
+Overfull \hbox (71.20529pt too wide) in paragraph at lines 456--457
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+
+Underfull \vbox (badness 5475) has occurred while \output is active []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no £ in font ptmb7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 473.
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./Imagens/webservice.png>]
+<Imagens/pilhat.jpg, id=11, 702.625pt x 401.5pt>
+File: Imagens/pilhat.jpg Graphic file (type jpg)
+ <use Imagens/pilhat.jpg>
+Package pdftex.def Info: Imagens/pilhat.jpg used on input line 478.
+(pdftex.def)             Requested size: 351.31163pt x 200.7495pt.
+
+Overfull \hbox (99.31163pt too wide) in paragraph at lines 478--479
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+
+LaTeX Warning: Citation `tutorial' on page 2 undefined on input line 486.
+
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmb7t!
+Missing character: There is no § in font ptmb7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‰ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‰ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‰ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‰ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+
+LaTeX Warning: Citation `nodejs' on page 2 undefined on input line 551.
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+
+LaTeX Warning: Citation `expressjs' on page 2 undefined on input line 554.
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+
+Overfull \hbox (105.37514pt too wide) in paragraph at lines 558--560
+\OT1/ptm/m/n/10 https://apps.correios.com.br/SigepMasterJPA/AtendeClienteServic
+e/AtendeCliente?wsdl. 
+ []
+
+[2 <./Imagens/pilhat.jpg>]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+ <Imagens/wsdlcep.png, id=15, 803.0pt x 200.75pt>
+File: Imagens/wsdlcep.png Graphic file (type png)
+
+<use Imagens/wsdlcep.png>
+Package pdftex.def Info: Imagens/wsdlcep.png used on input line 565.
+(pdftex.def)             Requested size: 465.74033pt x 116.43507pt.
+
+Overfull \hbox (213.74033pt too wide) in paragraph at lines 565--566
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
+[]\OT1/ptm/m/n/10 Utilizando o node-soap (j co-men-tado na sesso
+ []
+
+
+Underfull \hbox (badness 4266) in paragraph at lines 570--571
+[]\OT1/ptm/m/n/10 2[]), uma req-ui-sio HTTP-GET de con-sulta de cep
+ []
+
+
+Underfull \hbox (badness 5985) in paragraph at lines 570--571
+\OT1/ptm/m/n/10 en-cam-in-hada para \OT1/ptm/m/it/10 Web Serve \OT1/ptm/m/n/10 
+Rafael Bus-cas, na url
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
+\OT1/ptm/m/n/10 http://rafaelbuscas.ddns.net/api/correios/json/cep/Codigo e
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+<Imagens/codigocep.png, id=17, 903.375pt x 501.875pt>
+File: Imagens/codigocep.png Graphic file (type png)
+
+<use Imagens/codigocep.png>
+Package pdftex.def Info: Imagens/codigocep.png used on input line 576.
+(pdftex.def)             Requested size: 433.61508pt x 240.89725pt.
+
+Overfull \hbox (181.61508pt too wide) in paragraph at lines 576--577
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+
+LaTeX Warning: Citation `correiosapp' on page 3 undefined on input line 581.
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+<Imagens/wsdlr1.png, id=18, 702.625pt x 200.75pt>
+File: Imagens/wsdlr1.png Graphic file (type png)
+ <use Imagens/wsdlr1.png>
+Package pdftex.def Info: Imagens/wsdlr1.png used on input line 591.
+(pdftex.def)             Requested size: 421.57825pt x 120.45091pt.
+
+Overfull \hbox (169.57825pt too wide) in paragraph at lines 591--592
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+
+Underfull \hbox (badness 3407) in paragraph at lines 588--594
+ \OT1/ptm/m/it/10 1) Servio de Ras-trea-mento En-comenda via SOAP: [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--594
+\OT1/ptm/m/n/10 O WSDL dos cor-reios que fornece o servio de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--594
+\OT1/ptm/m/n/10 de-mostrado na figura 5[], est dispon-vel na url
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+
+Overfull \hbox (56.28592pt too wide) in paragraph at lines 596--597
+\OT1/ptm/m/n/10 http://rafaelbuscas.ddns.net/api/correios/json/objeto/CodigoDoR
+astreamento,
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+
+LaTeX Warning: Citation `correios' on page 3 undefined on input line 599.
+
+<Imagens/codigor1.png, id=19, 752.8125pt x 351.3125pt>
+File: Imagens/codigor1.png Graphic file (type png)
+
+<use Imagens/codigor1.png>
+Package pdftex.def Info: Imagens/codigor1.png used on input line 602.
+(pdftex.def)             Requested size: 451.69098pt x 210.78911pt.
+
+Overfull \hbox (199.69098pt too wide) in paragraph at lines 602--603
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./Imagens/wsdlcep.png> <./Imagens/codigocep.png> <./Imagens/wsdlr1.png>]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmri7t!
+Missing character: There is no § in font ptmri7t!
+Missing character: There is no Ã in font ptmri7t!
+Missing character: There is no ¡ in font ptmri7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
+[]\OT1/ptm/m/n/10 O servio est dispon-vel na url
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
+\OT1/ptm/m/n/10 "http://www2.correios.com.br/sistemas/rastreamento/", a
+ []
+
+<Imagens/c1.jpg, id=26, 1405.25pt x 602.25pt>
+File: Imagens/c1.jpg Graphic file (type jpg)
+ <use Imagens/c1.jpg>
+Package pdftex.def Info: Imagens/c1.jpg used on input line 616.
+(pdftex.def)             Requested size: 421.57826pt x 180.67639pt.
+
+Overfull \hbox (169.57826pt too wide) in paragraph at lines 616--617
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+<Imagens/req.png, id=27, 712.6625pt x 250.9375pt>
+File: Imagens/req.png Graphic file (type png)
+ <use Imagens/req.png>
+Package pdftex.def Info: Imagens/req.png used on input line 627.
+(pdftex.def)             Requested size: 391.96559pt x 138.01604pt.
+
+Overfull \hbox (139.96559pt too wide) in paragraph at lines 627--628
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no µ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
+[]\OT1/ptm/m/n/10 Assim sendo, uma req-ui-sio atravs da pgina
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
+\OT1/ptm/m/n/10 Rafael-Bus-cas ou uti-lizando di-re-ta-mente a url
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
+\OT1/ptm/m/n/10 http://rafaelbuscas.ddns.bet/api/correios/json/aobjeto/"codigo-
+
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 638--639
+\OT1/ptm/m/n/10 onde o mesmo en-via uma req-ui-sio HTTP-POST, para
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 638--639
+\OT1/ptm/m/n/10 a pgina de ras-trea-mento dos cor-reios com o cdigo de
+ []
+
+<Imagens/par1.png, id=28, 702.625pt x 562.1pt>
+File: Imagens/par1.png Graphic file (type png)
+ <use Imagens/par1.png>
+Package pdftex.def Info: Imagens/par1.png used on input line 643.
+(pdftex.def)             Requested size: 421.57825pt x 337.2626pt.
+
+Overfull \hbox (169.57825pt too wide) in paragraph at lines 643--644
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./Imagens/codigor1.png> <./Imagens/c1.jpg> <./Imagens/req.png>]
+Missing character: There is no Ã in font ptmrc7t!
+Missing character: There is no ¡ in font ptmrc7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+
+<Imagens/c2.jpg, id=34, 1806.75pt x 903.375pt>
+File: Imagens/c2.jpg Graphic file (type jpg)
+ <use Imagens/c2.jpg>
+Package pdftex.def Info: Imagens/c2.jpg used on input line 659.
+(pdftex.def)             Requested size: 415.54376pt x 207.77188pt.
+
+Overfull \hbox (163.54376pt too wide) in paragraph at lines 659--660
+ [][] 
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+
+<Imagens/android.png, id=35, 542.025pt x 963.6pt>
+File: Imagens/android.png Graphic file (type png)
+ <use Imagens/android.png>
+Package pdftex.def Info: Imagens/android.png used on input line 668.
+(pdftex.def)             Requested size: 108.40308pt x 192.71658pt.
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmrc7t!
+Missing character: There is no £ in font ptmrc7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no • in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ­ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no © in font ptmr7t!
+
+(./bare_jrnl.bbl) [5 <./Imagens/par1.png> <./Imagens/c2.jpg> <./Imagens/android
+.png>] (./bare_jrnl.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2463 strings out of 493013
+ 40123 string characters out of 6135682
+ 108205 words of memory out of 5000000
+ 5981 multiletter control sequences out of 15000+600000
+ 40855 words of font info for 74 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 39i,7n,25p,568b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on bare_jrnl.pdf (5 pages, 1129625 bytes).
+PDF statistics:
+ 55 PDF objects out of 1000 (max. 8388607)
+ 26 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -20,9 +20,10 @@ ExpressJs, ``{Documentação de referência da API}.''
   \url{http://expressjs.com/pt-br/4x/api.html}, 2017.
 \newblock [Online; acesso em 05-Outubro-2017].
 
-\bibitem{viacep}
-VIACEP, ``{Códigos de Endereçamento Postal (CEP) do Brasil}.''
-  \url{https://viacep.com.br/}, 2017.
+\bibitem{correiosapp}
+CORREIOS, ``{Sistema de Gerenciamento de Postagem dos Correios}.''
+  \url{http://www.corporativo.correios.com.br/encomendas/sigepweb/doc/Manual_de_Implementacao_do_Web_Service_SIGEP_WEB.pdf},
+  2017.
 \newblock [Online; acesso em 05-Outubro-2017].
 
 \bibitem{correios}

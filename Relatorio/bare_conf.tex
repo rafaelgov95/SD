@@ -1,0 +1,423 @@
+
+%% bare_conf.tex
+%% V1.4b
+%% 2015/08/26
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
+%% conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/pkg/ieeetran
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall the IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%*************************************************************************
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. The IEEE's font choices and paper sizes can   ***
+% *** trigger bugs that do not appear when using other class files.       ***                          ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+\documentclass[conference]{IEEEtran}
+% Some Computer Society conferences also require the compsoc mode option,
+% but others use the standard conference format.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+\usepackage{float}
+\usepackage{textcomp}
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/pkg/ifpdf
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+%\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+% The latest version can be obtained at:
+% http://www.ctan.org/pkg/cite
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+% \usepackage[pdftex]{graphicx}
+% declare the path(s) where your graphic files are
+% \graphicspath{{../pdf/}{../jpeg/}}
+% and their extensions so you won't have to specify these with
+% every instance of \includegraphics
+% \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+% or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+% will default to the driver specified in the system graphics.cfg if no
+% driver is specified.
+% \usepackage[dvips]{graphicx}
+% declare the path(s) where your graphic files are
+% \graphicspath{{../eps/}}
+% and their extensions so you won't have to specify these with
+% every instance of \includegraphics
+% \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/pkg/graphicx
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/pkg/epslatex
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics.
+%
+% Note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/amsmath
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/pkg/algorithms
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/pkg/algorithmicx
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/array
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure.
+% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
+% corrections already built into the system in which case a warning will
+% be issued if an attempt is made to load fixltx2e.sty as it is no longer
+% needed.
+% The latest version and documentation can be found at:
+% http://www.ctan.org/pkg/fixltx2e
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/pkg/stfloats
+% Do not use the stfloats baselinefloat ability as the IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that the IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/pkg/dblfloatfix
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/pkg/url
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+	\title{Aumentando a Velocidade de Treinamento de Rede Neural Convolucional para Classifica\c{c}\~ao de Imagem com Processamento em GPU}
+	
+	\author{\IEEEauthorblockN{Higor de Oliveira Chaves}
+		\IEEEauthorblockA{Universidade Federal\\ do Mato Grosso do Sul\\
+			Coxim, MS 79400--000\\
+			Telefone: (67) 99896-4797\\
+			Email: higor\_oliveira@outlook.com}
+		\and
+		\IEEEauthorblockN{Rafael Gon\c{c}alves de Oliveira Viana}
+		\IEEEauthorblockA{Universidade Federal\\ do Mato Grosso do Sul\\
+			Coxim, MS 79400--000\\
+			Telefone: (67) 99950-7979\\
+			Email: rafaelgov95@gmail.com} 
+		\and
+		\IEEEauthorblockN{Ramon da Silva V. dos Santos}
+		\IEEEauthorblockA{Universidade Federal\\do Mato Grosso do Sul\\
+			Coxim, MS 79400--000\\
+			Telefone: (67) 98114--5649\\
+			Email: ramon\_nrt@hotmail.com}}
+	
+	\maketitle
+	
+	\begin{abstract}
+		Existe atualmente um grande volume de dados sendo transmitidos pelos mais diversos dispositivos disseminados na sociedade mundial. A tend\^encia do mundo moderno, \'e que esses dados tornem-se um recurso natural, que como qualquer outro, necessita ser refinado para que possa ser bem utilizado. Para que essa grande massa de dados se torne informa\c{c}\~ao \'util e relevante por\'em, algumas técnicas precisam ser aplicadas, estas que necessitam de um grande poder computacional. Neste artigo, será demonstrado a diferen\c{c}a de perfomance entre CPU e GPU em algoritmos que necessitam de muito processamento. Para tal objetivo foram utilizadas as bibliotecas TensorFlow e cuDDN juntamente com a plataforma CUDA. 
+	\end{abstract}
+	
+	\IEEEpeerreviewmaketitle
+	
+	
+	\section{Introdu\c{c}\~ao}
+	Com a chegada do conceito de \textit{BigData}, a rede mundial de computadores vem se tornando uma grande mina de ouro. O ouro neste caso seria a informa\c{c}\~ao j\'a processada, por\'em assim como as minas s\~ao mineradas, os dados devem ser minerados.
+	
+    Os dados s\~ao tratados  utilizando t\'ecnicas (agrupamento, filtro, classifica\c{c}\~ao entre outras), com objetivo de obter informa\c{c}\~oes valiosas, como a probabilidade de um produto ser vendido em determinada regi\~ao, ou a predi\c{c}\~ao de bolsas de valores.
+	
+	A minera\c{c}\~ao \'e apenas uma das etapas, de um grande e complexo sistema de an\'alise e refinamento de dados, como a estrutura do KDD.
+	Assim como na minera\c{c}\~ao de recursos naturais a minera\c{c}\~ao de dados necessita de ferramentas e t\'ecnicas robustas, para poder realizar um maior e melhor processamento.
+	\section{Fundamenta\c{c}\~ao Te\'orica}
+	
+	\subsection{CUDA}
+	CUDA \'e uma plataforma de computa\c{c}\~ao paralela inventada pela NVIDIA. Ela \'e capaz de aumentar significativamente a performance computacional ao utilizar e aproveitar a pot\^encia da unidade de processamento gr\'afico GPU.
+	
+	Al\'em de trabalhos de artistas e desenvolvedores de jogos, trabalhos inovadores com a tecnologia come\c{c}aram a sugir. Nascia o movimento da GPU de Prop\'osito Geral 
+	(GPGPU).
+	
+	O CUDA Toolkit conta com um compilador, bibliotecas de matem\'aticas e ferramentas para depura\c{c}\~ao e otimiza\c{c}\~ao da performance de seus aplicativos, para ficar melhor ele   \'e distribu\'ido gratuitamente, al\'em de sua documenta\c{c}\~ao e manuten\c{c}\~ao fornecidos pela NVIDIA.
+	
+	\subsection{cuDDN}
+	\'E uma biblioteca para o NVIDIA CUDA, para rede neurais profunda que fornece implementa\c{c}\~oes altamente sintonizadas para rotinas padr\~ao, como convolu\c{c}\~ao para tr\'as (propaga\c{c}\~ao), agrupamento, normaliza\c{c}\~ao e camadas de ativa\c{c}\~ao.
+	Diversos softwares de redes profundas dependem do cuDDN (Caffe2, MatLab, Microsofot Cognitive Toolkit, TensorFlow, Theano, PyTorch) para acelerac\c{c}\~ao GPU de alto desempenho, permitindo se concentrar no treinamento de rede neurais e no desenvolvimento de aplica\c{c}\~oes em vez de gastar tempo no ajuste de desempenho de GPU de baixo n\'ivel.
+	
+	\subsection{TensorFlow}
+	
+		
+	\section{Recurso Computacional}
+	Para a realiza\c{c}\~ao dos testes ser\'a utilizado um computador com as seguintes configura\c{c}\~oes demostrada na Tabela \ref{pc:pc1}.
+	
+	\begin{table}[H]
+		\centering
+		\caption{Configura\c{c}\~ao de Poder Computacional}
+		\label{pc:pc1}
+		\begin{tabular}{|c|l|}
+			
+			SO  & Debian 9  Stretch Linux Kernel 4.9                                                \\ 
+			CPU &  Intel Core™ i5-7200U (2.5 GHz expansível até 3.1 GHz, Cache de 3 MB) \\ 
+			GPU & NVIDIA® GeForce® 940MX de 4GB, GDDR5​                    \\ 
+			RAM & 8GB, DDR4, 2400MHz                                       \\
+			
+		\end{tabular}
+	\end{table}
+	
+	\section{An\'alise de T\'ecnicas}
+	
+	C\'alculos computacionais como os utilizados na engenharia, m\'idia digital e aplica\c{c}\~oes cient\'ificas tradicionalmente tratadas pela Unidade de Processamento Central (CPU). A GPU atua como um co-processador e pode acelerar as aplica\c{c}\~oes devido ao seu poder de processamento massivamente paralelo em rela\c{c}\~ao ao design dos v\'arios n\'ucleos das CPUs.
+	A demostra\c{c}\~ao desses c\'alculos ser\~ao demostrados nesta sess\~ao.
+	
+	\subsubsection{Multiplica\c{c}\~ao de Matrizes}
+	
+	Esse \'e um exemplo trivial da computa\c{c}\~ao pelo seu grande gasto computacional, um exemplo pr\'atico s\'eria algumas redes neurais convolucional de classifica\c{c}\~ao de imagem, que utiliza o produto das matrizes para cria\c{c}\~ao de filtros.
+	
+	Um exemplo pr\'atico pode ser observado na Figura \ref{an:mult}, onde foram apresentados tr\^es testes de 150\texttwosuperior, 1500\texttwosuperior , 15000\texttwosuperior, todos com valores internos rand\^omicos, a GPU somente foi superior no teste quando o n\'ivel de complexidade relativamente grande.
+	
+	\begin{table}[H]
+		\centering
+		\caption{GPU x CPU Multiplica\c{c}\~ao de Matrizes}
+		\label{an:mult}
+		\begin{tabular}{@{}|c|c|c|@{}}
+			\multicolumn{1}{|l|}{Tamanho da Matriz} & Tempo na CPU \textmu{}s & Tempo na GPU \textmu{}s\\ 
+			150 X 150                               &0:00.137 \textmu{}s&0:00.668 \textmu{}s\\ 
+			1500 X 1500                             &0:00.318 \textmu{}s&0:00.661 \textmu{}s\\ 
+			15000 X 15000                           &2:36.198 \textmu{}s&0:10.329 \textmu{}s\\ 
+		\end{tabular}
+	\end{table}
+	
+	\section*{Conclus\~ao}
+	O processamento paralelo em GPU tem grande difiren\c{c}a quando os dados computados s\~ao de grande complexidade, o que torna essa tarefa muito custosa para a CPU, tornando assim a GPU superior nesses c\'alculos, por\'em para c\'alculos computacionais de baixa complexidade a CPU, se mostrou superior no desempenho.
+	
+	\begin{thebibliography}{1}
+		
+		\bibitem{IEEEhowto:kopka}
+		H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+		0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+		
+	\end{thebibliography}
+	
+\end{document}
+
+
