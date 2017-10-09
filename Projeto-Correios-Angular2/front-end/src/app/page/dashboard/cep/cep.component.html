@@ -1,0 +1,74 @@
+<div class="row">
+        <div class="input-group">
+          <input [(ngModel)]="cep" type="text" class="form-control" placeholder="Digite um objeto ou um CEP">
+          <span class="input-group-btn">
+                          <button type="submit" (click)=buscacep() class="btn btn-default btn-pesquisa">
+                              <span class="glyphicon glyphicon-search"></span>
+          </button>
+          </span>
+      </div>
+  </div>
+  <div class="col-lg-12 col-md-5 mx-auto">
+      <table class="table">
+          <thead class="thead-inverse">
+              <tr>
+  
+                      <th *ngIf="resultCEP.cep != ''"  scope="row">
+                             #
+                          </th>
+                  <th *ngIf="resultCEP.cep != ''">
+                      CEP
+                  </th>
+  
+                  <th *ngIf="resultCEP.localidade != ''">
+                      Cidade
+                   </th>
+                  <th *ngIf="resultCEP.logradouro  != ''">
+                      Logradouro
+                  </th>
+                  <th *ngIf="resultCEP.complemento != ''">
+                       Complemento
+                  </th>
+                  <th *ngIf="resultCEP.bairro != ''">
+                       Bairro
+                  </th>
+                  <th *ngIf="resultCEP.uf != ''">
+                      UF
+                  </th>
+                  <th *ngIf="resultCEP.unidade != ''">
+                       Unidade
+                  </th>
+  
+                  <th *ngIf="resultCEP.ibge != ''">
+                      IBGE
+                  </th>
+                  <th *ngIf="resultCEP.gia != ''">
+                      Gia
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th *ngIf="resultCEP.cep != ''" scope="row">1</th>
+                  <td *ngIf="resultCEP.cep != ''">{{resultCEP.cep}}</td>
+  
+                  <td *ngIf="resultCEP.localidade != ''">{{resultCEP.localidade}}</td>
+  
+                  <td *ngIf="resultCEP.logradouro != ''">{{resultCEP.logradouro}}</td>
+  
+                  <td *ngIf="resultCEP.complemento != ''">{{resultCEP.complemento}}</td>
+  
+                  <td *ngIf="resultCEP.bairro != ''">{{resultCEP.bairro}}</td>
+  
+                  <td *ngIf="resultCEP.uf != ''">{{resultCEP.uf}}</td>
+  
+                  <td *ngIf="resultCEP.ibge != ''">{{resultCEP.ibge}}</td>
+  
+                  <td *ngIf="resultCEP.gia != ''">{{resultCEP.gia}}</td>
+  
+              </tr>
+          </tbody>
+      </table>
+  
+  
+  </div>

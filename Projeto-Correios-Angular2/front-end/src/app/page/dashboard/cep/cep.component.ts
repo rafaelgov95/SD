@@ -1,6 +1,6 @@
-import { Usuario } from './../../shared/models/usuario';
+import { Usuario } from './../../../shared/models/usuario';
 import { Component } from '@angular/core';
-import { Buscas } from './../../shared/services/buscas/Buscas';
+import { Buscas } from './../../../shared/services/buscas/Buscas';
 import { Subscription } from 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
 //-- Paginetor
@@ -10,11 +10,12 @@ import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-cep',
+  templateUrl: './cep.component.html',
+  styleUrls: ['./cep.component.scss'],
+  providers:[Buscas]
 })
-export class DashboardComponent {
+export class CepComponent {
   cep: string
   resultCEP:Usuario
   textoCEP : string;

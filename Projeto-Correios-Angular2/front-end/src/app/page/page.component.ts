@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'app-page',
+  templateUrl: './page.component.html',
+  styleUrls: ['./page.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class PageComponent implements OnInit {
   inscricao: Subscription;
   constructor(private router: Router) {
 

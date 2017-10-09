@@ -1,0 +1,141 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Serviços da Página</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <input type="text" [(ngModel)]="input" class="form-control" aria-label="...">
+                    <div class="input-group-btn">
+
+                        <button type="button" class="btn btn-default" (click)="buscar()"><span class="glyphicon glyphicon-search"></span></button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{type}} <span class="caret"></span></button>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#" (click)="type='CEP'">CEP</a></li>
+                            <li><a href="#" (click)="type='Rastreio'">Rastreio</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- /btn-group -->
+                </div>
+                <!-- /input-group -->
+            </div>
+            <!-- /.col-lg-6 -->
+
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+
+
+
+<div class="panel panel-default"  *ngIf="resultCEP !=null || resultRast!=null" >
+    <div class="panel-heading">
+        <h3 class="panel-title">Resultado do {{type}}</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-lg-12 col-md-5 mx-auto">
+            <table class="table" *ngIf="resultCEP !=null">
+                <thead class="thead-inverse">
+                    <tr>
+
+                        <th *ngIf="resultCEP.cep != ''" scope="row">
+                            #
+                        </th>
+                        <th *ngIf="resultCEP.cep != ''">
+                            CEP
+                        </th>
+
+                        <th *ngIf="resultCEP.localidade != ''">
+                            Cidade
+                        </th>
+                        <th *ngIf="resultCEP.logradouro  != ''">
+                            Logradouro
+                        </th>
+                        <th *ngIf="resultCEP.complemento != ''">
+                            Complemento
+                        </th>
+                        <th *ngIf="resultCEP.bairro != ''">
+                            Bairro
+                        </th>
+                        <th *ngIf="resultCEP.uf != ''">
+                            UF
+                        </th>
+                        <th *ngIf="resultCEP.unidade != ''">
+                            Unidade
+                        </th>
+
+                        <th *ngIf="resultCEP.ibge != ''">
+                            IBGE
+                        </th>
+                        <th *ngIf="resultCEP.gia != ''">
+                            GIA
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th *ngIf="resultCEP.cep != ''" scope="row">1</th>
+                        <td *ngIf="resultCEP.cep != ''">{{resultCEP.cep}}</td>
+
+                        <td *ngIf="resultCEP.localidade != ''">{{resultCEP.localidade}}</td>
+
+                        <td *ngIf="resultCEP.logradouro != ''">{{resultCEP.logradouro}}</td>
+
+                        <td *ngIf="resultCEP.complemento != ''">{{resultCEP.complemento}}</td>
+
+                        <td *ngIf="resultCEP.bairro != ''">{{resultCEP.bairro}}</td>
+
+                        <td *ngIf="resultCEP.uf != ''">{{resultCEP.uf}}</td>
+
+                        <td *ngIf="resultCEP.ibge != ''">{{resultCEP.ibge}}</td>
+
+                        <td *ngIf="resultCEP.gia != ''">{{resultCEP.gia}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <table class="table" *ngIf="resultRast != null">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th *ngIf="resultRast.codigo != ''">
+                            #
+                        </th>
+                        <th *ngIf="resultRast.codigo != ''">
+                            Código
+                        </th>
+
+                        <th *ngIf="resultRast.data != ''">
+                            Data
+                        </th>
+                        <th *ngIf="resultRast.local  != ''">
+                            Local
+                        </th>
+                        <th *ngIf="resultRast.situacao != ''">
+                            Situação
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th *ngIf="resultRast.codigo != ''" scope="row">1</th>
+                        <td *ngIf="resultRast.codigo != ''">{{resultRast.codigo}}</td>
+
+                        <td *ngIf="resultRast.data != ''">{{resultRast.data}}</td>
+
+                        <td *ngIf="resultRast.local != ''">{{resultRast.local}}</td>
+
+                        <td *ngIf="resultRast.situacao!= ''">{{resultRast.situacao}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

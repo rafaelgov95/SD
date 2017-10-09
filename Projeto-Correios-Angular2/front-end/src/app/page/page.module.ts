@@ -5,23 +5,24 @@ import { RouterModule,Router } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BlogRoutingModule } from './blog-routing.module';
-import { BlogComponent } from './blog.component';
+import { PageRoutingModule } from './page-routing.module';
+import { PageComponent } from './page.component';
 import { EncomendaComponent } from './dashboard/encomenda/encomenda.component';
+import { CepComponent } from './dashboard/cep/cep.component';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
-    BlogRoutingModule,
+    PageRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     PipesModule
    
   ],
-  declarations: [BlogComponent,DashboardComponent, EncomendaComponent],
+  declarations: [PageComponent,DashboardComponent, EncomendaComponent, CepComponent],
   providers: [],
   exports: [PipesModule,DashboardComponent]
 })
-export class BlogModule { }
+export class PageModule { }

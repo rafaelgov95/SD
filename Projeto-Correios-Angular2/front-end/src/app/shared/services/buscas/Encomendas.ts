@@ -1,4 +1,4 @@
-import { Usuario } from './../../models/usuario';
+import { buscaEncomenda } from './../../models/buscaEncomendas';
 import { Observable } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
 import { Http, Headers, RequestOptions, Response, URLSearchParams } from '@angular/http';
@@ -22,7 +22,7 @@ export class Encomendas {
     
   }
 
-  getEncomenda(encomenda: string): Observable<Usuario> {
+  getEncomenda(encomenda: string): Observable<buscaEncomenda> {
     let options = new RequestOptions({ headers: this.headers });
     return this.http.get('http://localhost:3000/json/'+encomenda,options)
       .map((response: Response) => response.json());
