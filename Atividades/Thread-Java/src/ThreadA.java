@@ -7,6 +7,12 @@ class ThreadB extends Thread{
         synchronized(this){
             for(int i=0; i<2000 ; i++){
                 total += i;
+
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
             System.out.println("Terminou o laço");
             notify();
