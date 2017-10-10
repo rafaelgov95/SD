@@ -43,7 +43,7 @@ public class Main {
                 + "</soapenv:Envelope>";
         SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
         SOAPConnection soapConnection = soapConnectionFactory.createConnection();
-        String url = "http://webservice.correios.com.br:80/service/rastro";//url do webservice nao e a url do wsdl do webservice, repare que isto foi copia da parte vermelha da figura 1
+        String url = "http://webservice.correios.com.br:80/service/rastro"  ;//url do webservice nao e a url do wsdl do webservice, repare que isto foi copia da parte vermelha da figura 1
         MimeHeaders headers = new MimeHeaders();
         headers.addHeader("Content-Type", "text/xml");
 

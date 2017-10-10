@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{tutorial}
+T.~Spoint, ``{Web Services - Examples}.''
+  \url{www.tutorialspoint.com/webservices/web_services_examples.htm}, 2017.
+\newblock [Online; acesso em 05-Outubro-2017].
+
+\bibitem{nodejs}
+NodeJs, ``{Documentação de referência da API}.''
+  \url{https://nodejs.org/en/docs/}, 2017.
+\newblock [Online; acesso em 02-Outubro-2017].
+
+\bibitem{expressjs}
+ExpressJs, ``{Documentação de referência da API}.''
+  \url{http://expressjs.com/pt-br/4x/api.html}, 2017.
+\newblock [Online; acesso em 05-Outubro-2017].
+
+\bibitem{viacep}
+VIACEP, ``{Códigos de Endereçamento Postal (CEP) do Brasil}.''
+  \url{https://viacep.com.br/}, 2017.
+\newblock [Online; acesso em 05-Outubro-2017].
+
+\bibitem{correios}
+Correios, ``{Web Service de Rastreamento}.''
+  \url{https://www.correios.com.br/para-voce/correios-de-a-a-z/pdf/rastreamento-de-objetos/manual_rastreamentoobjetosws.pdf},
+  2017.
+\newblock [Online; acesso em 05-Outubro-2017].
+
+\end{thebibliography}
