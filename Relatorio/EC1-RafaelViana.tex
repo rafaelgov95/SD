@@ -97,13 +97,24 @@
 
 
 \section{Introdução}
-  Com a diseminação de dispositivos com conexeção a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web \textit{Web Services}, estes necessarios para atender as mais diversas funções como o rastreio de encomendas e consultas de CEPs entre outros serviços.
-  Este relatório demonstrará  a arquitetura de um \textit{Web Service} e como foi implementado um \textit{Web Service} de consulta de CEP e rastreamento de encomendas dos correios, juntamente com uma página web que consome os serviços.
-  O código deste relatório esta em sua totalidade no endereço http://github.com/rafaelgov95/SD/Projeto-Correios-Angular2, e o mesmo pode ser reutilizado sobre a licença MIT.
-\section{Arquitetura de um Web Service}
-Para poder identificar qual arquitetura que um \textit{Web Service} deve possuir devemos examinar os papéis individuais de cada ator no \textit{Web Service} e examinar a pilha emergente de protocolo que o mesmo pretende utiliza.
+  Com a disseminação de dispositivos com conexão a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web \textit{Web Services}, estes são necessarios para atender as mais diversas funções como o rastreio de encomendas e consultas de CEPs entre outros serviços.
+  Este relatório demonstra a arquitetura de um \textit{Web Service} e como foi implementado um \textit{Web Service} que possui serviços de consulta de CEP e rastreamento de encomendas dos correios, juntamente com uma página web oferecendo uma interface para os mesmos.
+  O código deste relatório esta em sua totalidade no endereço http://github.com/rafaelgov95/SD/Projeto-Correios-CEP, e o mesmo pode ser reutilizado sobre a licença MIT.
+\section{Web Service}
+Webservice é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes, como pode ser objservado na figura \ref{wbs}, um \textit{Data Server}, disponibiliza serviços para os mais diversos tipos de dispositivos, em diferentes formatos de objetos.
+
+Com está tecnologia é possível que novas aplicações possam interagir com aquelas que já existem e que sistemas desenvolvidos em plataformas diferentes sejam compatíveis. 
+ \cite{webservece}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.14]{Imagens/webservice.png}
+	\caption{Sistema implantando, fornecendo serviços para PCs, dispositivos móveis e outros web servers.}
+	\label{wbs}
+\end{figure}  
+\section{Qual Arquitetura de Web Service utilizar}
+Para poder identificar qual arquitetura utilizar de \textit{Web Service}, deve-se examinar os papéis individuais de cada ator no contexto, e também a pilha emergente de protocolo que o mesmo pretende utilizar.
 O mesmo pode ser publicado na intranet ou na Internet, provendo três possiveis formatos de serviços: Provedor de Serviço, Solicitante de Serviço e o Registro de Serviço.
-Para mais detalhes desta sessão incentivo consultar \cite{tutorial}. 
+Para mais detalhes desta sessão incentivo consultar a referências \cite{tutorial}. 
 
 \begin{enumerate}
 	\item \textbf{Provedor de serviço:}
@@ -114,71 +125,71 @@ Para mais detalhes desta sessão incentivo consultar \cite{tutorial}.
 	Este é um diretório de serviços logicamente centralizado. O registro fornece um lugar central onde os desenvolvedores podem publicar novos serviços ou encontrar os existentes. Ele serve como centro de compensação centralizado para empresas e seus serviços.
 \end{enumerate}
 
+Outro modo de identificar qual arquitetura utilizar, é examinar a pilha emergente de protocolo que pretende utilizar. Cada dia existe mais tipos de protocolos porém existem 4 tipo que se destacam: Serviço de Transporte - "FTP", Mensgens "XML", Descrição de Serviço "WSDL"  e Descoberta de Serviço "UDDI".
 
-\subsection{Pilha de protocolo de um \textit{Web Service}}
-Uma segunda opção para identificar qual arquitetura o  \textit{Web Service} deve utiliza é examinar a pilha emergente de protocolo que pretende utilizar. Cada dia existe mais tipos de protocolos porém existem 4 tipo que se destacam: Serviço de Transporte - "FTP", Mensagens "XML", Descrição de Serviço "WSDL"  e Descoberta de Serviço "UDDI" 
+	Podemos observar na figura \ref{wbss}, a pilha de soluções com a pilha de tecnologia correspondente para cada camada. 
 \begin{enumerate}
-	\item \textbf{Serviço de transporte:}
-	Esta camada é responsável pelo transporte de mensagens entre aplicativos. Atualmente, esta camada inclui o protocolo de transporte de hipertexto (HTTP), protocolo de transferência de correio simples (SMTP), protocolo de transferência de arquivos (FTP) e protocolos mais recentes, como o protocolo de intercâmbio extensível de blocos (BEEP).
-	\item \textbf{Mensagens XML:}
-	Esta camada é responsável por codificar mensagens em um formato XML comum para que as mensagens possam ser entendidas em cada uma das extremidades. Atualmente, esta camada inclui XML-RPC e SOAP.
-	\item \textbf{Descrição do Serviço:}
-	Esta camada é responsável por descrever a interface pública para um serviço web específico. Atualmente, a descrição do serviço é tratada através do Web Service Description Language (WSDL).
-
 	\item \textbf{Descoberta do serviço:}
-	Esta camada é responsável por centralizar os serviços em um registro comum e fornecer funcionalidades fáceis de publicação / pesquisa. Atualmente, a descoberta do serviço é tratada através de Descrição Universal, Descoberta e Integração (UDDI).
-\end{enumerate}
+	Responsável por centralizar os serviços em um registro comum e fornecer funcionalidades fáceis de publicação/pesquisa. Atualmente, a descoberta do serviço é tratada através de Descrição Universal, Descoberta e Integração (UDDI).
+	\item \textbf{Descrição do Serviço:}
+	Responsável por descrever a interface pública para um serviço web específico. Atualmente, a descrição do serviço é tratada através do Web Service Description Language (WSDL).
+	\item \textbf{Mensagens XML:}
+	Responsável por codificar mensagens em um formato XML comum para que as mensagens possam ser entendidas em cada uma das extremidades. Atualmente, esta camada inclui XML-RPC e SOAP.
+	\item \textbf{Serviço de transporte:}
+	 Responsável pelo transporte de mensagens entre aplicativos. Atualmente, esta camada inclui o protocolo de transporte de hipertexto (HTTP), protocolo de transferência de correio simples (SMTP), protocolo de transferência de arquivos (FTP) e protocolos mais recentes, como o protocolo de intercâmbio extensível de blocos (BEEP).
 
-\subsection {Principais Serviço de Transporte de um Web Service}Os protocolos da camada inferior ficam respornsaveis pelo transporte de serviços. Essa camada é responsável por transportar como exemplo mensagens XML e JSON entre dois computadores.
-\begin{enumerate}
-	\item \textbf{Hyper Text Transfer Protocol (HTTP):}
-	É a opção mais popular para o transporte de serviços. O HTTP é simples, estável e amplamente implantado. Além disso, a maioria dos firewalls permitem o tráfego HTTP. Isso permite que mensagens REST ou SOAP se mostrem como mensagens HTTP. Isso é bom se você quiser integrar aplicativos remotos, mas eleva uma série de preocupações de segurança.
-	\item \textbf{Bloqueia o protocolo de troca extensível (BEEP)}
-	Esta é uma alternativa promissora para o HTTP. O BEEP é uma nova estrutura da Task Force de Engenharia da Internet (IETF) para a construção de novos protocolos. O BEEP está em camadas diretamente no TCP e inclui uma série de recursos internos, incluindo um protocolo inicial de handshake, autenticação, segurança e tratamento de erros. Usando BEEP, pode-se criar novos protocolos para uma variedade de aplicações, incluindo mensagens instantâneas, transferência de arquivos, distribuição de conteúdo e gerenciamento de rede.
-	O SOAP não está vinculado a nenhum protocolo de transporte específico. Na verdade, você pode usar SOAP via HTTP, SMTP ou FTP. Uma idéia promissora é, portanto, usar SOAP sobre BEEP.
+
 \end{enumerate}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Imagens/pilhat.jpg}
 	\caption{Pilha de protocolo de transporte e suas tecnologias. }
-	\label{wbs}
+	\label{wbss}
 \end{figure}
+
+\subsection {Principais Serviço de Transporte de um Web Service}Os protocolos da camada inferior ficam responsáveis pelo transporte de serviços. Essa camada é responsável por transportar como exemplo mensagens XML e JSON entre dois computadores.
+\begin{enumerate}
+	\item \textbf{Hyper Text Transfer Protocol (HTTP):}
+	É a opção mais popular para o transporte de serviços. O HTTP é simples, estável e amplamente implantado. Além disso, a maioria dos firewalls permitem o tráfego HTTP. Isso permite que mensagens REST ou SOAP se mostrem como mensagens HTTP. Isso é bom se você quiser integrar aplicativos remotos, mas eleva uma série de preocupações de segurança.
+	\item \textbf{Bloqueia o protocolo de troca extensível (BEEP)}
+	Esta é uma alternativa promissora para o HTTP. O BEEP é uma nova estrutura da Task Force de Engenharia da Internet (IETF) para a construção de novos protocolos.
+\end{enumerate}
 
 
 \subsection{Componentes de um \textit{Web Service}}
-Ao longo dos últimos anos, três tecnologias primárias emergiram como padrões mundiais que constituem o núcleo da tecnologia de serviços da Web de hoje. Essas tecnologias são demostradas abaixo.
+Ao longo dos últimos anos, diversas tecnologias emergiram como padrões mundiais que constituem o núcleo da tecnologia de serviços da Web de hoje. Algumas destas tecnologias e suas caracteristicas são demostradas abaixo.
 
 
 \subsubsection{WSDL - \textit{Web Services Description Language} }
 O WSDL é um idioma baseado em XML para descrever os serviços da Web e como acessá-los.
 
 \begin{enumerate}
-	\item O WSDL foi desenvolvido conjuntamente pela Microsoft e pela IBM.
-	\item WSDL é um protocolo baseado em XML para troca de informações em ambientes descentralizados e distribuídos.
-	\item WSDL é o formato padrão para descrever um serviço web.
-	\item A definição WSDL descreve como acessar um serviço da Web e quais as operações que ele executará.
-	\item O WSDL descrever como se relacionar com serviços baseados em XML.
-	\item WSDL é parte integrante do UDDI, um registro de negócios mundial baseado em XML.
-	\item WSDL é o idioma que UDDI usa.
+	\item É um protocolo baseado em XML, para troca de informações em ambientes descentralizados e distribuídos.
+	\item É o formato padrão para descrever um serviço web.
+	\item Descreve como acessar um serviço da Web e quais as operações que ele executará.
+	\item Descrever como se relacionar com serviços baseados em XML.
+	\item É o idioma que UDDI utiliza.
 	
 \end{enumerate}
 
 \subsubsection{SOAP - \textit{Simple Object Access Protocol}}
+
 O SOAP é um protocolo baseado em XML para trocar informações entre computadores.
 
+O mesmo não está vinculado a nenhum protocolo de transporte específico. Na verdade, você pode usar SOAP via HTTP, SMTP, FTP ou BEEP. 
+Algumas caracteriscas estão presentes no SOAP elas são:
 \begin{enumerate}
-	\item O SOAP será desenvolvido como um padrão W3C.
-	\item O SOAP é um protocolo de comunicação.
-	\item O SOAP é para comunicação entre aplicativos.
-	\item O SOAP é um formato para enviar mensagens.
-	\item O SOAP é projetado para se comunicar via Internet.
-	\item O SOAP é independente da plataforma.
-	\item O SOAP é independente da linguagem.
-	\item O SOAP é simples e extensível.
-	\item O SOAP permite que você percorra os firewalls.
+	\item Será desenvolvido como um padrão W3C.
+	\item Protocolo de comunicação.
+	\item Comunicação entre aplicativos.
+	\item Formato para enviar mensagens.
+	\item Projetado para se comunicar via Internet.
+	\item Independente da plataforma.
+	\item Independente da linguagem.
+	\item Permite que você percorra os firewalls.
 \end{enumerate}
 \subsubsection{REST - \textit{Representation State Transfer}}
-É uma arquitetura criada para ser mais simples de se usar que o SOAP. Este pode ser usado em vários formatos de texto, como CSV (Comma-separated Values), RSS (Really Simple Syndication), JSON e YAML. Porém, só pode ser utilizado com o protocolo HTTP/HTTPS, por exemplo utilizando os métodos GET, POST, PUT e DELETE. 
+É uma arquitetura criada para ser mais simples de se usar que o SOAP. Pode ser usado em vários formatos de texto, como CSV (Comma-separated Values), RSS (Really Simple Syndication), JSON e YAML. Porém, só pode ser utilizado com o protocolo HTTP/HTTPS, por exemplo utilizando os métodos GET, POST, PUT e DELETE. 
 
 \begin{enumerate}
 	\item Melhor curva de aprendizado.
@@ -186,18 +197,12 @@ O SOAP é um protocolo baseado em XML para trocar informações entre computador
 	\item Os dados podem ser colocados em cache, retornando sempre a mesma resposta para a mesma requisição.
 	\item Mais rápido pois precisa de menos processamento que o SOAP.
 \end{enumerate}
-\subsection{Exemplo Ilustrativo de um Web Service}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.18]{Imagens/webservice.png}
-	\caption{Sistema implantando fornecendo serviços para diversos sistemas clientes diferentes.}
-	\label{wbs}
-\end{figure}
+
 \section{Metodologia}
-Nesta sessão será relatado como foi o desenvolvimento e a implantação de um \textit{Web Service} em um \textit{Web Server} que realiza busca de CEPs e rastreamento de encomendas dos correios.
+Nesta sessão relato como foi o desenvolvimento e a implantação de um \textit{Web Service} em um \textit{Web Server} que promove serviços de busca de CEPs e rastreamento de encomendas dos correios, utilizando uma página web como interface para consultas.
  
 \subsection{Web Server}
-	O \textit{Web Server} foi implementado utilizando o NodeJS com o framework ExpressJs, onde cria um ambiente de desenvolvimento para criação de Web Services.
+	O \textit{Web Server} foi implementado utilizando o NodeJS com o framework ExpressJs, onde se cria um ambiente de desenvolvimento para criação de Web Services.
 	\begin{quote}
 	O Node.js usa um modelo de E/S não bloqueante, que o torna leve e eficiente. O ecossistema de pacotes Node.js, npm , é o maior ecossistema de bibliotecas de código aberto do mundo \cite{nodejs}.
 	\end{quote}
@@ -206,20 +211,23 @@ Nesta sessão será relatado como foi o desenvolvimento e a implantação de um 
 	\end{quote}
 
 \subsection{Web Service de Busca de CEP}
-	A busca de ceps esta sendo tercerizada por um \textit{Web Service} que prove consultas de CEPs, nos mais diversos tipos de empacotamento. Esses serviços são fornecidos pela impresa	\textit{VIACEP}, o site da mesma é https://viacep.com.br/.
+	A busca de ceps, está sendo tercerizada por um \textit{Web Service} que prove  servico de consultas de CEPs, nos mais diversos tipos de empacotamento. Esses serviços são fornecidos pela empresa	\textit{VIACEP}, o site da mesma é https://viacep.com.br/.
 
-	Uma página Web RafaelBuscas foi construida utilizando o framework Angular, a mesma consome o serviço de buscas de cep, no formato JSON fornecido pelos servidores da Viacep.
+	Uma página Web RafaelBuscas foi desenvolvida utilizando o framework Angular, a mesma consome o serviço de buscas de cep, no formato JSON fornecido pelos servidores da Viacep.
 	
-	A url do Web Service da VIACEP, consumido pela página RafaelBuscas, foi o http://viacep.com.br/ws/01001000/json/, o mesmo retorna uma resposta em JSON, com as informações do CEP (Localização, Bairro, Código IBGE, GIA), para mais informações sobre requisições consultar \cite{viacep}. 
-	
+	A url do Web Service da VIACEP, consumido pela página RafaelBuscas, foi o http://viacep.com.br/ws/CodigoCEP/json/, o mesmo encaminha uma requisição HTTP-GET com o código do CEP válido conforme, o mesmo retorna uma resposta em JSON, com as informações do CEP (Localização, Bairro, Código IBGE, GIA entre outras), conforme a figura \ref{c33}, para mais informações sobre requisições consultar a referência \cite{viacep}. 
+	 \begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.6]{Imagens/via.png}
+		\caption{Modelo de requisição HTTP-GET e seu retorno.}
+		\label{c33}
+	\end{figure}
 \subsection{Web Service Encomendas dos Correios}
-	O rastreiamento por encomendas dos correios foi feita com duas tecnologias diferentes de empacontamento, fornecidos pelos Servidores dos Correios, um utiliza a tecnologia SOAP e outra alternativa e utilizar um requisição REST HTTP-POST e parsear a resposta de uma página HTML, cada uma das opções serão discutidas abaixo.
+	O rastreiamento por encomendas dos correios, dispõe de duas tecnologias diferentes de empacotamento, fornecida pelos Correios. A primeira utiliza a tecnologia SOAP, e outra alternativa é utilizar uma requisição REST HTTP-POST, para obter uma requisição da página oficial dos correios e após receber a resposta em um objeto HTML, e realizado um parsear na resposta.
 \subsubsection{Serviço de Rastreamento Encomenda via SOAP}
-O WSDL dos correios que fornece recursos para os serviços de requisição SOAP. 
+O WSDL dos correios que fornece recursos para os serviços de requisição SOAP,o serviço de rastreamento de encomendas dos correios via SOAP é gratuito.
 
-O Serviço de Rastreamento de Encomendas dos correios via SOAP é gratuito.
-
-A Url "http://webservice.correios.com.br:80/service/rastro" é o endereço do \textit{Web Service} e não do wsdl, o webservice espera uma mensagem SOAP como na Listing \ref{c1} a mesma deve ser assinada com cabeçalhos HTTP no formato "Content-Type", "text/xml".
+A Url "http://webservice.correios.com.br:80/service/rastro" é o endereço do \textit{Web Service} e não do WDSL, o webservice espera uma mensagem SOAP como na Listing \ref{c1} a mesma deve ser assinada com cabeçalhos HTTP no formato "Content-Type", "text/xml".
 \lstset{
 	language=xml,
 	tabsize=3,
@@ -242,12 +250,12 @@ A Url "http://webservice.correios.com.br:80/service/rastro" é o endereço do \t
 	emph={food,name,price},emphstyle={\color{magenta}}}
 \lstinputlisting{Codigo/codigo1.xml}
 
-Utilizando a linguagem Java e a biblioteca \textit{javax.xml.soap} foi feita uma simulação de envio de requisição SOAP com a mensagem Listing \ref{c1} para o \textit{Web Service} de rastreamento de encomendas, fornecido pelos correios para mais informações encentivo consultar \cite{correios}.
+Utilizando a linguagem Java e a biblioteca \textit{javax.xml.soap}, houve simulação de envio de requisição SOAP com a mensagem Listing \ref{c1} para o \textit{Web Service} de rastreamento de encomendas, fornecido pelos correios para mais informações referente a API de serviços dos correios, incentivo consultar a referência \cite{correios}.
 
-O retorno da requisição é um código XML contendo a resposta da requsição, como demostrano na Listing \ref{c2}.
+O retorno da requisição é um código XML, contendo a resposta da requisição, como demostrano na Listing \ref{c2}.
  \lstset{
  	language=xml,
- 	tabsize=3,
+ 	tabsize=1,
  	%frame=lines,
  	caption=Resposta da Requisição SOAP,
  	label=c2,
@@ -266,12 +274,12 @@ O retorno da requisição é um código XML contendo a resposta da requsição, 
  	basicstyle=\footnotesize,
  	emph={food,name,price},emphstyle={\color{magenta}}}
  \lstinputlisting{Codigo/codigo2.xml}
- Esse serviço disponibilizado pelos correios apesar de ser gratuito somente retorna a última atualização do objeto, como demostrado na Listing \ref{c2}.
+ Esse serviço disponibilizado pelos correios apesar de ser gratuito, somente retorna a última atualização do objeto como demostrado na Listing \ref{c2}.
 \subsubsection{Serviço de Rastreamento de Encomendas alternativo utilizando Crawling na Página dos Correios}
 
-	Existe um serviço disponível na página dos correios para rastreamento de encomendas utilizando esse serviço da página web é possivel fazer um Crawling da página, com o objetivo de extrair as informações da encomenda.
+	Existe um serviço disponível na página dos correios para rastreamento de encomendas, onde é possivel realizar um crawling da página, para obter um objetivo HTML, contendo as informações da encomenda buscada.
 	
-	O serviço está disponível na url "http://www2.correios.com.br/sistemas/rastreamento/", a imagem \ref{c1} demostra como pode-se utilizando a ferramenta \textit{Postman} para realizar uma requsição Rest HTTP-POST, direto para página de rastreamento com objetivo de extrair informações da mesma.
+	O serviço está disponível na url "http://www2.correios.com.br/sistemas/rastreamento/", a imagem \ref{c1} demostra como pode-se utilizar a ferramenta \textit{Postman}, para realizar uma requisição REST HTTP-POST, direto para página de rastreamento com objetivo de extrair informações da mesma.
 	
 	 \begin{figure}[H]
 	 	\centering
@@ -280,9 +288,9 @@ O retorno da requisição é um código XML contendo a resposta da requsição, 
 	 	\label{c1}
 	 \end{figure}
 	
-	Para consumir o serviço da página dos correios primeiramente temos que criar um \textit{Web Service} com NodeJs e o framework ExpressJs, junto com a biblioteca request-promise para requisição JavaScript e a biblioteca cheerio para realizar o parse das tag do HTML.
+	Para consumir o serviço da página dos correios, primeiramente, temos que criar um \textit{Web Service} com NodeJs e o framework ExpressJs, junto com a biblioteca request-promise para requisição JavaScript e a biblioteca cheerio para realizar o parse das tag do HTML.
 	
-	Na Listing \ref{c3} foi criado um método que realiza um requisição REST - HTTP-POST no \textit{Web Server} da página web.
+	Na Listing \ref{c3} consta um método que realiza uma requisição REST - HTTP-POST no \textit{Web Server} da página web.
 	
 	\medskip
 	\begin{lstlisting}[caption=Criando Requisição em Java Script,label=c3]
@@ -300,11 +308,13 @@ O retorno da requisição é um código XML contendo a resposta da requsição, 
 		return response
 	}	
 	\end{lstlisting}
-	Após a requsição da  Listing \ref{c3}, um variável data contendo todo o HTML da requsição e parseado pela função na Listing \ref{c4}, com o objetivo de extrair as informações necessárias.
+	Após a requisição da Listing \ref{c3}, teremos uma variável, contendo todo o HTML da página web, que foi obtida pela requsição.
 	
-	O parse percorre a tabela e extrai, algumas informações (código, localidade, data, situação) com objetivo de criar um objeto JSON, com as informações de rastreamento que será consumido pela página web (RafaelBuscas).
+	Utilizando a função na Listing \ref{c4}, realizamos um parse no HTML, com o objetivo de extrair as informações referente a encomenda.
 	
-	Sendo assim uma requisição através da página RafaelBuscas ou utilizando diretamente a url http://rafaelbuscas.ddns.bet/json/"codigo-de-rastreamento", primeiramente e recebida pelo \textit{Web Service} que está aguardando na rota da url acima, após recebido uma requisição o mesmo requisita a página de rastreamento dos correios com o código fornecido, e depois realiza um parse da página extraindo as informações e encaminhando o objeto em JSON como response para requisição inicial.   
+	O parse percorre a tabela e extrai, algumas informações (código, localidade, data, situação) criando um objeto JSON, com as informações de rastreamento obtidas, que será consumido pela página web RafaelBuscas.
+	
+	Realizando uma requisição através da página RafaelBuscas ou utilizando diretamente a url http://rafaelbuscas.ddns.bet/json/"codigo-de-rastreamento", primeiramente a requisição é recebida pelo \textit{Web Service} (que está aguardando na rota da url acima), onde o mesmo envia uma requisição HTTP-POST, para a página de rastreamento dos correios com o código de encomenda fornecido, após o parse realizado as informações são encaminhandas em um objeto JSON, como resposta para requisição inicial.   
 	\medskip
 	\begin{lstlisting}[caption=Criando um Crawling para parsar as tags,label=c4]
 	
@@ -344,10 +354,12 @@ O retorno da requisição é um código XML contendo a resposta da requsição, 
 	  	
 	  	
 	  	\section{Página RafaelBuscas}
-	  	Para fins didaticos os serviços criados nesse relatório estão disponíveis na url http://rafaelbuscas.ddns.net.
+	  	Para fins didaticos, os serviços criados nesse relatório estão disponíveis na url http://rafaelbuscas.ddns.net, a mesma possui uma página web como interface para os serviços citados nas seções anteriores.
 	  	
-	  	Essa página está hospedada em uma máquina virtual do Google Cloud, a mesma está disponível para buscas de cep e rastreamento de encomendas sem custos.
-	  	Na página inical no canto inferior tem um input para colocar o código do CEP ou do Rastreamento, um componente para seleção de Cep ou Rastremamento com nome de TIPO, tem que ser marcado como CEP ou Rastreio, antes da busca(butão com uma lupa) como demostrado na Figura \ref{c2}.
+	  	Esta página está hospedada em uma máquina virtual do Google Cloud, a mesma disponível para buscas de cep e rastreamento de encomendas sem custos.
+	  	Na página inical no canto inferior, exite um input para o código do CEP ou do Rastreamento (fornecidos pelos correios).
+	  	
+	  	Um componente para seleção de consulta entre Cep ou Rastremamento, com o nome de ''TIPO'', deve ser marcado como CEP ou Rastreio, antes da busca (botão com uma lupa) como demostrado na Figura \ref{c2}.
 	  	
 	  		 \begin{figure}[H]
 	  		\centering

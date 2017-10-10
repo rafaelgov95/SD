@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  9 OCT 2017 22:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  10 OCT 2017 18:22
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -520,9 +520,6 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (./EC1-RafaelViana.aux
 
-LaTeX Warning: Label `wbs' multiply defined.
-
-
 LaTeX Warning: Label `c1' multiply defined.
 
 
@@ -662,34 +659,41 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<Imagens/pilhat.jpg, id=12, 702.625pt x 401.5pt>
-File: Imagens/pilhat.jpg Graphic file (type jpg)
- <use Imagens/pilhat.jpg>
-Package pdftex.def Info: Imagens/pilhat.jpg used on input line 142.
-(pdftex.def)             Requested size: 351.31163pt x 200.7495pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 143.
+<Imagens/webservice.png, id=1, 2308.625pt x 1706.375pt>
+File: Imagens/webservice.png Graphic file (type png)
+
+<use Imagens/webservice.png>
+Package pdftex.def Info: Imagens/webservice.png used on input line 110.
+(pdftex.def)             Requested size: 323.20529pt x 238.89087pt.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 111.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 143.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 111.
 
-Underfull \vbox (badness 3579) has occurred while \output is active []
+Underfull \vbox (badness 5924) has occurred while \output is active []
 
- [2]
-[3 <./Imagens/pilhat.jpg>]
-<Imagens/webservice.png, id=20, 2308.625pt x 1706.375pt>
-File: Imagens/webservice.png Graphic file (type png)
+ [1
 
-<use Imagens/webservice.png>
-Package pdftex.def Info: Imagens/webservice.png used on input line 192.
-(pdftex.def)             Requested size: 415.53458pt x 307.13425pt.
- [4 <./Imagens/webservice.png>]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./Imagens/webservice.p
+ng>]
+<Imagens/pilhat.jpg, id=17, 702.625pt x 401.5pt>
+File: Imagens/pilhat.jpg Graphic file (type jpg)
+ <use Imagens/pilhat.jpg>
+Package pdftex.def Info: Imagens/pilhat.jpg used on input line 145.
+(pdftex.def)             Requested size: 351.31163pt x 200.7495pt.
+
+[3 <./Imagens/pilhat.jpg>] [4] <Imagens/via.png, id=24, 451.6875pt x 401.5pt>
+File: Imagens/via.png Graphic file (type png)
+
+<use Imagens/via.png>
+Package pdftex.def Info: Imagens/via.png used on input line 221.
+(pdftex.def)             Requested size: 271.01459pt x 240.90184pt.
+ [5 <./Imagens/via.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -709,76 +713,92 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1.
- [5])
+)
 (./Codigo/codigo2.xml
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 3.
  [6])
-Overfull \hbox (24.77791pt too wide) in paragraph at lines 274--275
+Overfull \hbox (24.77791pt too wide) in paragraph at lines 282--283
 []\OT1/ptm/m/n/12 O servi[]o est[]a dis-pon[]^^Pvel na url "http://www2.correio
 s.com.br/sistemas/rastreamento/",
  []
 
-<Imagens/c1.jpg, id=32, 1405.25pt x 602.25pt>
+<Imagens/c1.jpg, id=35, 1405.25pt x 602.25pt>
 File: Imagens/c1.jpg Graphic file (type jpg)
  <use Imagens/c1.jpg>
-Package pdftex.def Info: Imagens/c1.jpg used on input line 278.
+Package pdftex.def Info: Imagens/c1.jpg used on input line 286.
 (pdftex.def)             Requested size: 421.57826pt x 180.67639pt.
- [7 <./Imagens/c1.jpg>] [8]
-Underfull \hbox (badness 2368) in paragraph at lines 347--348
-\OT1/ptm/m/n/12 Para fins di-da-ti-cos os servi[]os cri-a-dos nesse re-lat[]ori
-o est[]ao dis-pon[]^^Pveis na url
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+[8 <./Imagens/c1.jpg>]
+Underfull \hbox (badness 1881) in paragraph at lines 357--358
+\OT1/ptm/m/n/12 Para fins di-da-ti-cos, os servi[]os cri-a-dos nesse re-lat[]or
+io est[]ao dis-pon[]^^Pveis na url
  []
 
-<Imagens/c2.jpg, id=40, 1907.125pt x 1003.75pt>
+<Imagens/c2.jpg, id=43, 1907.125pt x 1003.75pt>
 File: Imagens/c2.jpg Graphic file (type jpg)
  <use Imagens/c2.jpg>
-Package pdftex.def Info: Imagens/c2.jpg used on input line 354.
+Package pdftex.def Info: Imagens/c2.jpg used on input line 366.
 (pdftex.def)             Requested size: 438.62953pt x 230.85764pt.
 
-Overfull \hbox (11.83818pt too wide) in paragraph at lines 354--355
+Overfull \hbox (11.83818pt too wide) in paragraph at lines 366--367
  [][] 
  []
 
-(./EC1-RafaelViana.bbl [9 <./Imagens/c2.jpg>]
+[9] (./EC1-RafaelViana.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--7
+[]\OT1/ptm/m/n/12 SOAWebServices., ``Como fun-ci-o-nam os Web-Ser-vi-ces.'' $\O
+T1/pcr/m/n/12 http : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
+\OT1/pcr/m/n/12 soawebservices . com . br / como-[]funciona . aspx$\OT1/ptm/m/n
+/12 , 2012.  [On-line;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
 []\OT1/ptm/m/n/12 T. Spoint, ``Web Ser-vi-ces - Exam-ples.'' $\OT1/pcr/m/n/12 w
 ww . tutorialspoint . com /
  []
 
 
-Underfull \hbox (badness 1960) in paragraph at lines 4--7
+Underfull \hbox (badness 1960) in paragraph at lines 9--12
 \OT1/pcr/m/n/12 webservices / web _ services _ examples . htm$\OT1/ptm/m/n/12 ,
  2017.  [On-line; acesso
  []
 
 
-Underfull \hbox (badness 2409) in paragraph at lines 14--17
+Underfull \hbox (badness 2409) in paragraph at lines 19--22
 []\OT1/ptm/m/n/12 ExpressJs, ``Documenta[][]ao de re-fer[]encia da API.'' $\OT1
 /pcr/m/n/12 http : / / expressjs . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
+Underfull \hbox (badness 10000) in paragraph at lines 29--33
 \OT1/pcr/m/n/12 para-[]voce / correios-[]de-[]a-[]a-[]z / pdf / rastreamento-[]
 de-[]objetos /
  []
 
-) [10] (./EC1-RafaelViana.aux)
+) [10 <./Imagens/c2.jpg>] (./EC1-RafaelViana.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6369 strings out of 493013
- 87455 string characters out of 6135682
- 307213 words of memory out of 5000000
- 9785 multiletter control sequences out of 15000+600000
+ 6376 strings out of 493013
+ 87543 string characters out of 6135682
+ 277619 words of memory out of 5000000
+ 9791 multiletter control sequences out of 15000+600000
  24211 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,49p,572b,1680s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,10n,49p,557b,1601s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
@@ -788,10 +808,10 @@ etic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EC1-RafaelViana.pdf (10 pages, 944235 bytes).
+Output written on EC1-RafaelViana.pdf (10 pages, 958685 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

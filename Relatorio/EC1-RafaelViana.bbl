@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{webservece}
+SOAWebServices., ``{Como funcionam os WebServices}.''
+  \url{http://www.soawebservices.com.br/como-funciona.aspx}, 2012.
+\newblock [Online; acesso em 05-Outubro-2017].
+
 \bibitem{tutorial}
 T.~Spoint, ``{Web Services - Examples}.''
   \url{www.tutorialspoint.com/webservices/web_services_examples.htm}, 2017.
