@@ -49,7 +49,7 @@
     <div class="panel-body">
 
         <div class="col-lg-12 col-md-5 mx-auto">
-            <table class="table" *ngIf="resultCEP !=null">
+            <table class="table" *ngIf="resultCEP !=null || resultCEP.cep!=''">
                 <thead class="thead-inverse">
                     <tr>
 
@@ -60,14 +60,14 @@
                             CEP
                         </th>
 
-                        <th *ngIf="resultCEP.localidade != ''">
+                        <th *ngIf="resultCEP.cidade != ''">
                             Cidade
                         </th>
-                        <th *ngIf="resultCEP.logradouro  != ''">
-                            Logradouro
-                        </th>
-                        <th *ngIf="resultCEP.complemento != ''">
+                        <th *ngIf="resultCEP.complemento  != ''">
                             Complemento
+                        </th>
+                        <th *ngIf="resultCEP.complemento2 != ''">
+                            Complemento 2
                         </th>
                         <th *ngIf="resultCEP.bairro != ''">
                             Bairro
@@ -75,16 +75,7 @@
                         <th *ngIf="resultCEP.uf != ''">
                             UF
                         </th>
-                        <th *ngIf="resultCEP.unidade != ''">
-                            Unidade
-                        </th>
-
-                        <th *ngIf="resultCEP.ibge != ''">
-                            IBGE
-                        </th>
-                        <th *ngIf="resultCEP.gia != ''">
-                            GIA
-                        </th>
+                
                     </tr>
                 </thead>
                 <tbody>
@@ -92,26 +83,24 @@
                         <th *ngIf="resultCEP.cep != ''" scope="row">1</th>
                         <td *ngIf="resultCEP.cep != ''">{{resultCEP.cep}}</td>
 
-                        <td *ngIf="resultCEP.localidade != ''">{{resultCEP.localidade}}</td>
 
-                        <td *ngIf="resultCEP.logradouro != ''">{{resultCEP.logradouro}}</td>
-
+                        <td *ngIf="resultCEP.cidade != ''">{{resultCEP.cidade}}</td>
                         <td *ngIf="resultCEP.complemento != ''">{{resultCEP.complemento}}</td>
+                        
+                        <td *ngIf="resultCEP.complemento2 != ''">{{resultCEP.complemento2}}</td>
+
 
                         <td *ngIf="resultCEP.bairro != ''">{{resultCEP.bairro}}</td>
 
                         <td *ngIf="resultCEP.uf != ''">{{resultCEP.uf}}</td>
 
-                        <td *ngIf="resultCEP.ibge != ''">{{resultCEP.ibge}}</td>
-
-                        <td *ngIf="resultCEP.gia != ''">{{resultCEP.gia}}</td>
 
                     </tr>
                 </tbody>
             </table>
 
 
-            <table class="table" *ngIf="resultRast != null">
+            <table class="table" *ngIf="resultRast != null || resultCEP.codigo!=''">
                 <thead class="thead-inverse">
                     <tr>
                         <th *ngIf="resultRast.codigo != ''">

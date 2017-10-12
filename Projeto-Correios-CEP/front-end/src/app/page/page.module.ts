@@ -7,8 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageRoutingModule } from './page-routing.module';
 import { PageComponent } from './page.component';
-import { EncomendaComponent } from './dashboard/encomenda/encomenda.component';
-import { CepComponent } from './dashboard/cep/cep.component';
+
 
 
 
@@ -21,7 +20,7 @@ import { CepComponent } from './dashboard/cep/cep.component';
     PipesModule
    
   ],
-  declarations: [PageComponent,DashboardComponent, EncomendaComponent, CepComponent],
+  declarations: [PageComponent,DashboardComponent],
   providers: [],
   exports: [PipesModule,DashboardComponent]
 })

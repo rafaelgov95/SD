@@ -25,7 +25,7 @@
 \pagestyle{empty}
      
 \sloppy
-	\title{Prediction-based redundant data elimination with content overhearing in wireless networks  \\ Exercício Computacional I - Sistemas Distribuídos}
+	\title{Prediction-based redundant data elimination with content overhearing in wireless networks  \\ Apresentação I}
 
 \author{Rafael Gonçalves de Oliveira Viana\inst{1} \\\vspace*{10pt} \normalsize  \today{} }
 
@@ -87,10 +87,135 @@ transferido através de redes sem fio. A localidade dos dados é resultado
 do usuário acessa o mesmo conteúdo popular no
 Internet e também a similaridade entre diferentes
 Objetos de dados da Internet [10].
-\section{Conclusão}
-Neste relatório foi apresentado a estrutura básica de um \textit{Web Services}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP.	  	
 
-	  \bibliography{bibli}
+
+Estudos recentes mostraram que a grande maioria do tráfego
+A redundância na Internet decorre de trocas de dados duplicados de
+tamanho inferior a 150 bytes [14]. Por sua vez, o RE de camada IP em um nível de sub-pacote foi mostrado para fornecer informações significativas
+benefícios de desempenho em redes com fio. Faz uso de
+caches sincronizados entre o remetente e o receptor [15],
+[16], [17], [18]. O remetente remove a seqüência de bytes duplicada
+(tão pequeno quanto 64B) da carga útil do pacote, comparando-o
+contra pacotes previamente transmitidos e, em vez disso, insere uma barra;
+o receptor substitui o calço pela seqüência de bytes correspondente
+em pacotes recebidos anteriores para reconstruir o pacote completo.
+
+Explorando a técnica RE da camada IP com conteúdo sobre-
+ouvir em redes sem fio pode melhorar significativamente a
+Goodput e utilização de canais sem fio [12]. Contudo,
+Isso apresenta um desafio. Alarme sem probabilidade sem fio
+e a possibilidade de um receptor ouvir de múltiplas
+os transmissores causam os caches de um remetente e um receptor distante
+da sincronização, o que pode interromper a correção da RE
+e degradar sua performance. REfactor [12] trata da
+desafio pela estimativa de probabilidade de overhearing. Considerando um
+infra-estrutura de ponto de acesso único (AP) com múltiplos associados
+clientes, o remetente AP estima se o cliente receptor
+é provável que tenha ouvido um pedaço de saída do anterior
+transmissões para outros clientes. Com base nisso, o remetente
+calcula a redução esperada do tempo de transmissão resultante
+da remoção do pedaço, em consideração de possíveis
+Tempo adicional para solicitação de dados ausentes e retransmissão em
+caso de falta de cache no receptor. AP remove apenas o pedaço
+quando a redução esperada do tempo de transmissão é alta.
+
+A probabilidade de overhearing sem fio, no entanto, é difícil
+estimar com precisão. REfactor determina o problema de overhearing
+capacidade apenas pela taxa de transmissão de dados, que é simples
+mas muito provavelmente não seja suficientemente preciso por causa da dinâmica
+condições de canal e interferência em grandes redes sem fio
+redes. Uma estimativa insuficientemente precisa pode causar erros
+decisões sobre remoção ou não de redundância, e conseqüências
+Reduza o desempenho da RE. Além disso, para estender
+para várias infra-estruturas AP e redes de malha, REfac-
+O tor exige que os nós sem fio enviem uma auditoria periodicamente
+notificações e comunicar conteúdo do cache, que incorre
+custo significativo de comunicação e coordenações complexas
+entre nós. Da mesma forma, para eliminar a redundância do tráfego
+um salto em redes de malha sem fio, um nó deve coletar tal
+informações de cache de todos os outros nós dos quais o tráfego
+pode ser ouvido pelo nó do próximo salto.
+
+
+Em vez de usar uma estimativa de probabilidade de
+papel aborda o desafio do conteúdo sem fio que ouve demais
+para RE de camada IP usando previsões. Consequentemente, propomos
+Eliminação de redundância baseada em previsão com conteúdo Over-
+audição (PRECO). Em PRECO, o receptor armazena o recebido
+e o fluxo de dados ouvido em uma cadeia de pedaços. Ele compara
+os pedaços do pacote recebido com as cadeias
+cache. Em uma partida, espera-se que a futura entrada
+é muito provável que os dados correspondam aos pedaços previamente armazenados
+na corrente. O destinatário envia para os futuros dados do remetente
+previsões que incluem os hashes de pedaços na corrente. o
+o remetente remove o pedaço do pacote de saída se encontrar
+que seu hash combina com uma previsão. Desta forma, PRECO
+não depende da estimativa de probabilidade de overhearing; ele remove
+um pedaço duplicado somente se o receptor tiver armazenado em cache o pedaço.
+Ele garante um sistema eficaz e robusto de resposta de conteúdo RE
+sobre links sem fio. Também pode ser usado diretamente em múltiplos
+Infra-estrutura de AP e redes de malha sem ouvir
+notificações e comunicação de conteúdo em cache.
+
+
+
+O PRECO tem desafios fundamentalmente diferentes da previ-
+A abordagem de RE baseada em Previsão chamada PACK [19] proposta
+para o ambiente em nuvem. PACK usa um tamanho grande
+8KB o que faz com que ele não consiga identificar o conteúdo de granularidade mais fina
+redundância. Também leva a um conteúdo ineficaz que ouve demais
+uma vez que muitos nós podem não ouvir tais grandes pedaços em
+cheio no ambiente sem fio. Em contraste, o PRECO pretende
+identificar pedaços duplicados de centenas de bytes em um sub-pacote
+nivelar e trabalhar em links sem fio de baixa largura de banda. Assim, o
+O custo de transmissão das previsões deve ser considerado em ordem
+para perceber os benefícios gerais da RE. Outra questão nova em
+PRECO é a possibilidade de falta de dados em cadeias de partes.
+PACK faz previsões e combina não apenas com o recebido
+Fluxos TCP, mas também sobre os fluxos de dados ouvidos. Assim sendo,
+PRECO deve ser capaz de identificar o fluxo entre os múltiplos
+Fluxos contendo partes correspondentes que levam a uma precisão mais precisa
+previsão, apesar da falta de dados em alguns dados gerais
+fluxos.
+
+
+Além disso, exploramos os benefícios da implantação de sub-
+nível de pacote RE como um serviço de camada IP primitivo em todos os nós
+redes de malhas sem fio. Essa implantação em toda a rede pode
+fornecer benefícios de desempenho ao eliminar a redundância
+Todos os links. Graças ao PRECO que permite uma rede eficiente em toda a rede
+implantação em um ambiente sem fio, propomos ainda
+roteamento de fonte ciente de redundância em redes de malha sem fio em
+obter ganhos de desempenho maiores em toda a rede
+RÉ. Apresentamos uma "transmissão estimada consciente de redundância
+tempo "(RETT) métrica. RETT prevê a quantidade total de tempo
+seria necessário enviar um pacote de dados ao longo de uma rota tomando
+em relação ao nível de link RE. Ao encaminhar o tráfego do
+Internet para a rede de malha, um gateway escolhe a rota com
+o RETT mais baixo.
+
+Em resumo, a contribuição deste trabalho é a seguinte.
+\begin{enumerate}
+\item PRECO oferece uma solução efetiva, eficiente e escalável
+para a camada de IP baseada na camada de IP de conteúdo overhearing over over wireless
+links.
+\item Um algoritmo de roteamento consciente de redundância é proposto para fur-
+explorar os benefícios da implantação de RE em toda a rede em
+redes de malhas sem fio.
+\end{enumerate}
+
+II revisa os esquemas existentes para a eliminação de redundância em
+redes com fio e sem fio. Na seção III e IV, apresentamos 
+o design do PRECO e o algoritmo de roteamento com redundância
+m, respectivamente. A seção V apresenta avaliação de desempenho.
+A seção VI conclui este artigo.
+
+
+
+
+\section{Conclusão}
+
+\bibliography{bibli}
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  11 OCT 2017 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  11 OCT 2017 23:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -653,16 +653,19 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
 No file RafaelViana-Apresentacao.bbl.
-[2] (./RafaelViana-Apresentacao.aux) ) 
+[3] (./RafaelViana-Apresentacao.aux) ) 
 Here is how much of TeX's memory you used:
- 5739 strings out of 493013
- 80229 string characters out of 6135682
- 165828 words of memory out of 5000000
- 9195 multiletter control sequences out of 15000+600000
+ 5746 strings out of 493013
+ 80325 string characters out of 6135682
+ 167793 words of memory out of 5000000
+ 9202 multiletter control sequences out of 15000+600000
  18188 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,40p,513b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,10n,40p,264b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/
 dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
@@ -670,10 +673,10 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on RafaelViana-Apresentacao.pdf (2 pages, 70057 bytes).
+Output written on RafaelViana-Apresentacao.pdf (3 pages, 76792 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 39 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

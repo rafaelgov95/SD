@@ -32,21 +32,25 @@ export class DashboardComponent {
   constructor(private buscas: Buscas, private servico: Encomendas, private fb: FormBuilder,public toastr: ToastsManager, vcr: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vcr)
     this.type = "Tipo"
-    // this.resultCEP = new Cep("", "", "", "", "", "", "", "", "")
-    // this.resultRast = new buscaEncomenda("", "", "", "")
+    this.resultCEP = new Cep("", "", "", "", "", "", "")
+    this.resultRast = new buscaEncomenda("", "", "", "")
   }
 
   buscar() {
+    
     if (this.type == "Tipo") {
       this.showInfo()
     } else if (this.type == "CEP") {
-      this.resultRast = null;
+      this.resultCEP = new Cep("", "", "", "", "", "", "")
+      this.resultRast = new buscaEncomenda("", "", "", "")
       this.buscas.getCEP(this.UserForm.controls['cep'].value).subscribe(data => {
-        this.resultCEP = new Cep(data.cep, data.logradouro, data.complemento, data.bairro, data.localidade, data.uf, data.unidade, data.ibge, data.gia)
+        this.resultCEP = new Cep(data.cep, data.cidade, data.complemento, data.bairro, data.complemento2, data.uf,data.end)
+
         this.cshowSuccess()
       }, err => this.cshowError())
     } else if (this.type == "Rastreio") {
-      this.resultCEP = null;
+      this.resultCEP = new Cep("", "", "", "", "", "", "")
+      this.resultRast = new buscaEncomenda("", "", "", "")
       this.servico.getEncomenda(this.UserForm.controls['rast'].value).subscribe(data => {
         data = data['rast']
         this.resultRast = new buscaEncomenda(data.codigo, data.data, data.local, data.situacao)
