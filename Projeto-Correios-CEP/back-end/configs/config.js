@@ -1,6 +1,5 @@
 /*
-    @name       Rastro - API Rastreamendo de objetos - Correios
-    Configurações básicas da API
+    @name      API Rastreamendo de objetos e CEP - Correios - NodeJS
  */
 var configs = function() {
     return  {
