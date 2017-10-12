@@ -46,7 +46,7 @@
 	numbers=left,
 	numberstyle=\footnotesize,
 	numbersep=9pt,
-	tabsize=2,
+	tabsize=1,
 	breaklines=true,
 	showtabs=false,
 	captionpos=b
@@ -91,14 +91,16 @@
 
      
 \begin{resumo} 	
-  Este relatório introduz a arquitetura de um \textit{Web Service} assim como seus componentes, o mesmo relata como foi implementado um Web Server que possui uma página web e um serviço para busca de CEP e rastreamento de encomendas dos Correios, utilizando Angular no \textit{front-end} e NodeJS no \textit{back-end}.
+  Este relatório introduz a arquitetura de um \textit{Web Service} assim como seus componentes, o mesmo relata como foi implementado um Web Server que possui uma página web e serviços para busca de cidade e bairro através do CEP e rastreamento de encomendas dos correios.
 \end{resumo}
 
 
 
 \section{Introdução}
-  Com a disseminação de dispositivos com conexão a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web \textit{Web Services}, estes são necessarios para atender as mais diversas funções como o rastreio de encomendas e consultas de CEPs entre outros serviços.
-  Este relatório demonstra a arquitetura de um \textit{Web Service} e como foi implementado um \textit{Web Service} que possui serviços de consulta de CEP e rastreamento de encomendas dos correios, juntamente com uma página web oferecendo uma interface para os mesmos.
+  Com a disseminação de dispositivos com conexão a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web, estes necessarios para atender as mais diversas funções como exemplo, salas de bate-papo, e-commerces e serviços meteorológicos.
+  
+  Este relatório apresenta brevemente a arquitetura de um \textit{Web Service} e como foi implementado, serviços de consulta de cidade e barrio através do CEP e rastreamento de encomendas dos correios, juntamente com uma página web oferecendo uma interface para os serviços disponíveis.
+  
   O código deste relatório esta em sua totalidade no endereço http://github.com/rafaelgov95/SD/Projeto-Correios-CEP, e o mesmo pode ser reutilizado sobre a licença MIT.
 \section{Web Service}
 Webservice é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes, como pode ser objservado na figura \ref{wbs}, um \textit{Data Server}, disponibiliza serviços para os mais diversos tipos de dispositivos, em diferentes formatos de objetos.
@@ -110,50 +112,7 @@ Com está tecnologia é possível que novas aplicações possam interagir com aq
 	\includegraphics[scale=0.14]{Imagens/webservice.png}
 	\caption{Sistema implantando, fornecendo serviços para PCs, dispositivos móveis e outros web servers.}
 	\label{wbs}
-\end{figure}  
-\section{Qual Arquitetura de Web Service utilizar}
-Para poder identificar qual arquitetura utilizar de \textit{Web Service}, deve-se examinar os papéis individuais de cada ator no contexto, e também a pilha emergente de protocolo que o mesmo pretende utilizar.
-O mesmo pode ser publicado na intranet ou na Internet, provendo três possiveis formatos de serviços: Provedor de Serviço, Solicitante de Serviço e o Registro de Serviço.
-Para mais detalhes desta sessão incentivo consultar a referências \cite{tutorial}. 
-
-\begin{enumerate}
-	\item \textbf{Provedor de serviço:}
-	Fornece serviços web. O provedor de serviços implementa o serviço e disponibiliza-o na Internet ou intranet.
-	\item \textbf{Solicitante de Serviço:}
-	Este é um consumidor do serviço web. O solicitante utiliza um serviço da Web existente abrindo uma conexão de rede e enviando uma solicitação XML.
-	\item \textbf{Registro de serviço:}
-	Este é um diretório de serviços logicamente centralizado. O registro fornece um lugar central onde os desenvolvedores podem publicar novos serviços ou encontrar os existentes. Ele serve como centro de compensação centralizado para empresas e seus serviços.
-\end{enumerate}
-
-Outro modo de identificar qual arquitetura utilizar, é examinar a pilha emergente de protocolo que pretende utilizar. Cada dia existe mais tipos de protocolos porém existem 4 tipo que se destacam: Serviço de Transporte - "FTP", Mensgens "XML", Descrição de Serviço "WSDL"  e Descoberta de Serviço "UDDI".
-
-	Podemos observar na figura \ref{wbss}, a pilha de soluções com a pilha de tecnologia correspondente para cada camada. 
-\begin{enumerate}
-	\item \textbf{Descoberta do serviço:}
-	Responsável por centralizar os serviços em um registro comum e fornecer funcionalidades fáceis de publicação/pesquisa. Atualmente, a descoberta do serviço é tratada através de Descrição Universal, Descoberta e Integração (UDDI).
-	\item \textbf{Descrição do Serviço:}
-	Responsável por descrever a interface pública para um serviço web específico. Atualmente, a descrição do serviço é tratada através do Web Service Description Language (WSDL).
-	\item \textbf{Mensagens XML:}
-	Responsável por codificar mensagens em um formato XML comum para que as mensagens possam ser entendidas em cada uma das extremidades. Atualmente, esta camada inclui XML-RPC e SOAP.
-	\item \textbf{Serviço de transporte:}
-	 Responsável pelo transporte de mensagens entre aplicativos. Atualmente, esta camada inclui o protocolo de transporte de hipertexto (HTTP), protocolo de transferência de correio simples (SMTP), protocolo de transferência de arquivos (FTP) e protocolos mais recentes, como o protocolo de intercâmbio extensível de blocos (BEEP).
-
-
-\end{enumerate}
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{Imagens/pilhat.jpg}
-	\caption{Pilha de protocolo de transporte e suas tecnologias. }
-	\label{wbss}
-\end{figure}
-
-\subsection {Principais Serviço de Transporte de um Web Service}Os protocolos da camada inferior ficam responsáveis pelo transporte de serviços. Essa camada é responsável por transportar como exemplo mensagens XML e JSON entre dois computadores.
-\begin{enumerate}
-	\item \textbf{Hyper Text Transfer Protocol (HTTP):}
-	É a opção mais popular para o transporte de serviços. O HTTP é simples, estável e amplamente implantado. Além disso, a maioria dos firewalls permitem o tráfego HTTP. Isso permite que mensagens REST ou SOAP se mostrem como mensagens HTTP. Isso é bom se você quiser integrar aplicativos remotos, mas eleva uma série de preocupações de segurança.
-	\item \textbf{Bloqueia o protocolo de troca extensível (BEEP)}
-	Esta é uma alternativa promissora para o HTTP. O BEEP é uma nova estrutura da Task Force de Engenharia da Internet (IETF) para a construção de novos protocolos.
-\end{enumerate}
+\end{figure} 
 
 
 \subsection{Componentes de um \textit{Web Service}}
@@ -197,12 +156,57 @@ Algumas caracteriscas estão presentes no SOAP elas são:
 	\item Os dados podem ser colocados em cache, retornando sempre a mesma resposta para a mesma requisição.
 	\item Mais rápido pois precisa de menos processamento que o SOAP.
 \end{enumerate}
+ 
+ 
+ \subsection {Principais Serviço de Transporte de um Web Service}Os protocolos da camada inferior ficam responsáveis pelo transporte de serviços. Essa camada é responsável por transportar como exemplo mensagens XML e JSON entre dois computadores.
+ \begin{enumerate}
+ 	\item \textbf{Hyper Text Transfer Protocol (HTTP):}
+ 	É a opção mais popular para o transporte de serviços. O HTTP é simples, estável e amplamente implantado. Além disso, a maioria dos firewalls permitem o tráfego HTTP. Isso permite que mensagens REST ou SOAP se mostrem como mensagens HTTP. Isso é bom se você quiser integrar aplicativos remotos, mas eleva uma série de preocupações de segurança.
+ 	\item \textbf{Bloqueia o protocolo de troca extensível (BEEP)}
+ 	Esta é uma alternativa promissora para o HTTP. O BEEP é uma nova estrutura da Task Force de Engenharia da Internet (IETF) para a construção de novos protocolos.
+ \end{enumerate}
+ 
+\section{Qual Arquitetura de Web Service utilizar}
+Para poder identificar qual arquitetura utilizar de \textit{Web Service}, deve-se examinar os papéis individuais de cada ator no contexto, e também a pilha emergente de protocolo que o mesmo pretende utilizar.
+O mesmo pode ser publicado na intranet ou na Internet, provendo três possiveis formatos de serviços: Provedor de Serviço, Solicitante de Serviço e o Registro de Serviço.
+Para mais detalhes desta sessão incentivo consultar a referências \cite{tutorial}. 
+
+\begin{enumerate}
+	\item \textbf{Provedor de serviço:}
+	Fornece serviços web. O provedor de serviços implementa o serviço e disponibiliza-o na Internet ou intranet.
+	\item \textbf{Solicitante de Serviço:}
+	Este é um consumidor do serviço web. O solicitante utiliza um serviço da Web existente abrindo uma conexão de rede e enviando uma solicitação XML.
+	\item \textbf{Registro de serviço:}
+	Este é um diretório de serviços logicamente centralizado. O registro fornece um lugar central onde os desenvolvedores podem publicar novos serviços ou encontrar os existentes. Ele serve como centro de compensação centralizado para empresas e seus serviços.
+\end{enumerate}
+
+Outro modo de identificar qual arquitetura utilizar, é examinar a pilha emergente de protocolo que pretende utilizar. Cada dia existe mais tipos de protocolos porém existem 4 tipo que se destacam: Serviço de Transporte - "FTP", Mensgens "XML", Descrição de Serviço "WSDL"  e Descoberta de Serviço "UDDI".
+
+	Podemos observar na figura \ref{wbss}, a pilha de soluções com a pilha de tecnologia correspondente para cada camada. 
+\begin{enumerate}
+	\item \textbf{Descoberta do serviço:}
+	Responsável por centralizar os serviços em um registro comum e fornecer funcionalidades fáceis de publicação/pesquisa. Atualmente, a descoberta do serviço é tratada através de Descrição Universal, Descoberta e Integração (UDDI).
+	\item \textbf{Descrição do Serviço:}
+	Responsável por descrever a interface pública para um serviço web específico. Atualmente, a descrição do serviço é tratada através do Web Service Description Language (WSDL).
+	\item \textbf{Mensagens XML:}
+	Responsável por codificar mensagens em um formato XML comum para que as mensagens possam ser entendidas em cada uma das extremidades. Atualmente, esta camada inclui XML-RPC e SOAP.
+	\item \textbf{Serviço de transporte:}
+	 Responsável pelo transporte de mensagens entre aplicativos. Atualmente, esta camada inclui o protocolo de transporte de hipertexto (HTTP), protocolo de transferência de correio simples (SMTP), protocolo de transferência de arquivos (FTP) e protocolos mais recentes, como o protocolo de intercâmbio extensível de blocos (BEEP).
+
+
+\end{enumerate}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Imagens/pilhat.jpg}
+	\caption{Pilha de protocolo de transporte e suas tecnologias. }
+	\label{wbss}
+\end{figure}
 
 \section{Metodologia}
 Nesta sessão relato como foi o desenvolvimento e a implantação de um \textit{Web Service} em um \textit{Web Server} que promove serviços de busca de CEPs e rastreamento de encomendas dos correios, utilizando uma página web como interface para consultas.
  
 \subsection{Web Server}
-	O \textit{Web Server} foi implementado utilizando o NodeJS com o framework ExpressJs, onde se cria um ambiente de desenvolvimento para criação de Web Services.
+	O \textit{Web Server} foi implementado utilizando o NodeJS com o framework ExpressJs, onde se cria um ambiente de desenvolvimento para criação de serviços web.
 	\begin{quote}
 	O Node.js usa um modelo de E/S não bloqueante, que o torna leve e eficiente. O ecossistema de pacotes Node.js, npm , é o maior ecossistema de bibliotecas de código aberto do mundo \cite{nodejs}.
 	\end{quote}
@@ -211,11 +215,11 @@ Nesta sessão relato como foi o desenvolvimento e a implantação de um \textit{
 	\end{quote}
 
 \subsection{Web Service de Busca de CEP}
-	A busca de ceps, está sendo tercerizada por um \textit{Web Service} que prove  servico de consultas de CEPs, nos mais diversos tipos de empacotamento. Esses serviços são fornecidos pela empresa	\textit{VIACEP}, o site da mesma é https://viacep.com.br/.
+	A busca de cidade e bairro pelo CEP está sendo tercerizada por um \textit{Web Service}, que prove este serviço com base nos dados de seu banco de dados, nos mais diversos tipos de empacotamento. Esses serviços são fornecidos pela empresa \textit{VIACEP}, o site da mesma é https://viacep.com.br/.
 
-	Uma página Web RafaelBuscas foi desenvolvida utilizando o framework Angular, a mesma consome o serviço de buscas de cep, no formato JSON fornecido pelos servidores da Viacep.
+	Uma página web RafaelBuscas foi desenvolvida utilizando o framework Angular, a mesma consome o serviço de cep, no formato JSON fornecido pelos servidores da \textit{VIACEP}.
 	
-	A url do Web Service da VIACEP, consumido pela página RafaelBuscas, foi o http://viacep.com.br/ws/CodigoCEP/json/, o mesmo encaminha uma requisição HTTP-GET com o código do CEP válido conforme, o mesmo retorna uma resposta em JSON, com as informações do CEP (Localização, Bairro, Código IBGE, GIA entre outras), conforme a figura \ref{c33}, para mais informações sobre requisições consultar a referência \cite{viacep}. 
+	A url do serviço web da VIACEP consumida pela página RafaelBuscas, está disponível http://viacep.com.br/ws/CodigoCEP/json/, o mesmo encaminha uma requisição HTTP-GET, com o código do CEP, retornando uma resposta em JSON, com as informações do CEP (Localização, Bairro, Código IBGE, GIA entre outras), conforme a figura \ref{c33}, para mais informações sobre requisições nos servidores da \textit{VIACEP} consultar a referência \cite{viacep}. 
 	 \begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.6]{Imagens/via.png}
@@ -250,7 +254,7 @@ A Url "http://webservice.correios.com.br:80/service/rastro" é o endereço do \t
 	emph={food,name,price},emphstyle={\color{magenta}}}
 \lstinputlisting{Codigo/codigo1.xml}
 
-Utilizando a linguagem Java e a biblioteca \textit{javax.xml.soap}, houve simulação de envio de requisição SOAP com a mensagem Listing \ref{c1} para o \textit{Web Service} de rastreamento de encomendas, fornecido pelos correios para mais informações referente a API de serviços dos correios, incentivo consultar a referência \cite{correios}.
+Utilizando a linguagem Java e a biblioteca \textit{javax.xml.soap}, houve o envio de requisição SOAP com a mensagem da Listing \ref{c1} para o \textit{Web Service} de rastreamento de encomendas, fornecido pelos correios para mais informações referente a API de serviços dos correios, incentivo consultar a referência \cite{correios}.
 
 O retorno da requisição é um código XML, contendo a resposta da requisição, como demostrano na Listing \ref{c2}.
  \lstset{
@@ -277,9 +281,9 @@ O retorno da requisição é um código XML, contendo a resposta da requisição
  Esse serviço disponibilizado pelos correios apesar de ser gratuito, somente retorna a última atualização do objeto como demostrado na Listing \ref{c2}.
 \subsubsection{Serviço de Rastreamento de Encomendas alternativo utilizando Crawling na Página dos Correios}
 
-	Existe um serviço disponível na página dos correios para rastreamento de encomendas, onde é possivel realizar um crawling da página, para obter um objetivo HTML, contendo as informações da encomenda buscada.
+	Existe um serviço disponível na página dos correios para rastreamento de encomendas, onde é possivel realizar um crawling na página, para obter um objetivo HTML, contendo as informações da encomenda buscada.
 	
-	O serviço está disponível na url "http://www2.correios.com.br/sistemas/rastreamento/", a imagem \ref{c1} demostra como pode-se utilizar a ferramenta \textit{Postman}, para realizar uma requisição REST HTTP-POST, direto para página de rastreamento com objetivo de extrair informações da mesma.
+	O serviço está disponível na url "http://www2.correios.com.br/sistemas/rastreamento/", a imagem \ref{c1} demostra como pode-se utilizar a ferramenta \textit{Postman}, para realizar uma requisição REST HTTP-POST, direto para página de rastreamento, com objetivo de extrair informações da mesma.
 	
 	 \begin{figure}[H]
 	 	\centering
@@ -288,7 +292,7 @@ O retorno da requisição é um código XML, contendo a resposta da requisição
 	 	\label{c1}
 	 \end{figure}
 	
-	Para consumir o serviço da página dos correios, primeiramente, temos que criar um \textit{Web Service} com NodeJs e o framework ExpressJs, junto com a biblioteca request-promise para requisição JavaScript e a biblioteca cheerio para realizar o parse das tag do HTML.
+	Para consumir o serviço da página dos correios, primeiramente, foi desenvolvivdo um \textit{Web Service} com NodeJs e o framework ExpressJs, junto com a biblioteca request-promise para requisição JavaScript e a biblioteca cheerio para realizar o parse das tags "tr'' e ''td'' (onde estão as informações da encomenda, demostrado na figura  \ref{c1}, no campo body do response) do HTML.
 	
 	Na Listing \ref{c3} consta um método que realiza uma requisição REST - HTTP-POST no \textit{Web Server} da página web.
 	
@@ -354,10 +358,9 @@ O retorno da requisição é um código XML, contendo a resposta da requisição
 	  	
 	  	
 	  	\section{Página RafaelBuscas}
-	  	Para fins didaticos, os serviços criados nesse relatório estão disponíveis na url http://rafaelbuscas.ddns.net, a mesma possui uma página web como interface para os serviços citados nas seções anteriores.
+	  	Para fins didaticos, os serviços de rastreamento de encomendas e buscas de cep pelo código, relatados estão disponíveis na url http://rafaelbuscas.ddns.net, a mesma possui uma página web como interface para os serviços, estes que estão hospedados em uma máquina virtual do Google Cloud.
 	  	
-	  	Esta página está hospedada em uma máquina virtual do Google Cloud, a mesma disponível para buscas de cep e rastreamento de encomendas sem custos.
-	  	Na página inical no canto inferior, exite um input para o código do CEP ou do Rastreamento (fornecidos pelos correios).
+	  	Na página inical no canto inferior, existe um input para o código do CEP ou do Rastreamento (fornecidos pelos correios).
 	  	
 	  	Um componente para seleção de consulta entre Cep ou Rastremamento, com o nome de ''TIPO'', deve ser marcado como CEP ou Rastreio, antes da busca (botão com uma lupa) como demostrado na Figura \ref{c2}.
 	  	
@@ -368,7 +371,7 @@ O retorno da requisição é um código XML, contendo a resposta da requisição
 	  		\label{c2}
 	  	\end{figure}
 \section{Conclusão}
-Esse relatório demostro como pode ser criado uma página web e um \textit{web service}  que consome serviços de outros \textit{Web Services} disponíveis por outras impresas, ou utilizar os mesmos para criação de um novo serviço, para atender as mais diversas necessidades.	  	
+Neste relatório foi apresentado a estrutura básica de um \textit{Web Services}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP.	  	
 
 	  \bibliography{bibli}
 
