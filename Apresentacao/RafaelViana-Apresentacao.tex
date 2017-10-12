@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage{float}
+\usepackage[brazil]{babel}   
+%\usepackage[latin1]{inputenc}  
+\usepackage[utf8]{inputenc}  
+\usepackage{url}
+
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+
+\bibliographystyle{ieeetr}
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+
+\pagestyle{empty}
+     
+\sloppy
+	\title{Prediction-based redundant data elimination with content overhearing in wireless networks  \\ Exercício Computacional I - Sistemas Distribuídos}
+
+\author{Rafael Gonçalves de Oliveira Viana\inst{1} \\\vspace*{10pt} \normalsize  \today{} }
+
+
+\address{Sistemas de Informação -- Universidade Federal do Mato Grosso do Sul
+	(UFMS)\\
+  	Caixa Postal 79400-000 -- Coxim -- MS -- Brazil
+  \email{rafael.viana@aluno.ufms.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+     
+\begin{resumo} 	
+	Este artigo pretende melhorar a taxa de transferência  de rede sem fio
+    por supressão de transmissões de dados duplicados de
+	links de rede. Demonstrou-se que a redundância da camada IP
+	a eliminação (RE) com o conteúdo excessivo pode significar
+	melhorar o bom rendimento ea utilização de canais sem fio em dispositivos sem fio
+	meio ambiente. No entanto, a integração da camada IP RE e
+	a transmissão sem fio introduz um desafio. Ou seja, probabilístico
+	ouvir por acaso sem fio e a possibilidade de um receptor ouvir
+	de transmissores múltiplos causam caches de um remetente e um
+	receptor longe da sincronização, que pode perturbar a camada de IP
+	A correção de RE e degrada seu desempenho.
+	Os trabalhos anterios lidam com este desafio pela probabilidade de ouvir por acaso
+	que, no entanto, não é eficiente ou escalável.
+	Nesse papel, propomos uma eliminação de redundância baseada em previsão com
+	método de ouvir por acaso de conteúdo (PRECO) para resolver este desafio.
+	Ao explorar o RE baseado em predição, PRECO não requer
+	sincronização de cache e estimativa de probabilidade de ouvir por acaso,
+	o que permite a sua implantação eficiente e escalável. Baseado em
+	PRECO, exploramos os benefícios da implantação do nível de sub-pacote
+	RE como um serviço primitivo de camada IP em todos os nós na malha sem fio
+	redes, propondo um protocolo de roteamento com reconhecimento de redundância.
+	A avaliação de desempenho orientada por rastreamento mostra a eficácia e
+	eficiência de PRECO em comparação com outros métodos RE.
+\end{resumo}
+\section{Introdução}
+
+As redes sem fio têm sido uma comunicação amplamente utilizada
+paradigma para proporcionar mobilidade, Internet na cidade
+conectividade e computação ao ar livre com baixo custo e rápido
+implantação [1], [2], [3], [4], [5], [6]. No entanto, interferência
+e a qualidade da ligação fraca limita severamente o rendimento da rede sem fio
+redes especialmente para grandes redes densas [7], [8]. este
+O papel concentra-se em uma importante classe de técnicas [9], [10],
+[11], [12] que visam melhorar o rendimento da rede sem fio
+suprimindo transmissões de dados duplicados da rede
+links. Essas técnicas podem eliminar as transmissões de
+pacotes ou conteúdos de dados que foram previamente transmitidos.
+Conseqüentemente, eles podem ser classificados em duas categorias: pacotes baseados
+Eliminação de redundância (RE) [9] e baseada em conteúdo
+RE [10], [11], [12], [13]. Comparado com RE com pacotes,
+RE baseada em conteúdo pode explorar a localidade de dados na carga de trabalho
+transferido através de redes sem fio. A localidade dos dados é resultado
+do usuário acessa o mesmo conteúdo popular no
+Internet e também a similaridade entre diferentes
+Objetos de dados da Internet [10].
+\section{Conclusão}
+Neste relatório foi apresentado a estrutura básica de um \textit{Web Services}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP.	  	
+
+	  \bibliography{bibli}
+
+\end{document}
+
+
