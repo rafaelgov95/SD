@@ -1,7 +1,5 @@
 /*
     @name       Rastro - API Rastreamendo de objetos - Correios
-    @author     Tales Luna <tale.ferreira.luna@gmail.com>
-
     Configurações básicas da API
  */
 var configs = function() {
