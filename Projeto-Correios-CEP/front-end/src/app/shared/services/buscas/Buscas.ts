@@ -24,7 +24,7 @@ export class Buscas {
 
   getCEP(cep: string): Observable<Cep> {
     let options = new RequestOptions({ headers: this.headers });
-    return this.http.get('http://localhost:3000/api/correios/json/cep/'+cep,options)
+    return this.http.get('/api/correios/json/cep/'+cep,options)
       .map((response: Response) => response.json());
   }
 
