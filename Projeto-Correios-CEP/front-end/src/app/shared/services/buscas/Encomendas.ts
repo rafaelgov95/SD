@@ -25,12 +25,12 @@ export class Encomendas {
 
   getEncomenda2(encomenda: string): Observable<any> {
     let options = new RequestOptions({ headers: this.headers });
-    return this.http.get('http://localhost:3000/api/correios/json/objeto/'+encomenda,options)
+    return this.http.get('/api/correios/json/objeto/'+encomenda,options)
       .map((response: Response) => response.json());
   }
   getEncomenda(encomenda: string): Observable<buscaEncomenda> {
     let options = new RequestOptions({ headers: this.headers });
-    return this.http.get('http://localhost:3000/api/correios/json/aobjeto/'+encomenda,options)
+    return this.http.get('/api/correios/json/aobjeto/'+encomenda,options)
       .map((response: Response) => response.json());
   }
 
