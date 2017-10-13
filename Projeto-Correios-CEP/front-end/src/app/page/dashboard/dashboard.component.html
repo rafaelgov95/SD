@@ -42,13 +42,16 @@
 
 
 
-<div class="panel panel-default" *ngIf="resultCEP.cep !=''&& resultCEP !=null ">
+<div class="panel panel-default" *ngIf="resultCEP.cep !=''|| resultRast.codigo !=''||resultRast2.codigo !='' ">
     <div class="panel-heading">
         <h3 class="panel-title">Resultado do {{type}}</h3>
     </div>
     <div class="panel-body">
 
         <div class="col-lg-12 col-md-5 mx-auto">
+
+
+            
             <table class="table" *ngIf="resultCEP !=null || resultCEP.cep!=''">
                 <thead class="thead-inverse">
                     <tr>
@@ -100,7 +103,7 @@
             </table>
 
 
-            <table class="table" *ngIf="resultRast != null ">
+            <table class="table" *ngIf="resultRast.codigo != '' && resultRast.codigo != null ">
                 <thead class="thead-inverse">
                     <tr>
                         <th *ngIf="resultRast.codigo != ''">
