@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<CharSequence> adapter;
     private List<CharSequence> items;
     private String[] strings;
-    private String urlCep = "http://rafaelbuscas.ddns.net/api/correios/json/cep";
+    private String urlCep = "http://rafaelbuscas.ddns.net/api/correios/json/cep/79400000";
     private String urlRastro1 = "http://www.json-generator.com/api/json/get/bQoNZLBLZu?indent=2";
     private String urlRastro2 = "http://httpbin.org/get";
     Map<String, String> params = new HashMap<>();
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
-                urlCep+=input.getText().toString(),
+                urlCep,
                 null,
                 new Response.Listener<JSONArray>() {
                     @Override

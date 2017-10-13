@@ -60,6 +60,7 @@ export class DashboardComponent {
 
       this.servico.getEncomenda(this.UserForm.controls['rast'].value).subscribe(data => {
         console.log("REST", data)
+        data = data[0]
         this.resultRast = new buscaEncomenda(data.codigo, data.data, data.local, data.situacao)
         console.log("REST", this.resultRast)
         this.rshowSuccess()
