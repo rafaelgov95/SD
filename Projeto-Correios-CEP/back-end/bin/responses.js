@@ -12,7 +12,9 @@ var xml_return = require("./xml_return");
 var responses = function (type,data,status,res) {
     switch (type){
         case 'json':
-            return res.status(status).json(data);
+        var envar = [];
+        envar.push(data)
+            return res.status(status).json(envar);
         case 'xml':
             return res.status(status)
                 .send(xml_return(data,'rastreio',res));

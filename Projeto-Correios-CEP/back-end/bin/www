@@ -1,11 +1,5 @@
 #!/usr/bin/env node
 
-/*
-   @name       Rastro - API Rastreamendo de objetos - Correios - NodeJS
-   @author     Tales Luna <tale.ferreira.luna@gmail.com>
-
- */
-
 var app     = require('../app');
 var debug   = require('debug')('rastro-nodejs:server');
 var http    = require('http');

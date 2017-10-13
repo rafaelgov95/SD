@@ -27,7 +27,7 @@ app.use(function (req, res, next) {
 });
 
 
-app.get('/api/correios/json/cep', function (req, res) {
+app.get('/api/correios/json/cep/:cep', function (req, res) {
     var url = "https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl";
     var options = {
         ignoredNamespaces: {
@@ -35,15 +35,16 @@ app.get('/api/correios/json/cep', function (req, res) {
             override: true
         }
     };
-    var cep = req.query.cep.replace("/\D/", '');
+    var cep = req.params.cep.replace("/\D/", '');
     if (cep.length == 8) {
         soap.createClient(url, options, function (err, client) {
             if (err) {
                 res.json(false);
             } else {
-                console.log(client.describe())
-                client.consultaCEP({ cep: req.query.cep }, function (errCli, result) {
-                    res.json(errCli ? false : result['return']);
+                client.consultaCEP({ cep: req.params.cep }, function (errCli, result) {
+                    var resp = [];
+                    resp.push(errCli ? false : result['return'])
+                    res.json(resp);
                 });
             }
         });
@@ -52,25 +53,27 @@ app.get('/api/correios/json/cep', function (req, res) {
     }
 });
 
-app.get("/api/correios/json/objeto", function (req, res) {
+app.get("/api/correios/json/objeto/:code", function (req, res) {
     var url = "http://webservice.correios.com.br/service/rastro/Rastro.wsdl";
-    var objeto = req.query.code;
+    var objeto = req.params.code;
     soap.createClient(url, function (err, client) {
         if (err) {
             res.send("ERRO")
         } else {
             client.buscaEventos({ usuario: "ECT", senha: "SRO", tipo: "L", resultado: "T", lingua: 101, objetos: objeto }, function (errCli, result) {
-                res.json(errCli ? false : result['return']);
+                var resp = [];
+                resp.push(errCli ? false : result['return'])
+                res.json(resp);
             });
         }
     });
 });
 
-app.get('/api/correios/json/altobjeto', function (req, res) {
+app.get('/api/correios/json/aobjeto/:code', function (req, res) {
     WebSRO.request(req)
         .then(function (data) {
             var response = WebSRO.parser(data);
-            responses(req.params.type, response, HTTPStatus.OK, res);
+            responses("json", response, HTTPStatus.OK, res);
 
         }).catch(function (err) {
             var messages = {};

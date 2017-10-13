@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Rafael Buscas</string>
+    <string-array name="planets_array">
+        <item>CEP</item>
+        <item>RastroV1</item>
+        <item>RastroV2</item>
+    </string-array>
+</resources>
