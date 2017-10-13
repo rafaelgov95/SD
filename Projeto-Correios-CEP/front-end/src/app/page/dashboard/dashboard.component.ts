@@ -49,8 +49,9 @@ export class DashboardComponent {
       this.resultRast = new buscaEncomenda("", "", "", "")
       this.resultRast2 = new buscaEncomenda2("", "", "", "", "")
       this.buscas.getCEP(this.UserForm.controls['cep'].value).subscribe(data => {
+        console.log(data)
         this.resultCEP = new Cep(data.cep, data.cidade, data.complemento, data.bairro, data.complemento2, data.uf, data.end)
-
+        console.log(this.resultCEP)
         this.cshowSuccess()
       }, err => this.cshowError())
     } else if (this.type == "Rastreio REST") {
@@ -73,7 +74,9 @@ export class DashboardComponent {
 
       this.servico.getEncomenda2(this.UserForm.controls['rast'].value).subscribe(data => {
         console.log("SOAP", data)
-        this.resultRast2 = new buscaEncomenda2(data.objeto.numero, data.objeto.evento.data, data.objeto.evento.cidade, data.objeto.evento.descricao, data.objeto.evento.destino.local)
+        data = data[0]
+        var numero = data.objeto.numero;
+        this.resultRast2 = new buscaEncomenda2(numero, data.objeto.evento.data, data.objeto.evento.cidade, data.objeto.evento.descricao, data.objeto.evento.destino.local)
         console.log("REST", this.resultRast2)
         this.rshowSuccess()
       }, err => this.rshowError())
