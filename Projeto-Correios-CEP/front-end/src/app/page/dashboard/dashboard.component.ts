@@ -50,6 +50,7 @@ export class DashboardComponent {
       this.resultRast2 = new buscaEncomenda2("", "", "", "", "")
       this.buscas.getCEP(this.UserForm.controls['cep'].value).subscribe(data => {
         console.log(data)
+        data = data[0]
         this.resultCEP = new Cep(data.cep, data.cidade, data.complemento, data.bairro, data.complemento2, data.uf, data.end)
         console.log(this.resultCEP)
         this.cshowSuccess()
@@ -74,7 +75,8 @@ export class DashboardComponent {
 
       this.servico.getEncomenda2(this.UserForm.controls['rast'].value).subscribe(data => {
         console.log("SOAP", data)
-        data = data[0]
+        data = data[0];
+
         var numero = data.objeto.numero;
         this.resultRast2 = new buscaEncomenda2(numero, data.objeto.evento.data, data.objeto.evento.cidade, data.objeto.evento.descricao, data.objeto.evento.destino.local)
         console.log("REST", this.resultRast2)
