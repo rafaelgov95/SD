@@ -42,7 +42,7 @@
 
 
 
-<div class="panel panel-default" *ngIf="resultCEP.cep !=''|| resultRast.codigo !=''||resultRast2.codigo !='' ">
+<div class="panel panel-default" *ngIf="resultCEP.cep !=''|| resultRast.codigo !=''||resultRast2.numero !='' ">
     <div class="panel-heading">
         <h3 class="panel-title">Resultado do {{type}}</h3>
     </div>
@@ -140,13 +140,13 @@
             </table>
 
 
-            <table class="table" *ngIf="resultRast2.codigo != '' && resultRast2.codigo != null ">
+            <table class="table" *ngIf="resultRast2.numero != '' && resultRast2.numero != null ">
                 <thead class="thead-inverse">
                     <tr>
-                        <th *ngIf="resultRast2.codigo != ''">
+                        <th *ngIf="resultRast2.numero != ''">
                             #
                         </th>
-                        <th *ngIf="resultRast2.codigo != ''">
+                        <th *ngIf="resultRast2.numero != ''">
                             Código
                         </th>
 

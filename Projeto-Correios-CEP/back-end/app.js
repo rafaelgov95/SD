@@ -46,7 +46,7 @@ app.get('/api/correios/json/cep/:cep', function (req, res) {
                 client.consultaCEP({ cep: req.params.cep }, function (errCli, result) {
                     var resp = [];
                     resp.push(errCli ? false : result['return'])
-                    res.json(errCli ? false : result['return']);
+                    res.json(resp);
                 });
             }
         });
