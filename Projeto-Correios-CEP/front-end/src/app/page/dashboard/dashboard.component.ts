@@ -5,7 +5,7 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { buscaEncomenda } from './../../shared/models/buscaEncomendas';
 import { Encomendas } from './../../shared/services/buscas/Encomendas';
-import { Component,ViewContainerRef } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 import { Buscas } from './../../shared/services/buscas/Buscas';
 import { Subscription } from 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
@@ -31,49 +31,51 @@ export class DashboardComponent {
   textoCEP: string;
   resultRast: buscaEncomenda
   resultRast2: buscaEncomenda2
-  
-  constructor(private buscas: Buscas, private servico: Encomendas, private fb: FormBuilder,public toastr: ToastsManager, vcr: ViewContainerRef) {
+
+  constructor(private buscas: Buscas, private servico: Encomendas, private fb: FormBuilder, public toastr: ToastsManager, vcr: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vcr)
     this.type = "Tipo"
     this.resultCEP = new Cep("", "", "", "", "", "", "")
     this.resultRast = new buscaEncomenda("", "", "", "")
-    this.resultRast2 = new buscaEncomenda2("", "", "", "","")
+    this.resultRast2 = new buscaEncomenda2("", "", "", "", "")
   }
 
   buscar() {
-    
+
     if (this.type == "Tipo") {
       this.showInfo()
     } else if (this.type == "CEP") {
       this.resultCEP = new Cep("", "", "", "", "", "", "")
       this.resultRast = new buscaEncomenda("", "", "", "")
-      this.resultRast2 = new buscaEncomenda2("", "", "", "","")      
+      this.resultRast2 = new buscaEncomenda2("", "", "", "", "")
       this.buscas.getCEP(this.UserForm.controls['cep'].value).subscribe(data => {
-        this.resultCEP = new Cep(data.cep, data.cidade, data.complemento, data.bairro, data.complemento2, data.uf,data.end)
+        this.resultCEP = new Cep(data.cep, data.cidade, data.complemento, data.bairro, data.complemento2, data.uf, data.end)
 
         this.cshowSuccess()
       }, err => this.cshowError())
     } else if (this.type == "Rastreio REST") {
       this.resultCEP = new Cep("", "", "", "", "", "", "")
       this.resultRast = new buscaEncomenda("", "", "", "")
-      this.resultRast2 = new buscaEncomenda2("", "", "", "","")      
-      
-      this.servico.getEncomenda(this.UserForm.controls['rast'].value).subscribe(data => {
-        data = data['rast']
-        this.resultRast = new buscaEncomenda(data.codigo, data.data, data.local, data.situacao)
-        this.rshowSuccess()
-      }, err =>  this.rshowError())
+      this.resultRast2 = new buscaEncomenda2("", "", "", "", "")
 
-    }else if (this.type == "Rastreio SOAP") {
+      this.servico.getEncomenda(this.UserForm.controls['rast'].value).subscribe(data => {
+        console.log("REST", data)
+        this.resultRast = new buscaEncomenda(data.codigo, data.data, data.local, data.situacao)
+        console.log("REST", this.resultRast)
+        this.rshowSuccess()
+      }, err => this.rshowError())
+
+    } else if (this.type == "Rastreio SOAP") {
       this.resultCEP = new Cep("", "", "", "", "", "", "")
-      this.resultRast = new buscaEncomenda("", "", "", "")      
-      this.resultRast2 = new buscaEncomenda2("", "", "", "","")
+      this.resultRast = new buscaEncomenda("", "", "", "")
+      this.resultRast2 = new buscaEncomenda2("", "", "", "", "")
 
       this.servico.getEncomenda2(this.UserForm.controls['rast'].value).subscribe(data => {
-      
-        this.resultRast2 = new buscaEncomenda2(data.objeto.numero,data.objeto.evento.data,data.objeto.evento.cidade,data.objeto.evento.descricao,data.objeto.evento.destino.local)
+        console.log("SOAP", data)
+        this.resultRast2 = new buscaEncomenda2(data.objeto.numero, data.objeto.evento.data, data.objeto.evento.cidade, data.objeto.evento.descricao, data.objeto.evento.destino.local)
+        console.log("REST", this.resultRast2)
         this.rshowSuccess()
-      }, err =>  this.rshowError())
+      }, err => this.rshowError())
 
     }
   }
