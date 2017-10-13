@@ -27,6 +27,8 @@ app.use(function (req, res, next) {
 });
 
 
+
+
 app.get('/api/correios/json/cep/:cep', function (req, res) {
     var url = "https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl";
     var options = {
@@ -44,7 +46,7 @@ app.get('/api/correios/json/cep/:cep', function (req, res) {
                 client.consultaCEP({ cep: req.params.cep }, function (errCli, result) {
                     var resp = [];
                     resp.push(errCli ? false : result['return'])
-                    res.json(resp);
+                    res.json(errCli ? false : result['return']);
                 });
             }
         });
@@ -90,7 +92,6 @@ app.get('/api/correios/json/aobjeto/:code', function (req, res) {
             responses(req.params.type, error, error.code, res);
         });
 });
-
 
 app.use('/*', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');

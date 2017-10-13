@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<CharSequence> adapter;
     private List<CharSequence> items;
     private String[] strings;
-    private String urlCep = "http://rafaelbuscas.ddns.net/api/correios/json/cep?cep=";
+    private String urlCep = "http://localhost:3000/api/correios/json/cep";
     private String urlRastro1 = "http://www.json-generator.com/api/json/get/bQoNZLBLZu?indent=2";
     private String urlRastro2 = "http://httpbin.org/get";
     Map<String, String> params = new HashMap<>();
@@ -75,13 +75,13 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.botao_busca)
     public void buscar() {
-        urlCep+=input.getText().toString();
+       ;
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.PUT,
-                urlRastro1,
+                urlCep+=input.getText().toString(),
                 null,
                 new Response.Listener<JSONArray>() {
                     @Override

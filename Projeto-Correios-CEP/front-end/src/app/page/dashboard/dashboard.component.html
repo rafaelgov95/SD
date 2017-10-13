@@ -16,7 +16,7 @@
                     <form [formGroup]="UserForm" >
                         <input type="text" disabled  placeholder="Por favor escolha uma opcão ao lado.!!" class="form-control" aria-label="..." required *ngIf="type=='Tipo'">                             
                         <input type="text" id="cep" formControlName="cep" placeholder="CEP Ex:79400000" class="form-control" aria-label="..." required *ngIf="type=='CEP'"> 
-                        <input type="text" id="rast" formControlName="rast" placeholder="Código de Rastreiamento Ex:RY908347422SG" class="form-control" aria-label="..." required *ngIf="type=='Rastreio'">
+                        <input type="text" id="rast" formControlName="rast" placeholder="Código de Rastreiamento Ex:RY908347422SG" class="form-control" aria-label="..." required *ngIf="type=='Rastreio SOAP' || type=='Rastreio REST'"  >
                     </form>
                     <div class="input-group-btn">
 
@@ -25,8 +25,8 @@
 
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="#" (click)="type='CEP'">CEP</a></li>
-                            <li><a href="#" (click)="type='Rastreio'">Rastreio</a></li>
-
+                            <li><a href="#" (click)="type='Rastreio SOAP'">Rastreio SOAP</a></li>
+                            <li><a href="#" (click)="type='Rastreio REST'">Rastreio REST</a></li>
                         </ul>
                     </div>
                     <!-- /btn-group -->
@@ -42,7 +42,7 @@
 
 
 
-<div class="panel panel-default" *ngIf="resultCEP !=null || resultRast!=null">
+<div class="panel panel-default" *ngIf="resultCEP.cep !=''&& resultCEP !=null ">
     <div class="panel-heading">
         <h3 class="panel-title">Resultado do {{type}}</h3>
     </div>
@@ -100,7 +100,7 @@
             </table>
 
 
-            <table class="table" *ngIf="resultRast != null || resultCEP.codigo!=''">
+            <table class="table" *ngIf="resultRast.codigo != '' && resultRast.codigo != null ">
                 <thead class="thead-inverse">
                     <tr>
                         <th *ngIf="resultRast.codigo != ''">
@@ -135,6 +135,50 @@
                     </tr>
                 </tbody>
             </table>
+
+
+            <table class="table" *ngIf="resultRast2.codigo != '' && resultRast2.codigo != null ">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th *ngIf="resultRast2.codigo != ''">
+                            #
+                        </th>
+                        <th *ngIf="resultRast2.codigo != ''">
+                            Código
+                        </th>
+
+                        <th *ngIf="resultRast2.data != ''">
+                            Data
+                        </th>
+                        <th *ngIf="resultRast2.local  != ''">
+                            Local
+                        </th>
+                        <th *ngIf="resultRast2.descricao != ''">
+                            Situação
+                        </th>
+                        <th *ngIf="resultRast2.destino != ''">
+                            Destino
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th *ngIf="resultRast2.codigo != ''" scope="row">1</th>
+                        <td *ngIf="resultRast2.codigo != ''">{{resultRast2.codigo}}</td>
+
+                        <td *ngIf="resultRast2.data != ''">{{resultRast2.data}}</td>
+
+                        <td *ngIf="resultRast2.local != ''">{{resultRast2.local}}</td>
+
+                        <td *ngIf="resultRast2.descricao!= ''">{{resultRast2.descricao}}</td>
+                        <td *ngIf="resultRast2.destino!= ''">{{resultRast2.destino}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+
+
+
         </div>
     </div>
 </div>

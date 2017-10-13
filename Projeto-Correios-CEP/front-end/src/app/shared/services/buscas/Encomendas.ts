@@ -1,3 +1,4 @@
+import { buscaEncomenda2 } from './../../models/buscaEncomendas2';
 import { buscaEncomenda } from './../../models/buscaEncomendas';
 import { Observable } from 'rxjs';
 import { Injectable, EventEmitter } from '@angular/core';
@@ -22,9 +23,14 @@ export class Encomendas {
     
   }
 
+  getEncomenda2(encomenda: string): Observable<any> {
+    let options = new RequestOptions({ headers: this.headers });
+    return this.http.get('http://localhost:3000/api/correios/json/objeto/'+encomenda,options)
+      .map((response: Response) => response.json());
+  }
   getEncomenda(encomenda: string): Observable<buscaEncomenda> {
     let options = new RequestOptions({ headers: this.headers });
-    return this.http.get('/crastro/json/objeto?code='+encomenda,options)
+    return this.http.get('http://localhost:3000/api/correios/json/aobjeto/'+encomenda,options)
       .map((response: Response) => response.json());
   }
 
