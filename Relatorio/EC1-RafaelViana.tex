@@ -104,11 +104,11 @@
 \section{Introdução}
 	  Com a disseminação de dispositivos com conexão a Internet na sociedade atual, houvesse a necessidade de criar/gerenciar serviços web, estes necessarios para atender as mais diversas funções como exemplo, salas de bate-papo, e-commerces e serviços meteorológicos entre outros.
   
-  Este relatório apresenta brevemente a arquitetura de um \textit{Web Service} e como foi implementado, serviços de consulta de cidade e barrio através do CEP e rastreamento de encomendas dos correios, juntamente com uma página web e um aplicativo Android que oferece uma interface para os serviços disponíveis pelo \textit{Web Server} Rafael Buscas.
+  Este relatório apresenta brevemente a arquitetura de um \textit{Web Service} e como foi implementado, serviços de consulta de cidade e barrio através do CEP e rastreamento de encomendas dos correios, juntamente com uma página web(rafaelbuscas.ddns.net) e um aplicativo Android que oferece uma interface para os serviços disponíveis pelo \textit{Web Server} Rafael Buscas.
   
   O código deste relatório está em sua totalidade no endereço http://github.com/rafaelgov95/SD/Projeto-Correios-CEP, e o mesmo pode ser reutilizado sobre a licença MIT.
 \section{Web Service}
-Webservice é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes, como pode ser objservado na figura \ref{wbs}, um \textit{Data Server}, disponibiliza serviços para os mais diversos tipos de dispositivos, em diferentes formatos de objetos.
+Web service é uma solução utilizada na integração de sistemas e na comunicação entre aplicações diferentes, como pode ser objservado na figura \ref{wbs}, um \textit{Data Server}, disponibiliza serviços para os mais diversos tipos de dispositivos, em diferentes formatos de objetos.
 
 Com está tecnologia é possível que novas aplicações possam interagir com aquelas que já existem e que sistemas desenvolvidos em plataformas diferentes sejam compatíveis. 
  \cite{webservece}.
@@ -216,7 +216,7 @@ Nesta sessão relato como foi o desenvolvimento e a implantação de um \textit{
 	\end{quote}
 
 \subsection{\textit{Web Service} de Busca de CEP}\label{web:cep}
-	A busca de cidade e bairro pelo CEP está sendo realiza por um serviço disponível, no WSDL dos 
+	A busca de cidade e bairro pelo CEP está sendo realiza, a partir de um serviço disponível, no WSDL dos 
 	correios com a url https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl.
 	
 	Conforme pode-se observar na figura \ref{c33}, existem diversos serviços neste WSDL, porém só será utilizado o serviço de consulta de cep, com o nome \textit{consultaCEP}.
@@ -228,7 +228,7 @@ Nesta sessão relato como foi o desenvolvimento e a implantação de um \textit{
 		\label{c33}
 	\end{figure}
 
-Utilizando o node-soap (já comentado na sessão \ref{soapt}), uma requisição HTTP-GET de consulta de cep encaminhada para \textit{Web Serve} Rafael Buscas, na url http://rafaelbuscas.ddns.net/api/correios/json/cep/Codigo e recebida por um serviço web, que dispara uma requisição de consulta de cep, por SOAP para o serviço de consulta dos correios, onde após retorno da mesma as informações são repassadas para a requisição inicial.
+Utilizando o node-soap (já comentado na sessão \ref{soapt}), uma requisição HTTP-GET de consulta de cep encaminhada para \textit{Web Serve} Rafael Buscas, na url http://rafaelbuscas.ddns.net/api/correios/json/cep/Codigo, a mesma é recebida por um serviço web, que dispara uma requisição de consulta de cep por SOAP para o serviço de consulta dos correios, onde após retorno da mesma as informações são repassadas para a requisição inicial.
 
 As linhas de código que recebe a requisição incial, conecta-se ao WSDL dos correios e reenvia a consulta, pode ser objservada na figura \ref{c22}. 
 	
@@ -318,21 +318,21 @@ Na figura \ref{en:1} utilizando o NodeJS ea biblioteca node-soap, uma solicitaç
 	  	\begin{figure}[H]
 	  		\centering
 	  		\includegraphics[scale=0.23]{Imagens/c2.jpg}
-	  		\caption{Página Web Rafael Buscas, demostração de busca de encomendas via SOAP.}
+	  		\caption{Página Web Rafael Buscas, demostração de busca de encomenda via SOAP.}
 	  		\label{c2}
-	  	\end{figure}
+	  	\end{figure}	
   	
   	Além da página web, um aplicativo para plataforma Android (figura \ref{and}), foi desenvolvido pra demostração de portabilidade dos serviços desenvolvidos neste documento, o mesmo possui as mesmas funcionalidades da página web.
   	
   	\begin{figure}[H]
   		\centering
   		\includegraphics[scale=0.2]{Imagens/android.png}
-  		\caption{Aplicativo Android Rafael Buscas, demostração de busca de encomendas via SOAP.}
+  		\caption{Aplicativo Android Rafael Buscas, demostração de busca de encomenda via SOAP.}
   		\label{and}
   	\end{figure}
    
 \section{Conclusão}
-Neste relatório foi apresentado a estrutura básica de um \textit{Web Service}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP.	  	
+Neste relatório foi apresentado a estrutura básica de um \textit{Web Service}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP, a partir de dispositivos diferentes, porém do mesmo \textit{Web Servece}.	  	
 
 	  \bibliography{bibli}
 

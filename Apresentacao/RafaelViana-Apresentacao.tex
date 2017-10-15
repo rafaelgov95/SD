@@ -342,9 +342,614 @@ PRECO precisa resolver os seguintes problemas:
 	para aumentar a precisão da previsão? (Seção III-C)
 \end{enumerate}
 
+\subsection{Chunking e Caching}
+
+\begin{enumerate}
+	\item Chunking Algorithm
+	
+	• 
+	PRECO divide a carga útil de um
+	pacote em pedaços por um algoritmo de fragmentação baseada em conteúdo.
+	Este algoritmo determina os limites do bloco usando o conteúdo
+	em vez de deslocamento, então alterações localizadas no fluxo de dados apenas
+	afetam os pedaços que estão perto das mudanças, o que permite
+	e robusta identificação de conteúdo duplicado em diferentes
+	objetos de dados. Um número de algoritmo de fragmentação baseada em conteúdo
+	foram propostos, incluindo as impressões digitais de Rabin [20], [10],
+	MAXP [14], SAMPLEBYTE [17] e rolamento baseado em XOR
+	hash [19]. Como REfactor [12], PRECO usa MAXP [14] para
+	define limites de partes, porque o MAXP fornece uniformemente
+	limites de partes distribuídas em toda a carga útil e impõe uma
+	limite inferior no comprimento do pedaço e baixa carga computacional.
+	MAXP seleciona uma posição como limite de pedaço se seu valor de hash for
+	o máximo (ou mínimo) sobre todos os hashes calculados sobre o
+	região de byte-p centrada nessa posição. A carga útil do pacote é
+	divididos em pedaços por esses limites, como mostrado na Figura 1.
+	O tamanho esperado do pedaço é p e todos os pedaços devem ter comprimento
+	pelo menos p / 2, exceto o último no final da carga útil [27].
+	Ignoramos o último pedaço se seu tamanho for inferior a p / 2, tal
+	como o pedaço que segue Chunk2 na Figura 1. p deveria ser
+	significativamente maior do que o tamanho da soma de um pedaço de hash e shim
+	em PRECO porque a economia efetiva de largura de banda resultou
+	de uma previsão bem sucedida do bloco é o tamanho do bloco menos
+	o tamanho da soma. Adicionalmente, também limitamos o comprimento máximo
+	de um pedaço para bytes B max. A determinação do tamanho do bloco
+	deve considerar o trade-off entre despesas de previsão e
+	economias de largura de banda. Um tamanho de bloco maior reduz o número de
+	mensagens de previsão, enquanto um tamanho de pedaço menor pode aumentar
+	a eficiência de detecção de bytes redundantes.
+	
+	\item Caching Received and Overheard Chunks
+	
+	• 
+	Em PRECO,
+	os nós sem fio ouvem as transmissões de fluxos TCP.
+	PRECO identifica cada fluxo por (src, dst, src port, dst port)
+	tupla, referida como ID do fluxo. Um nó sem fio mantém
+	uma lista de fluxo para gravar as IDs dos fluxos do TCP, que
+	Atualmente está recebendo e ouvindo demais. Quando um novo pacote
+	chega, o nó verifica a lista para determinar se o
+	O pacote é de um novo fluxo ou de um fluxo existente. Se o
+	O pacote é de um fluxo existente, seus pedaços estão ligados a
+	pedaços anteriormente ouvidos no mesmo fluxo. De outra forma,
+	o nó cria uma entrada para o novo fluxo na lista
+	e armazena os cachimbos do pacote. Um período de tempo limite é
+	especificado para cada entrada, e é reiniciado sempre que um novo
+	O pacote é recebido do fluxo dessa entrada. Garante o
+	local de tempo de transmissão de pedaços na mesma cadeia. A
+	a entrada é excluída se nenhum pacote do fluxo correspondente
+	são ouvidos ou recebidos dentro do período de tempo limite.
+	Lembre-se de que um fluxo consiste de pacotes, um pacote consiste
+	de pedaços, e um pedaço consiste em bytes de dados. O sem fio
+	nodos armazenam os pedaços ouvidos / recebidos em seu pedaço local
+	cache com os hashes e números de seqüência do
+	pedaços. O número de seqüência de um pedaço é o número de seqüência
+	de seu pacote TCP contendo mais o deslocamento do pedaço em
+	a carga útil do pacote. Os pedaços de pacotes do mesmo TCP
+	O fluxo está ligado a uma cadeia na ordem de sua sequência
+	números, como mostrado na Figura 1. Além disso, qualquer byte no pedaço
+	tem um número de sequência que é o número de sequência do bloco
+	mais o deslocamento do byte no pedaço. Os pedaços no
+	A cadeia pode não ser dados consecutivos no fluxo, devido a
+	falta de dados devido à audição probabilística e ignorada
+	pedaços pelo algoritmo de fragmentação. Ainda assim, o nó em um multi-
+	A rede sem fio pode ter a chance de preencher as falhas
+	dados incorridos pela audição probabilística, uma vez que pode
+	ouvir o mesmo pacote em diferentes lúpulos.
+	
+	Os nós sem fio podem receber / ouvir o mesmo pacote
+	várias vezes, quer por mecanismos de retransmissão
+	em 802.11 protocolos MAC e TCP, ou porque os nós
+	em redes de múltiplos saltos pode ouvir a transmissão de
+	um pacote em diferentes lúpulos. Para detectar pacotes duplicados,
+	PRECO armazena o número de seqüência TCP de um pacote, juntamente com o seu
+	pedaços no cache. PRECO considera um pacote duplicado
+	se repetiu o número de seqüência TCP no fluxo. De
+	Ignorando pacotes duplicados, PRECO garante que apenas um único
+	A cópia do pacote é cortada e armazenada, evitando assim
+	custo desnecessário de processamento e armazenamento.
+	
+
+	
+	
+\end{enumerate}
+	\subsection{ 
+		Eliminação de Redundância Baseada em Previsão}
+	\begin{enumerate}
+	\item 	Prediction Algorithm
+	
+	Ao receber um novo pacote
+	do remetente, o receptor executa o corte e calcula
+	o hash para cada pedaço na carga útil, e então olha para cima
+	esses hashes em seu cache local. Se um hash de um pedaço for
+	encontrado, significa que existe um par duplicado no cache.
+	Com base nas cadeias que contêm os pedaços correspondentes, o
+	receptor encontra os pedaços que provavelmente apareceriam em
+	os próximos dados recebidos, e envia ao remetente os seus hashes
+	como previsões.
+	Abaixo, explicamos como encontrar os pedaços como previsões.
+	A abordagem anterior PACK [19] faz previsões para cada pedaço de segmento ingle porque novos pedaços chegam sequencialmente em
+	Transmissão TCP. Toda vez que um pedaço de correspondência é encontrado, ele re-
+	lança uma seqüência de partes subsequentes ao pedaço de correspondência
+	na cadeia para previsões. Tal algoritmo de previsão, como,
+	nunca, é eficiente para PRECO. Isso ocorre porque em PRECO,
+	um pacote pode ter vários pedaços que têm duplicações em
+	o cache. Se a previsão for feita para cada correspondência,
+	múltiplas seqüências de pedaços, cada uma seguindo uma correspondência
+	pedaço, seria recuperado para prever a mesma entrada
+	dados, que incorrem em transmissões de previsão extras. Além disso,
+	esses pedaços de correspondência podem ser espalhados por diferentes cadeias,
+	mas algumas cadeias podem não ter muito em comum com a
+	objeto de dados na transmissão e previsões dessas cadeias
+	são inúteis. Para resolver esses problemas, PRECO determina um
+	pedaço de correspondência, o que leva à sequência de partes mais
+	provável que apareça no futuro dados recebidos, e usa o
+	Seqüência de pedaços seguindo-o na cadeia para predição.
+	
+	Nos referimos a um tal pedaço de correspondência como uma âncora de previsão.
+	
+	Para determinar a melhor âncora de previsão, primeiro encontramos a
+	cadeia que tem "correspondência máxima" com os pedaços recebidos
+	e depois decidir qual pedaço de correspondência é usado como o
+	âncora de previsão. Para esse fim, um método direto
+	é escolher a cadeia que contém o maior tamanho total
+	de pedaços de correspondência, e use o maior entre todos os
+	trocados correspondentes naquela corrente como âncora de previsão. Dentro
+	detalhe, denotar as correntes por L 1, ..., L k. Suponha que cada cadeia L i
+	tem pedaços de correspondência {C i, 1, C i, 2, ..., C i, l i}. Deixe | C i, m | seja do tamanho
+	do pedaço C im. O tamanho total dos pedaços de correspondência na cadeia L i
+	eu sou.
+	 Este método,
+	No entanto, pode não gerar previsões eficientes, pois não
+	não considere as distâncias entre os pedaços de correspondência em
+	Transmissão TCP. A eficácia do RE baseado em previsão vem
+	da continuidade do conteúdo duplicado. Se a correspondência
+	os pedaços estão vagamente espalhados na corrente com grandes lacunas
+	entre si, a corrente não está bem combinada com a
+	objeto de dados na transmissão e pode fornecer previsões ruins.
+	Assim, apresentamos uma abordagem de fragmentação para encontrar o
+	Cadeia de "correspondência máxima" com a consideração da
+	distâncias entre os pedaços de correspondência.
+	
+	\item 
+	Transmissão de Previsão e Decodificação de Shim
+	
+	Para o
+	eficácia das previsões, PRECO limita a faixa de dados
+	previsto a partir de uma âncora de previsão, estabelecendo uma previsão
+	Janela W. Na sequência do bloco seguindo a previsão
+	âncora, um pedaço só pode ser usado para predição se o
+	A distância entre ele e a âncora de previsão é menor que W.
+	O receptor recupera os hashes do bloco dentro da previsão
+	janela, e usa-os para previsões de bits. Cada pedaço
+	Também é atribuído com um ID de previsão que é a sua sequência
+	número na janela. Uma previsão de bloco inclui um hash para
+	o pedaço de entrada esperado. O receptor envia o pedaço
+	previsões para o remetente em uma mensagem de previsão. O pedaço
+	as previsões na mesma mensagem de previsão formam uma seqüência.
+	O receptor também mantém um cache de previsão para armazenar
+	previsões enviadas recentemente ao remetente.
+	Ao receber uma mensagem de previsão do receptor, o
+	o remetente extrai as previsões do bloco e os armazena em um
+	cache de previsão local. Começa a comparar as previsões
+	com seus dados de saída. Para cada pacote de saída, o remetente
+	executa o algoritmo de fragmentação (na Seção III-B1) para dividir
+	a carga útil em pedaços e tenta combinar as previsões
+	com esses pedaços. Se achar que um pedaço coincide com um
+	previsão, o remetente substitui o conteúdo e insere um calço
+	em vez disso, incluindo o deslocamento do pedaço no pacote e
+	o número de sequência do pedaço no mensagem de previsão.
+	Depois de receber um pacote contendo um calço do remetente, o
+	o receptor encontra o pedaço correspondente ao número de seqüência
+	no calço, e reconstrói o pacote completo, substituindo o
+	calce com o pedaço.
+		\end{enumerate}
+	\subsection{Redundância-Aware Source Routing In Wireless Mesh
+		Redes}
+	
+	Em redes de malha sem fio, cada roteador de malha compartilha In-
+	acesso de ternet comunicando-se com alguns nós de gateway
+	e fornece conectividade com a Internet para clientes móveis. É muito
+	prometendo melhorar o rendimento da malha sem fio rede-
+	funciona eliminando a redundância no tráfego transferido
+	dos gateways para roteadores de malha. Nesta seção, consideramos
+	para implantar PRECO como um serviço primitivo de camada IP em todos os nós
+	em redes de malha sem fio e aproveitar os benefícios do roteamento
+	para maximizar a oportunidade de reduzir o conteúdo redundante.
+	Figure 3 gives an example
+	Gateway
+	to show the benefit of the
+	redundancy-aware source rout-
+	abc e
+	ing. Each link is labeled with
+	ETT=3
+	ETT=2
+	its ETT (Expected Transmis-
+	A2
+	abc d
+	sion Time) metric [28] defined
+	A1
+	as the expected MAC layer du-
+	ETT=4
+	ETT=3
+	A4
+	ration for a successful trans-
+	A3
+	abc d
+	A5 ETT=3
+	mission. Client C1 requests a
+	ETT=4
+	data object D1 consisting of
+	C2
+	C1
+	chunks a, b, c and d, and
+	abc d
+	the gateway chooses the route
+	Gateway-A1 - A3 to trans-
+	Fig. 3. RE with on-path caching.
+	fer the data object. Traditional
+	ETT-based source routing protocol chooses the route with the
+	minimum sum of ETT of links on the path. Thus, when C2
+	requests a data object D2 consisting of chunks a, b, c and e,
+	the gateway chooses the route Gateway- A2 - A4 - A5 with
+	ETT metric of 8. Suppose each router on a path caches the
+	transferred data object and is capable of removing redundant
+	content. Then, if the route Gateway - A1 - A3 - A5 is used
+	for transferring D2, the redundant content a, b, c can be
+	removed over links Gateway-A and A1 - A, and only
+	e is required to transfer over these links. Suppose the size of
+	each chunk is equal to a packet size, then according to the
+	computation of ETT, the time required to transfer D2 over
+	link Gateway-A1 and A1 - A3 is 3 and 4 respectively.
+	The total ETT for D2 is 3+4+16=23. The traditional ETT-
+	based route Gateway-A2 -A4 - A5, however, has a total
+	ETT for D2 is 8+12+12=32.
+	
+	\begin{enumerate}
+		\item 
+		Métrica de Roteamento com Redundância
+		
+		
+		Propomos uma "transmissão estimada consciente de redundância
+		Time "(RETT) de um link derivado do ETT met-
+		ric [28]. ETT é calculado por ETX x SB onde ETX [29] é
+		Transmissão esperada Contagem que estima o número de
+		Retransmissões necessárias para entregar um pacote sobre o link, S é
+		o tamanho médio do pacote e B é a largura de banda. Suponha que
+		um pacote tem uma razão de redundância média em comparação com
+		o cache de pacotes em um link. Então, o tempo de transmissão esperado para o pacote com a consideração da redundância
+		A eliminação sobre o link, ou seja, RETT, pode ser calculada por
+		Esta métrica de link pode refletir com mais precisão a transmissão
+		Tempo para transmissão de conteúdo aproveitando o redun-
+		Dant conteúdo nos roteadores. No entanto, também tem problemas.
+		Primeiro, ignora a sobrecarga das transmissões de previsão.
+		Em segundo lugar, a razão de redundância a varia entre os pacotes e
+		depende do conteúdo dos pacotes. Em terceiro lugar, é extremamente
+		caro para um protocolo de roteamento para calcular uma rota ótima
+		para cada pacote individual. Para lidar com esses problemas, nossa solução
+		é considerar o roteamento ideal para um fluxo TCP completo ou grande
+		dados em massa no fluxo, de modo que uma rota ideal possa ser
+		decidiu por um grupo de pacotes com maior probabilidade de ter
+		o perfil de redundância semelhante. Para a transmissão de previsão
+		sobrecarga, uma vez que uma mensagem de previsão contém várias partes
+		previsões. A sobrecarga de uma mensagem de previsão é amortizada
+		sobre todas as predações de pedaços na mensagem. Além disso, cada um
+		a predição de bloco tem um tamanho muito menor (por exemplo, 32 bits hash +
+		ID de previsão de 10 bits) do que o tamanho médio do pedaço (por exemplo, 256 bytes).
+		Portanto, a sobrecarga de previsão é insignificante, especialmente
+		quando os dados tiverem redundância suficiente. A métrica RETT
+		de uma rota é a soma das métricas do link. Prevê o total
+		quantidade de tempo que demoraria para enviar os dados em massa ao longo de um
+		rota, levando em consideração o nível de link RE.
+		
+		\item Routing Protocol
+		
+		Com base nas discussões acima, propomos uma redundância -
+		protocolo de roteamento de código ciente para um gateway para encaminhar tráfego
+		da Internet para a rede de malha.
+		Para a computação RETT, podemos usar o método no anterior
+		trabalhe [29] para calcular o ETX de cada link. Cada roteador de malha
+		transmite sondas de link de tamanho fixo em um período médio, e
+		calcula a taxa de entrega contando o número de sondas
+		recebido durante uma janela de tempo. Então, os roteadores relatam o
+		estatísticas de volta para o gateway. Para obter a razão de redundância
+		Para um dado em massa, o gateway armazena todos os dados a granel transferidos
+		juntamente com suas informações de caminho de roteamento. Usando o anteriormente
+		algoritmo de fragmentação introduzido, o gateway também divide cada
+		transferiu dados em massa para pequenos pedaços, calcula o hash
+		por cada pedaço, e armazena-os no seu cache. Quando
+		encaminhando um novo volume de dados, o gateway divide-o em pedaços
+		e olha para cima seus hashes no cache do pedaço para encontrar o volume -
+		dados no cache que tem o maior número de duplicatas
+		pedaços com os novos dados em massa, denotados por N max. Suponha que o
+		novos dados em massa têm N número de pedaços. Então, a redundância
+		A relação dos novos dados em massa é a = N max / N.
+		Suponha que a rota para os dados em massa que tem N max
+		O número de partes duplicadas consiste em nós n 1, n 2, ..., n k.
+		Com PRECO que executa RE com base na previsão do receptor,
+		qualquer link com n i como o nó receptor pode possivelmente obter o
+		benefício da RE. Para garantir uma transmissão de previsão negligenciável
+		custo comparado com a redundância a ser removida, podemos
+		Dê um limiar a T. Ou seja, se N max / N maior a T, a métrica RETT é
+		calculado pela Equação (2), caso contrário, é igual a ETT. Depois de
+		calculando a métrica RETT de todos os links, o gateway é executado
+		O algoritmo de Dijkstra para encontrar a rota com o RETT mais baixo.
+		
+		
+		No acima, o cálculo da métrica RETT do link em
+		O protocolo de roteamento proposto não considera o efeito
+		de conteúdo ouvido para redundância de eliminação de PRECO.
+		Considera apenas o efeito de dados armazenados em cache no caminho
+		transferir. Alguns links podem não ter nós no caminho, mas eles
+		tem nós que ouviu o conteúdo duplicado. Com estas
+		overhearing nodos como receptores de nós em links e redundância
+		serviço de eliminação, esses links podem ter menor expectativa
+		tempo de transmissão do que o ETT, e, portanto, pode ser usado para
+		encontre uma rota melhor. No entanto, para calcular RETT para estes
+		links, o gateway precisa ter uma estimativa precisa do
+		probabilidade de overhearing de nós, que foi mostrado para
+		seja difícil. Devido a isso, nosso protocolo de roteamento calcula
+		as rotas com base em que o gateway possui o roteamento definitivo
+		informações de dados em massa transferidos anteriormente. Enquanto isso,
+		o benefício do conteúdo de audição pode ser oportunista
+		explorado como apresentado anteriormente no nosso método RE. que
+		é, cada receptor prevê os dados que serão transmitidos para
+		baseia-se nos dados recebidos e ouvidos em seu cache para
+		eliminação de redundância na transmissão de dados.
+	\end{enumerate}
+
+\subsection{Performance Evaluation}
 
 
-\bibliography{bibli}
+Neste artigo, desenvolvemos um simulador usando Java para
+realizar experimentos de simulação de rastreamento real para avaliar
+o desempenho de PRECO. Nós reunimos traços de dados sem fio
+de executar o aplicativo do YouTube em dois smartphones, que são
+iPhone 6 plus e Xiao Mi 3. Para capturar o tráfego, nós
+deixe o tráfego passar por um laptop (Lenovo T420 com Windows
+10) e usou o software Wireshark para capturá-lo. Especificamente,
+nós conectamos o laptop à Internet com o cabo e
+configure o modo Hotspot no laptop. Os dois smartphones
+estão conectados com o laptop usando o WiFi compartilhado pelo laptop.
+Como resultado, os dois smartphones podem acessar a Internet.
+Os dois smartphones assistiram o mesmo selecionado aleatoriamente
+vídeos durante 20 minutos, e depois assisti dois vídeos diferentes
+com conteúdo similar durante 10 minutos, como mostrado na Figura 4.
+Esse processo foi repetido duas vezes. Nós coletamos dados 60 minutos a
+dia por 7 dias no total. O rastreamento de dados em direção ao iPhone 6 plus
+é denotado como T raça 1 e o outro é denunciado como T corrida 2.
+Finalmente, obtivemos dados de 1.71GB para T race 1 e 1.64GB para
+T corrida 2. Comparamos PRECO com EndRE [17], assimétrico
+Caching (AC) [11] e REfactor [12] usando o seguinte
+Métricas:
+
+\begin{enumerate}
+	
+	\item Eficiência RE. 
+	É a proporção dos bytes totais de redução
+	dados redundantes para o volume total de dados e calculados por
+	(V No-RE - V RE) / V No-RE, onde V No-RE é o total de dados
+	volume e V RE é o volume total dos dados reduzidos.
+	Uma maior eficiência de RE significa uma maior taxa de previsão,
+	eventualmente, uma maior precisão de previsão.
+	
+	\item • Sobrecarga da rede.
+	 É calculado por V Overhead
+	V dados, onde
+	V Overhead é o volume de dados das mensagens de previsão e
+	hashes na transmissão de conteúdo e os dados V são do tamanho do
+	total de dados de conteúdo transmitido.
+	\item • Relação de economia de banda.
+	 É calculado por (V No-RE-V RE-
+	V Overhead) / V No-RE para mostrar a largura de banda final
+	poupança causada por RE e rede de redução de despesas gerais.
+	
+	\begin{enumerate}
+		\item Configuração de Simulação
+		
+		Avaliamos a eficiência do PRECO com três diferentes
+		cenários de simulação. Primeiro, implantamos uma infra-estrutura AP
+		com um cliente associado em nosso simulador para avaliar o
+		desempenho de PRECO sem conteúdo ouvido. Então,
+		nós simulamos uma rede pequena com dois APs, cada um com um
+		cliente associado, para avaliar o desempenho de PRECO usando
+		Conteúdo que ouve demais. Finalmente, construímos um tipo de rede sem fio
+		rede de malha para avaliar os benefícios da redundância
+		encaminhamento. PRECO usa MAXP para encontrar os limites do pedaço
+		e o traço é dividido em pedaços por esses limites.
+		Limitamos os tamanhos do bloco a [256,1024] bytes. Nós estabelecemos o
+		limiar de distância de fusão d T = 1500 bytes e a inicial
+		Tamanho da janela de previsão W 0 = 4KB.
+		
+		\item Point-to-Point RE Efficiency
+		
+		
+		Nesta simulação, o nodo AP transferências sucessivas
+		T corrida 1 e T corrida 2. PRECO permite ao cliente utilizar
+		T corrida 1 no cache para fazer previsões quando o AP começou a
+		transmite T corrida 2. O AP removei bytes redundantes com base em
+		as previsões do cliente. A Tabela I mostra experiências
+		resultados para as diferentes métricas sem eliminação de redundância
+		("Não-RE") e com PRECO.
+		Como podemos ver, para a corrida T 2, PRECO reduz o tráfego
+		volume de 1,64 GB a 0,51 GB. Além disso, quando a transferência-
+		anel T raça 1, há também considerável redundância, mais de 16%,
+		detectado por PRECO mesmo sem transmissão de dados anterior.
+		Isso indica que tal redundância existe na própria corrida T 1.
+		Em comparação com a significativa redução de tráfego, a rede
+		a sobrecarga é insignificante. Podemos ver que o PRECO é efetivo em
+		reduzindo o custo da largura de banda tanto para a corrida T quanto para a corrida T 2. Mais distante-
+		mais, ao transferir T raça 2, PRECO pode alcançar maior
+		relação de economia de banda, em comparação com a transmissão T race 1.
+		Isso ocorre porque durante a transmissão de T race 2, PRECO pode
+		reduzir os dados redundantes, não apenas usando o seu próprio anterior
+		tráfego, mas também usando o tráfego anterior da corrida T 1.
+		
+		\item Benefícios do conteúdo Overhearing
+		
+		Nesta simulação, dois nós AP, doados pela AP1 e AP2,
+		e dois clientes, designados por C 1 e C 2, são implantados. AP 1
+		transfere a corrida T 1 para C 1 e C 2 funciona em modo promíscuo
+		para que possa ouvir a transmissão entre AP1 e C 1.
+		Ao mesmo tempo, AP2 transfere T corrida 2 para C 2. Medimos a eficiência de RE, a sobrecarga de rede e a economia de banda
+		razão de PRECO, EndRE, AC e REfactor com cache diferente
+		tamanhos e probabilidades de overhearing. Salvo indicação em contrário,
+		a probabilidade de overhearing foi ajustada para 80% e o receptor
+		O tamanho do cache foi definido como 200MB.
+		
+		A Figura 5 (a) e 5 (b) mostram, respectivamente, a eficiência RE
+		de diferentes métodos com o tamanho do cache no receptor
+		variando de 20MB para 200MB, e que com o overheair
+		mudança de probabilidade de 0% para 100%. Nós vemos que o
+		A eficiência RE segue PRECO> REfactor> EndRE> AC. EndRE
+		e AC geram menor eficiência de RE porque não fornecem
+		porto ouvindo, e eles perdem as oportunidades de eliminar
+		redundância baseada no tráfego ouvido. Além de usar
+		Overhearing, PRECO pode fazer uma previsão mais precisa sobre
+		dados redundantes do que AC. AC escolhe a mensagem de feedback em
+		cache do receptor ao encontrar o segmento de fluxo combinado com
+		o número máximo de partes correspondentes em comparação com
+		o fluxo recebido. O algoritmo de predição de PRECO usado no
+		O receptor considera não apenas o número de partes correspondentes, mas
+		também a distância entre eles, que fornece mais precisa
+		previsão do que AC. Observamos ainda isso, embora REfactor
+		também suporta overhearing, produz eficiência de RE menor
+		do que PRECO. REfactor toma a decisão da remoção de partes
+		com base na estimativa de probabilidade de overhearing, que pode
+		não seja preciso porque o resultado da estimativa é vulnerável a
+		as mudanças dinâmicas na rede. Se a estimativa for
+		não é preciso, o REfactor pode tomar uma decisão errada sobre
+		eliminação de redundância.
+		
+		Da Figura 5 (a), também podemos encontrar isso com o aumento de
+		o tamanho do cache, a eficiência RE aumenta. A razão é que
+		O cache com um tamanho maior armazena mais cachimbos, o que
+		melhorar a probabilidade de eliminação de redundância e, em seguida,
+		Eficiência RE. Além disso, vemos isso, para PRECO e REfactor, o
+		A eficiência de RE aumenta com a probabilidade de overhearing. Isto é
+		porque essa maior probabilidade de overhearing traz muito mais
+		pedaços redundantes de outras transmissões, o que melhora
+		a precisão da predição e, em seguida, a eficiência RE.
+		A Figura 6 (a) e a Figura 6 (b) mostram, respectivamente, a rede
+		sobrecarga de diferentes métodos com tamanho de cache variando de
+		20MB a 200MB e que com probabilidade de overhearing
+		de 0% a 100%. Vemos de ambos os personagens, REfactor tem
+		a maior sobrecarga da rede entre todos esses métodos RE.
+		A razão é que no REfactor, para estimar a
+		probabilidade de overhearing para dados transmitidos, dois APs precisam
+		comunicar uns com os outros, o que incorre em uma grande quantidade de
+		sobrecarga de rede. Para o EndRE, a sobrecarga da rede vem dos hashes da peça na transmissão de conteúdo. Em AC, o
+		A sobrecarga de rede inclui os maus-tratos no feedback
+		mensagens e transmissão de conteúdo. Para PRECO, a rede
+		a sobrecarga inclui os hashes de bloco e os IDs nas mesas de previsão.
+		sages e IDs na transmissão de conteúdo. Como resultado, EndRE, AC
+		e PRECO geram muito mais sobrecarga de rede do que o REfactor.
+		Da Figura 6 (a), também encontramos que com o tamanho do cache aumentado
+		As despesas gerais da rede aumentam.
+		Para AC e PRECO, o
+		O motivo é que um cache com um tamanho maior trará mais dados
+		redução e leva a mais hash sobrecarga na transmissão.
+		Para REfactor, à medida que o tamanho do cache aumenta, o remetente armazenará em cache
+		mais pedaços e produzir mais sobrecarga para ouvir
+		estimativa de probabilidade. Em EndRE, para descarregar o hash
+		informando do receptor para o remetente, as transferências do remetente
+		os maços de dados de todos os conteúdos, independentemente da
+		os pedaços de dados são redundantes ou não, então a carga de hash continua
+		constante. A Figura 6 (b) mostra que as sobrecargas da rede em
+		PRECO e REfactor aumentam com o aumento da sobre-
+		probabilidade auditiva. A maior probabilidade de overhearing produz
+		maior eficiência de RE, o que leva a mais hashes transmitidos
+		devido à redução de dados. Para EndRE e AC, o aumento
+		da probabilidade de overhearing não tem efeito em sua rede
+		overheads porque eles não consideram o conteúdo ouvir demais.
+		A Figura 7 (a) e a Figura 7 (b) mostram, respectivamente, a largura de banda
+		relação de economia de diferentes métodos com o tamanho do cache no receptor
+		variando de 20MB para 200MB, e que com o overheair
+		mudança de probabilidade de 0% para 100%. Vemos que a banda-
+		A relação de economia de largura segue PRECO> REfactor> EndRE> AC.
+		O resultado é consistente com o da Figura 5 (a) e da Figura 5 (b)
+		uma vez que a economia de largura de banda é causada principalmente pela eficiência RE
+		e as despesas gerais da rede representam apenas uma parte muito pequena
+		do custo da largura de banda.
+		
+		\item Benefícios do Roteamento com Redundância
+		
+		Na simulação, implantamos uma rede de malha com 5 linhas
+		e 5 colunas no total. Nós marcamos o nó como 0, 1, 2, 3, 4), onde m e n são o índice de linha e coluna
+	respectivamente. A 0,0 é o gateway desta rede de malha. o
+gateway como o nó de origem envia os pacotes para o cliente C 1,
+associado a A 4,3, cliente C 2, associado a A 4,4, e
+cliente C 3, associado a A 3,4. Nesse cenário, estabelecemos o
+overhearing cobertura para 1. Isso significa que apenas o nó do remetente
+O nó vizinho pode ouvir a transmissão de dados, o que
+confirma o cenário prático, já que os nós mais próximos têm
+muito mais chance de ouvir os dados enviados pelo remetente. C 2
+pode ouvir a transmissão de dados de A 4,3 para C 1 e A 3,4 para
+C 3. O gateway envia a corrida T 1 para C 1 e C 3 sucessivamente,
+Ao mesmo tempo, envia T corrida 2 para C 2. Nós nos preocupamos com a
+taxa de transferência de rede de A 0,0 a C 2. A taxa média de data para
+Cada link varia de 800Kps a 1200Kps
+
+Para investigar os benefícios da nossa proposta
+protocolo de roteamento com redundância, implementamos três roteiros
+se aproxima. (1) roteamento baseado em ETT: o gateway determina
+a rota ótima para um receptor usando a métrica ETT, e lá
+não existe uma implantação PRECO em toda a rede para executar RE
+todos os links; (2) roteamento com redundância sem conteúdo
+overhearing: o PRECO de toda a rede é implantado, mas sem
+O conteúdo em excesso, ou seja, apenas o cache no caminho está habilitado para
+RE e o gateway calcula a métrica RETT para selecionar
+a rota ótima para um receptor; (3) encaminhamento com redundância
+com conteúdo que ouve demais: é como a segunda abordagem, exceto
+que o overhearing do conteúdo está ativado no PRECO. O cache
+O tamanho no receptor foi ajustado para 200MB. Nós normalizamos o
+taxa de transferência (bytes / segundo) do roteamento ciente de redundância por esse
+do roteamento baseado em ETT.
+A Figura 8 (a) mostra o rendimento normalizado do gate-
+caminho para o cliente C 2 quando a probabilidade de overhearing foi variada
+de 0% a 100%. Da figura, podemos ver isso comparado
+com o roteamento baseado em ETT, nossa recomendação de redundância proposta
+o roteamento pode produzir 20% mais de vazão. Isto é porque
+Ao contrário do roteamento baseado em ETT, o roteamento com redundância
+usa RE. Ou seja, o gateway orienta o tráfego através do
+nós com alta redundância, o que ajuda a reduzir a transmissão
+tempo e melhorar o rendimento. Quando o conteúdo está ouvindo demais
+é considerado, o throughput é ainda melhorado. Nós podemos
+Veja como a probabilidade de overhearing aumenta, o throughput
+aumento cresce. Quando a probabilidade de overhearing é de 90%
+o throughput é melhorado em mais de 60%. A razão é que
+À medida que aumenta a probabilidade de overhearing, o nó recebe
+pedaços mais redundantes de outras transmissões, o que
+melhorar a precisão da predição no PRECO e reduzir ainda mais
+os dados redundantes. Nós também testamos nosso protocolo de roteamento com redundância usando diferentes métodos RE. O normalizado
+O throughput entre o gateway e o cliente é plotado
+na Figura 8 (b).
+
+Vemos isso em comparação com o ETT
+abordagem de roteamento, tanto as abordagens RE podem melhorar a
+throughput devido ao roteamento com redundância e RE
+métodos. Verificamos também que a melhoria da taxa de
+baixo PRECO> REfactor> EndRE> AC. Isto é porque alto
+RE eficiência significa menos transmissão de dados em cada link,
+o que reduz mais tempo de transmissão no caminho total e
+produz maior melhora na produção. Uma vez que o RE ef
+a sigilo PRECO> REfactor> EndRE> AC, o PRECO
+supera outros métodos sobre a melhoria do throughput. o
+as melhorias de produção crescem em PRECO e REfactor como
+a probabilidade de overhearing aumenta devido às mesmas razões
+como na Figura 5 (b).
+	\end{enumerate}
+\end{enumerate}
+ 
+ \section{Conclusão}
+ 
+ Neste artigo, propusemos uma camada IP baseada em predição RE
+ método com conteúdo ouvido chamado PRECO para wireless
+ redes. Em PRECO, os receptores sem fio comparam as entradas
+ pacotes com pacotes recebidos ou ouvidos anteriores, prever
+ futuros dados recebidos, e enviar seus hashes para o
+ remetentes. Um remetente sem fio remove pedaços de dados redundantes
+ que já existe no cache do receptor, comparando o
+ hashes de pedaços de dados de saída com as previsões de
+ o receptor. Nós também propusemos novos algoritmos de previsão
+ que permitem que PRECO efetivamente melhore a precisão da predição
+ e economia global de largura de banda. PRECO é vantajoso do que
+ Métodos de RE anteriores baseados em overhearing em dois aspectos. Primeiro,
+ por camada de IP baseada em predição RE, PRECO não requer
+ estimativa de probabilidade de overhearing. Em segundo lugar, não precisa
+ comunicação de conteúdo do cache e coordenação complexa a-
+ mong nodos sem fio ao serem implantados em vários AP
+ infra-estruturas e redes de malha. Assim, ele permite eficiência
+ RE de toda a rede com overheaming de conteúdo para rede sem fio
+ trabalho. Exploramos o serviço de camada IP em toda a rede em
+ redes de malha sem fio, e propôs um conhecimento de redundância
+ protocolo de roteamento para melhorar ainda mais seu benefício. Traçada
+ Os resultados da simulação mostram que o PRECO fornece significantes per-
+ benefícios de formatura em comparação com outros métodos RE. Dentro
+ o futuro trabalho, exploraremos como habilitar o gateway
+ para aprender eficientemente os fluxos de dados gerais de todos os nós para
+ determinação da rota em redes de malha.
+
 
 \end{document}
 
