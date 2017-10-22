@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{socket}
+Caelum, ``{Apêndice - Sockets}.''
+  \url{https://www.caelum.com.br/apostila-java-orientacao-objetos/apendice-sockets/},
+  2017.
+\newblock [Online; acesso em 18-Outubro-2017].
+
+\bibitem{conc}
+Caelum, ``{Apêndice - Problemas com concorrência}.''
+  \url{https://www.caelum.com.br/apostila-java-orientacao-objetos/apendice-problemas-com-concorrencia/},
+  2017.
+\newblock [Online; acesso em 20-Outubro-2017].
+
+\end{thebibliography}
