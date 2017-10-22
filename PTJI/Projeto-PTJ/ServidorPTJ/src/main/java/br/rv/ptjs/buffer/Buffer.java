@@ -8,10 +8,13 @@ import java.util.*;
 public class Buffer {
 
 
-    private static Collection<String> buffer = new Vector<String>();
+    public static Collection<String> buffer = new Vector<String>();
+    public static Collection<String> ports = new Vector<String>();
 
     public Buffer() {
-
+        this.ports = new Vector<String>();
+        this.ports.add("2324");
+        this.ports.add("2323");
     }
 
     public static void addMensagem(InputStream is, PrintStream ps) {
@@ -26,17 +29,19 @@ public class Buffer {
 
     }
 
-    public static void getMensagem() throws InterruptedException {
+    public static String getMensagem() throws InterruptedException {
         String nome = Thread.currentThread().getName();
         synchronized (buffer) {
             if (!buffer.isEmpty()) {
                 Thread.sleep(10000);
-                System.out.println("|Impressora " + nome + "| Data: " + LocalTime.now().toString() + "| Mensagem: " + buffer.toArray()[0] + " |");
+               String  m = buffer.toArray()[0].toString();
                 buffer.remove(buffer.toArray()[0]);
+                return "|Impressora " + nome + "| Data: " + LocalTime.now().toString() + "| Mensagem: " + m + " |";
+
             } else {
             }
         }
-
+    return "Error";
     }
 
 }
