@@ -5,7 +5,7 @@ import java.net.*;
 
 public class Cliente {
     public static void main(String[] args)
-            throws UnknownHostException, IOException {
+            throws UnknownHostException, IOException, InterruptedException {
         new Cliente("127.0.0.1", 2222).executa();
     }
 
@@ -17,19 +17,19 @@ public class Cliente {
         this.porta = porta;
     }
 
-    public void executa() throws UnknownHostException, IOException {
-        System.out.println("Vem vindo ao impressora magica!");
+    public void executa() throws UnknownHostException, IOException, InterruptedException {
+        System.out.println("Bem vindo digite algo para ser impresso!");
         BufferedReader rf = new BufferedReader(new InputStreamReader(System.in));
         String mensagem = rf.readLine();
         Socket cliente = new Socket(this.host, this.porta);
         System.out.println("O cliente se conectou ao servidor!");
 
         Recebedor r = new Recebedor(cliente.getInputStream());
-        new Thread(r).start();
-
+        Thread t1 = new Thread(r);
+        t1.start();
         PrintStream saida = new PrintStream(cliente.getOutputStream());
         saida.println(mensagem);
-        System.out.println("Mensagem enviada para impressao.....");
+        t1.join();
         saida.close();
         cliente.close();
     }

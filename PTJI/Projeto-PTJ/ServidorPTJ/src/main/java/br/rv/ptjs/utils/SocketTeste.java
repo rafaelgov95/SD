@@ -1,22 +1,26 @@
 package br.rv.ptjs.utils;
 
+import br.rv.ptjs.model.Impressora;
+
 import java.io.IOException;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SocketTeste {
-    public static boolean available(int port) {
+    public static boolean available(Impressora imp) {
         boolean portTaken = false;
-        ServerSocket socket = null;
+        Socket socket = null;
         try {
-            socket = new ServerSocket(port);
+            socket = new Socket(imp.getIp(), imp.getPorta());
         } catch (IOException e) {
-            portTaken = true;
+            return false;
         } finally {
             if (socket != null)
                 try {
                     socket.close();
-                } catch (IOException e) { /* e.printStackTrace(); */ }
+                    return true;
+                } catch (IOException e) {
+                    return false;
+                }
         }
         return false;
     }

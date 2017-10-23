@@ -1,47 +1,47 @@
 package br.rv.ptjs.buffer;
 
+import br.rv.ptjs.model.Documento;
+import br.rv.ptjs.model.Impressora;
+
+import javax.print.Doc;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.net.Socket;
 import java.time.LocalTime;
 import java.util.*;
 
 public class Buffer {
 
 
-    public static Collection<String> buffer = new Vector<String>();
-    public static Collection<String> ports = new Vector<String>();
+    public final static List<Documento> Documentos = new ArrayList<Documento>();
+    public final static List<Impressora> Impressoras = new ArrayList<Impressora>();
 
     public Buffer() {
-        this.ports = new Vector<String>();
-        this.ports.add("2324");
-        this.ports.add("2323");
+
+    }
+    public synchronized static boolean isDocumentos(){
+        return Documentos.isEmpty();
     }
 
-    public static void addMensagem(InputStream is, PrintStream ps) {
-        synchronized (buffer) {
+    public synchronized static boolean isImpressoras(){
+        return Impressoras.isEmpty();
+    }
+    public static void addDocumento(Documento novo) throws InterruptedException, IOException {
+        synchronized (Documentos) {
+            Documentos.add(novo);
             String nome = Thread.currentThread().getName();
-            Scanner s = new Scanner(is);
-            String mensagem = s.nextLine();
-            System.out.println("|Cliente   " + nome + "| Data: " + LocalTime.now().toString() + "| Mensagem: " +mensagem+ " |");
-            buffer.add(mensagem);
-            s.close();
+            novo.toast.println("Mensagem adicionada a Fila.");
+            System.out.println("|Cliente   " + nome  + "| Data: " + LocalTime.now().toString() + "| Mensagem: " + novo.getMensagem()+ " |");
         }
 
     }
 
-    public static String getMensagem() throws InterruptedException {
-        String nome = Thread.currentThread().getName();
-        synchronized (buffer) {
-            if (!buffer.isEmpty()) {
-                Thread.sleep(10000);
-               String  m = buffer.toArray()[0].toString();
-                buffer.remove(buffer.toArray()[0]);
-                return "|Impressora " + nome + "| Data: " + LocalTime.now().toString() + "| Mensagem: " + m + " |";
-
-            } else {
+    public static synchronized Documento getDocumento() throws InterruptedException {
+            if (!Documentos.isEmpty()) {
+                return Documentos.remove(0);
             }
-        }
-    return "Error";
+        return null;
     }
 
 }

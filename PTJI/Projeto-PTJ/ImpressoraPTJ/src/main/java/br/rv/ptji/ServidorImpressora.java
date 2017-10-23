@@ -1,4 +1,5 @@
 package br.rv.ptji;
+
 import br.rv.ptji.servicos.StartImpressora;
 
 import java.io.*;
@@ -19,12 +20,23 @@ public class ServidorImpressora {
     }
 
     public void executa() throws IOException, InterruptedException {
-        StartImpressora imp1 = new StartImpressora();
-        StartImpressora imp2 = new StartImpressora();
-        Thread t1 = new Thread(imp1);
-        t1.start();
-        Thread t2 = new Thread(imp1);
-        t2.start();
+//        StartImpressora imp1 = new StartImpressora(2323);
+//        StartImpressora imp2 = new StartImpressora(2324);
+//        Thread t1 = new Thread(imp1);
+//        t1.start();
+//        Thread t2 = new Thread(imp1);
+//        t2.start();
+//        t1.join();
+//        t2.join();
+        ServerSocket servidor = new ServerSocket(this.porta);
+        System.out.println(this.porta);
+
+        while (true) {
+            Socket cliente = servidor.accept();
+            PrintStream s = new PrintStream(cliente.getOutputStream());
+            Thread.sleep(10000);
+            s.println("OK");
+        }
 
     }
 
