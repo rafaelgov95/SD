@@ -1,0 +1,4 @@
+Impressão: 0 Cliente 47640 Data: 06:39:46.315  ERRO
+Impressão: 1 Cliente 47640 Data: 06:39:47.328  ERRO
+Impressão: 2 Cliente 47640 Data: 06:39:48.329  OK
+Impressão: 3 Cliente 47658 Data: 06:39:50.331  OK

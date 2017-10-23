@@ -5,6 +5,7 @@ import br.rv.ptji.servicos.StartImpressora;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class ServidorImpressora {
     private int porta;
@@ -30,12 +31,12 @@ public class ServidorImpressora {
         t2.join();
 //        ServerSocket servidor = new ServerSocket(this.porta);
 //        System.out.println(this.porta);
-
+//
 //        while (true) {
 //            Socket cliente = servidor.accept();
 //            PrintStream s = new PrintStream(cliente.getOutputStream());
-//            Thread.sleep(10000);
-//            s.println("OK");
+////            Thread.sleep(10000);
+//
 //        }
 
     }

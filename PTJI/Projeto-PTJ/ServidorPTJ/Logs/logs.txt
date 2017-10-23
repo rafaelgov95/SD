@@ -1,10 +1,80 @@
-|Cliente   Thread-1| Data: 03:30:38.480472| Mensagem: 1 |
-|Cliente   Thread-3| Data: 03:30:39.156212| Mensagem: 2 |
-|Cliente   Thread-5| Data: 03:30:41.018628| Mensagem: 4 |
-|Cliente   Thread-6| Data: 03:30:42.523680| Mensagem: 5 |
-|Cliente   Thread-7| Data: 03:30:53.213743| Mensagem: 3 |
-|Impressora Impressora-0| Data: 03:30:58.424612| Mensagem: 1 |
-|Impressora Impressora-1| Data: 03:30:59.156872| Mensagem: 2 |
-|Impressora Impressora-0| Data: 03:31:18.426076| Mensagem: 4 |
-|Impressora Impressora-1| Data: 03:31:19.158450| Mensagem: 5 |
-|Impressora Impressora-0| Data: 03:31:38.427666| Mensagem: 3 |
+|Cliente       47032     | Data: 06:05:49.703703| 
+|Cliente       47038     | Data: 06:05:50.398420| 
+|Cliente       47044     | Data: 06:05:51.265743| 
+|Impressora 2323| Cliente 47032| Data: 06:05:51.802132| OK
+|Cliente       47050     | Data: 06:05:52.111822| 
+|Impressora 2324| Cliente 47038| Data: 06:05:52.399905| ERRO
+|Impressora 2324| Cliente 47038| Data: 06:05:53.401118| ERRO
+|Impressora 2323| Cliente 47044| Data: 06:05:53.804666| OK
+|Impressora 2324| Cliente 47038| Data: 06:05:54.402499| OK
+|Impressora 2323| Cliente 47050| Data: 06:05:55.806990| ERRO
+|Impressora 2323| Cliente 47050| Data: 06:05:56.808589| ERRO
+|Impressora 2323| Cliente 47050| Data: 06:05:57.809904| ERRO
+|Impressora 2323| Cliente 47050| Data: 06:05:58.811344| OK
+|Cliente       47106     | Data: 06:08:50.151844| 
+|Cliente       47112     | Data: 06:08:51.908414| 
+|Cliente       47118     | Data: 06:08:54.174844| 
+|Cliente       47120     | Data: 06:08:54.238252| 
+|Cliente       47150     | Data: 06:10:54.486307| 
+|Cliente       47156     | Data: 06:10:55.066872| 
+|Impressora 2323| Cliente 47150| Data: 06:10:56.574875| ERRO
+|Impressora 2324| Cliente 47156| Data: 06:10:57.068605| OK
+|Impressora 2323| Cliente 47150| Data: 06:10:57.576164| OK
+|Cliente       47178     | Data: 06:11:43.414175| 
+|Cliente       47176     | Data: 06:11:43.610253| 
+|Impressora 2324| Cliente 47178| Data: 06:11:45.416258| OK
+|Impressora 2323| Cliente 47176| Data: 06:11:45.612260| ERRO
+|Impressora 2323| Cliente 47176| Data: 06:11:46.613630| OK
+|Cliente       47238     | Data: 06:16:28.514826| 
+|Impressora 2324| Cliente 47238| Data: 06:16:29.602757| OK
+|Cliente       47244     | Data: 06:16:30.282292| 
+|Impressora 2323| Cliente 47244| Data: 06:16:31.284294| OK
+|Cliente       47282     | Data: 06:19:23.892641| 
+|Impressora 2324| Cliente 47282| Data: 06:19:25.000599| OK
+|Cliente       47310     | Data: 06:21:14.056565| 
+|Impressora 2323| Cliente 47310| Data: 06:21:15.132885| OK
+|Cliente       47376     | Data: 06:30:12.542389| 
+|Cliente       47434     | Data: 06:34:37.069096| 
+|Cliente       47442     | Data: 06:34:38.580995| 
+|Cliente       47440     | Data: 06:34:38.770682| 
+|Impressora 2323| Cliente 47434| Data: 06:34:39.049123| OK
+|Impressora 2324| Cliente 47442| Data: 06:34:40.582504| OK
+|Impressora 2323| Cliente 47440| Data: 06:34:41.127614| ERRO
+|Cliente       47452     | Data: 06:34:41.557490| 
+|Impressora 2323| Cliente 47440| Data: 06:34:42.128972| OK
+|Impressora 2324| Cliente 47452| Data: 06:34:43.559182| ERRO
+|Impressora 2324| Cliente 47452| Data: 06:34:44.560311| OK
+|Cliente       47504     | Data: 06:35:49.853069| 
+|Cliente       47502     | Data: 06:35:51.104797| 
+|Cliente       47512     | Data: 06:35:51.139078| 
+|Impressora 2323| Cliente 47504| Data: 06:35:51.820706| ERRO
+|Cliente       47518     | Data: 06:35:51.952656| 
+|Impressora 2323| Cliente 47504| Data: 06:35:52.903915| OK
+|Impressora 2324| Cliente 47502| Data: 06:35:53.106267| ERRO
+|Impressora 2324| Cliente 47502| Data: 06:35:54.108117| ERRO
+|Impressora 2323| Cliente 47512| Data: 06:35:54.906220| OK
+|Impressora 2324| Cliente 47502| Data: 06:35:55.110012| OK
+|Cliente       47524     | Data: 06:35:55.931913| 
+|Impressora 2323| Cliente 47518| Data: 06:35:56.908410| OK
+|Impressora 2324| Cliente 47524| Data: 06:35:57.933354| OK
+|Cliente       47586     | Data: 06:38:46.963463| 
+|Impressora 2323| Cliente 47586| Data: 06:38:48.994875| ERRO
+|Impressora 2323| Cliente 47586| Data: 06:38:50.121007| OK
+|Cliente       47596     | Data: 06:38:50.338319| 
+|Cliente       47600     | Data: 06:38:50.400927| 
+|Cliente       47592     | Data: 06:38:50.689143| 
+|Impressora 2324| Cliente 47596| Data: 06:38:52.339996| OK
+|Impressora 2323| Cliente 47600| Data: 06:38:52.401291| OK
+|Impressora 2324| Cliente 47592| Data: 06:38:54.342045| OK
+|Cliente       47640     | Data: 06:39:44.196788| 
+|Cliente       47638     | Data: 06:39:44.295737| 
+|Impressora 2323| Cliente 47640| Data: 06:39:46.231043| ERRO
+|Impressora 2324| Cliente 47638| Data: 06:39:46.297449| OK
+|Cliente       47650     | Data: 06:39:46.486250| 
+|Cliente       47658     | Data: 06:39:46.555874| 
+|Impressora 2323| Cliente 47640| Data: 06:39:47.328503| ERRO
+|Impressora 2323| Cliente 47640| Data: 06:39:48.329861| OK
+|Impressora 2324| Cliente 47650| Data: 06:39:48.487744| ERRO
+|Impressora 2324| Cliente 47650| Data: 06:39:49.488712| ERRO
+|Impressora 2323| Cliente 47658| Data: 06:39:50.332536| OK
+|Impressora 2324| Cliente 47650| Data: 06:39:50.490764| OK

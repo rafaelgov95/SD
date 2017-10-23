@@ -2,6 +2,7 @@ package br.rv.ptjc;
 
 import java.io.*;
 import java.net.*;
+import java.util.Random;
 
 public class Cliente {
     public static void main(String[] args)
@@ -28,7 +29,9 @@ public class Cliente {
         Thread t1 = new Thread(r);
         t1.start();
         PrintStream saida = new PrintStream(cliente.getOutputStream());
+
         saida.println(mensagem);
+
         t1.join();
         saida.close();
         cliente.close();

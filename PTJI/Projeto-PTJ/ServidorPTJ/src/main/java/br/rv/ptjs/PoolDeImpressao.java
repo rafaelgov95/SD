@@ -29,8 +29,8 @@ public class PoolDeImpressao {
     }
 
     public void executa() throws IOException {
-        Buffer.addImpressora(new Impressora("127.0.0.1",2323,"Impressora-0"));
-        Buffer.addImpressora(new Impressora("127.0.0.1",2324,"Impressora-1"));
+        Buffer.addImpressora(new Impressora("127.0.0.1",2323,"2323"));
+        Buffer.addImpressora(new Impressora("127.0.0.1",2324,"2324"));
         SaidaDocumento escalonador = new SaidaDocumento();
         new Thread(escalonador).start();
         ServerSocket servidor = new ServerSocket(this.porta);
