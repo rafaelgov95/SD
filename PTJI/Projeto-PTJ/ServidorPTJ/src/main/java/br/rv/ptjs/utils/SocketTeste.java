@@ -5,6 +5,11 @@ import br.rv.ptjs.model.Impressora;
 import java.io.IOException;
 import java.net.Socket;
 
+/**
+ *
+ * @author rafael
+ */
+
 public class SocketTeste {
     public static boolean available(Impressora imp) {
         boolean portTaken = false;

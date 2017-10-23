@@ -6,22 +6,22 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 
 /**
  *
  * @author rafael
  */
-public class Arquivos extends Log {
 
-    public void CriarArquioX(String nome, String caminho) throws IOException {
+public class Arquivos  {
+
+    public static void CriarArquioX(String nome, String caminho,String log) throws IOException {
         String nomedoarquivo = (caminho + "/" + nome + ".txt");
         Path path = Paths.get(nomedoarquivo);
-        try (BufferedWriter escritor = Files.newBufferedWriter(path, Charset.defaultCharset())) {
-            for (int i = 0; i < getTamanhoDocumento(); i++) {
-                escritor.append(String.valueOf(i + ": " + getListaComPosi(i)));
+        try (BufferedWriter escritor = Files.newBufferedWriter(path, Charset.defaultCharset(), StandardOpenOption.APPEND)) {
+                escritor.append(log);
                 escritor.newLine();
-            }
         }
     }
 }

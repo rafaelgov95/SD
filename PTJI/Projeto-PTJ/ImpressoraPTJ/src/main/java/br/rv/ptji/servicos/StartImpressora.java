@@ -6,39 +6,29 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class StartImpressora implements Runnable {
-
-    int porta;
+    private int porta;
     public StartImpressora(int porta){
         this.porta=porta;
     }
 
-    public void run() {
-        ServerSocket servidor = null;
-        try {
-            servidor = new ServerSocket(this.porta);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void FakeImpressoras() throws InterruptedException, IOException {
+        ServerSocket servidor = new ServerSocket(this.porta);
         System.out.println(this.porta);
         while (true) {
-            Socket cliente = null;
-            try {
-                cliente = servidor.accept();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            PrintStream s = null;
-            try {
-                s = new PrintStream(cliente.getOutputStream());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Socket cliente = servidor.accept();
+            PrintStream s = new PrintStream(cliente.getOutputStream());
+            Thread.sleep(10000);
             s.println("OK");
+        }
+    }
+
+    public void run() {
+        try {
+            FakeImpressoras();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

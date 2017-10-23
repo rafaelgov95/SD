@@ -3,6 +3,11 @@ package br.rv.ptjs.servicos;
 import java.io.InputStream;
 import java.util.Scanner;
 
+/**
+ *
+ * @author rafael
+ */
+
 public class Recebedor implements Runnable {
 
     private InputStream servidor;

@@ -1,0 +1,10 @@
+|Cliente   Thread-1| Data: 03:30:38.480472| Mensagem: 1 |
+|Cliente   Thread-3| Data: 03:30:39.156212| Mensagem: 2 |
+|Cliente   Thread-5| Data: 03:30:41.018628| Mensagem: 4 |
+|Cliente   Thread-6| Data: 03:30:42.523680| Mensagem: 5 |
+|Cliente   Thread-7| Data: 03:30:53.213743| Mensagem: 3 |
+|Impressora Impressora-0| Data: 03:30:58.424612| Mensagem: 1 |
+|Impressora Impressora-1| Data: 03:30:59.156872| Mensagem: 2 |
+|Impressora Impressora-0| Data: 03:31:18.426076| Mensagem: 4 |
+|Impressora Impressora-1| Data: 03:31:19.158450| Mensagem: 5 |
+|Impressora Impressora-0| Data: 03:31:38.427666| Mensagem: 3 |

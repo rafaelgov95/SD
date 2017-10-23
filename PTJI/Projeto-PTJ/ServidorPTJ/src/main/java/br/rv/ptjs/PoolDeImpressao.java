@@ -11,6 +11,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
+/**
+ *
+ * @author rafael
+ */
+
 public class PoolDeImpressao {
     private int porta;
 
@@ -24,16 +29,12 @@ public class PoolDeImpressao {
     }
 
     public void executa() throws IOException {
-        Buffer.Impressoras.add(new Impressora("127.0.0.1",2323,"Impressora-0"));
-        Buffer.Impressoras.add(new Impressora("127.0.0.1",2324,"Impressora-1"));
-        SaidaDocumento t1 = new SaidaDocumento();
-        Thread ei = new Thread(t1);
-        ei.start();
-//        SaidaDocumento t2 = new SaidaDocumento();
-//        Thread ei1 = new Thread(t1);
-//        ei1.start();
+        Buffer.addImpressora(new Impressora("127.0.0.1",2323,"Impressora-0"));
+        Buffer.addImpressora(new Impressora("127.0.0.1",2324,"Impressora-1"));
+        SaidaDocumento escalonador = new SaidaDocumento();
+        new Thread(escalonador).start();
         ServerSocket servidor = new ServerSocket(this.porta);
-        System.out.println("Porta 222 aberta!");
+        System.out.println("Porta "+porta+" aberta!");
         while (true) {
             Socket cliente = servidor.accept();
             ChegadaDocumento tc = new ChegadaDocumento(cliente, new Scanner(cliente.getInputStream()).nextLine(),

@@ -3,6 +3,11 @@ package br.rv.ptjs.model;
 import java.io.PrintStream;
 import java.net.Socket;
 
+/**
+ *
+ * @author rafael
+ */
+
 public class Documento {
     public Socket socket;
     public String mensagem;

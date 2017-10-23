@@ -1,5 +1,10 @@
 package br.rv.ptjs.model;
 
+/**
+ *
+ * @author rafael
+ */
+
 public class Impressora {
     private String name;
     private String ip;
