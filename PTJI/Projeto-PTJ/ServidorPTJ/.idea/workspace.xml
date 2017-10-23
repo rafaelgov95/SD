@@ -98,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/br/rv/ptjs/servicos/ChegadaDocumento.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="174">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -493,12 +493,12 @@
       <updated>1508586351089</updated>
       <workItem from="1508586355976" duration="20318000" />
       <workItem from="1508609720695" duration="15148000" />
-      <workItem from="1508689413836" duration="42976000" />
+      <workItem from="1508689413836" duration="43010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78442000" />
+    <option name="totallyTimeSpent" value="78476000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -940,7 +940,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/rv/ptjs/servicos/ChegadaDocumento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
