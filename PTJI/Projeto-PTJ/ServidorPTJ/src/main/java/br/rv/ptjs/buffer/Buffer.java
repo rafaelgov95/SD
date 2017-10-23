@@ -41,7 +41,13 @@ public class Buffer {
         }
 
     }
+    public static void addLevelPDocumento(Documento novo) throws InterruptedException, IOException {
+        synchronized (Documentos) {
+            Documentos.add(0,novo);
 
+        }
+
+    }
     public static synchronized Documento getDocumento() throws InterruptedException {
         if (!Documentos.isEmpty()) {
             return Documentos.remove(0);
