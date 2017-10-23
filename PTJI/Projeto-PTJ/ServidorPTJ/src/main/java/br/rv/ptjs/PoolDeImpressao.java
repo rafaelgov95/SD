@@ -5,7 +5,9 @@ import br.rv.ptjs.model.Impressora;
 import br.rv.ptjs.servicos.ChegadaDocumento;
 import br.rv.ptjs.servicos.SaidaDocumento;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -29,12 +31,19 @@ public class PoolDeImpressao {
     }
 
     public void executa() throws IOException {
+        BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("#### BEMVINDO AO POOL DE IMPRESSÂO RAFAEL VIANA ####");
+        System.out.println("Informe em sequência R M T separados por espaço entre os valores!");
+        String[] linha = rd.readLine().split(" ");
+        Buffer.setT(Integer.parseInt(linha[2]));
+        Buffer.setM(Integer.parseInt(linha[1]));
+        Buffer.setR(Integer.parseInt(linha[0]));
+        System.out.println("Servidor Rodando na Porta "+ porta+"!");
         Buffer.addImpressora(new Impressora("127.0.0.1",2323,"2323"));
         Buffer.addImpressora(new Impressora("127.0.0.1",2324,"2324"));
         SaidaDocumento escalonador = new SaidaDocumento();
         new Thread(escalonador).start();
         ServerSocket servidor = new ServerSocket(this.porta);
-        System.out.println("Porta "+porta+" aberta!");
         while (true) {
             Socket cliente = servidor.accept();
             ChegadaDocumento tc = new ChegadaDocumento(cliente, new Scanner(cliente.getInputStream()).nextLine(),

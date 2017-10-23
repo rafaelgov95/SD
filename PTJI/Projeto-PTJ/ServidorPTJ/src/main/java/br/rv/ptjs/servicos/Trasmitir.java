@@ -32,7 +32,8 @@ public class Trasmitir implements Runnable {
         ps.println(doc.socket.getPort());
         String confirma = s.nextLine();
         if (confirma.equals("OK")) {
-            doc.toast.println("Impressão OK ");
+
+            doc.toast.println("Impressão Concluida pela Impressora " +doc.socket.getPort() +" OK  ");
             String log = "|Impressora " + imp.getName() + "| Cliente "+doc.socket.getPort()+"| Data: " + LocalTime.now().toString() + "| OK";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
@@ -40,7 +41,7 @@ public class Trasmitir implements Runnable {
             s.close();
             servidor.close();
         }else{
-            doc.toast.println("Ocorreu um erro na impressão, o mesmo será reenviado!!!! ");
+            doc.toast.println("Ocorreu um erro na impressão, na impressora "+doc.socket.getPort()+" o documento será reenviado!!!! ");
             String log = "|Impressora " + imp.getName() + "| Cliente "+doc.socket.getPort()+"| Data: " + LocalTime.now().toString() + "| ERRO";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
@@ -52,9 +53,8 @@ public class Trasmitir implements Runnable {
 
     public void probabilidadeDeEnvio() throws IOException, InterruptedException {
         Random r = new Random();
-        int proba = r.nextInt(10);
-
-        if (proba < 6) {
+        int proba = Buffer.getR()-1;
+        if (proba > r.nextInt(Buffer.getR())) {
             enviar(imp, doc);
         } else {
             Thread.sleep(100);

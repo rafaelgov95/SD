@@ -29,15 +29,6 @@ public class ServidorImpressora {
         t2.start();
         t1.join();
         t2.join();
-//        ServerSocket servidor = new ServerSocket(this.porta);
-//        System.out.println(this.porta);
-//
-//        while (true) {
-//            Socket cliente = servidor.accept();
-//            PrintStream s = new PrintStream(cliente.getOutputStream());
-////            Thread.sleep(10000);
-//
-//        }
 
     }
 

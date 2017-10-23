@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{entf}
+E.~Software, ``{Pool de impressão – você sabe sua finalidade?}.''
+  \url{http://www.devmedia.com.br/java-sockets-criando-comunicacoes-em-java/9465},
+  2017.
+\newblock [Online; acesso em 22-Outubro-2017].
+
 \bibitem{socket}
 Caelum, ``{Apêndice - Sockets}.''
   \url{https://www.caelum.com.br/apostila-java-orientacao-objetos/apendice-sockets/},

@@ -15,10 +15,16 @@ import java.util.*;
 public class Buffer {
 
 
+    private static int r;
+    private static int t;
+    private static int m;
     private final static List<Documento> Documentos = new ArrayList<Documento>();
     private final static List<Impressora> Impressoras = new ArrayList<Impressora>();
 
-    public Buffer() {
+    public Buffer(int r, int t, int m) {
+        this.r = r;
+        this.t = t;
+        this.m = m;
 
     }
 
@@ -27,10 +33,12 @@ public class Buffer {
     }
 
     public synchronized static boolean isImpressoras() {
+
         return Impressoras.isEmpty();
     }
 
     public static synchronized void addImpressora(Impressora imp){
+
         Impressoras.add(imp);
     }
 
@@ -54,6 +62,9 @@ public class Buffer {
         }
         return null;
     }
+    public static synchronized int getDocumentosSize() throws InterruptedException {
+      return Documentos.size();
+    }
 
     public static synchronized Impressora getImpressora() {
         if (!Impressoras.isEmpty()) {
@@ -62,5 +73,28 @@ public class Buffer {
         return null;
     }
 
+    public static int getR() {
+        return r;
+    }
+
+    public static void setR(int r) {
+        Buffer.r = r;
+    }
+
+    public static int getT() {
+        return t;
+    }
+
+    public static void setT(int t) {
+        Buffer.t = t;
+    }
+
+    public static int getM() {
+        return m;
+    }
+
+    public static void setM(int m) {
+        Buffer.m = m;
+    }
 
 }

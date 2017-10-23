@@ -23,7 +23,7 @@ public class Cliente {
         BufferedReader rf = new BufferedReader(new InputStreamReader(System.in));
         String mensagem = rf.readLine();
         Socket cliente = new Socket(this.host, this.porta);
-        System.out.println("O cliente se conectou ao servidor!");
+        System.out.println("O cliente de numero "+ cliente.getLocalPort() + " se conectou ao servidor "+ cliente.getPort()+"!");
 
         Recebedor r = new Recebedor(cliente.getInputStream());
         Thread t1 = new Thread(r);

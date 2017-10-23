@@ -14,8 +14,9 @@ import java.util.TreeMap;
 
 public class StartImpressora implements Runnable {
     private int porta;
-
+    private int cont;
     public StartImpressora(int porta) {
+        this.cont=0;
         this.porta = porta;
     }
 
@@ -25,22 +26,23 @@ public class StartImpressora implements Runnable {
         if(leia.hasNextLine()) {
             return leia.nextLine();
         }
-        return "Estralho";
+        return "Erro";
     }
 
     public void FakeImpressoras() throws InterruptedException, IOException {
         ServerSocket servidor = new ServerSocket(this.porta);
         System.out.println(this.porta);
-        int i=0;
+        Random r = new Random();
         while (true) {
+
+            Thread.sleep(r.nextInt(2000));
             Socket cliente = servidor.accept();
             PrintStream ps = new PrintStream(cliente.getOutputStream());
             String localPort = Port(cliente);
-            Random r = new Random();
-            Thread.sleep(1000);
-            int proba = r.nextInt(10);
-            String status ;
-            if (proba < 6) {
+            Thread.sleep(r.nextInt(100));
+            int proba = 6;
+            String status ="  OK" ;
+            if (proba > r.nextInt(10)) {
                 status="  ERRO";
                 ps.println("ERRO");
             } else {
@@ -48,7 +50,7 @@ public class StartImpressora implements Runnable {
                 ps.println("OK");
             }
             if(!localPort.equals("Estralho")) {
-                String log = "Impressão: " +(i++)+" Cliente " + localPort + " Data: " + LocalTime.now().toString()+status;
+                String log = "Impressão: " +(cont++)+" Cliente " + localPort + " Data: " + LocalTime.now().toString()+status;
                 Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
             }
 
