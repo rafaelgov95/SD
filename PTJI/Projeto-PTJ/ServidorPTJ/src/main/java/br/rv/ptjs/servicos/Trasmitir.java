@@ -33,7 +33,7 @@ public class Trasmitir implements Runnable {
         String confirma = s.nextLine();
         if (confirma.equals("OK")) {
 
-            doc.toast.println("Impressão Concluida pela Impressora " +doc.socket.getPort() +" OK  ");
+            doc.toast.println("Impressão Concluida pela Impressora " +imp.getName() +" OK  ");
             String log = "|Impressora " + imp.getName() + "| Cliente "+doc.socket.getPort()+"| Data: " + LocalTime.now().toString() + "| OK";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
@@ -41,7 +41,7 @@ public class Trasmitir implements Runnable {
             s.close();
             servidor.close();
         }else{
-            doc.toast.println("Ocorreu um erro na impressão, na impressora "+doc.socket.getPort()+" o documento será reenviado!!!! ");
+            doc.toast.println("Ocorreu um erro de impressão, na impressora "+imp.getName()+" o documento será reenviado!!!! ");
             String log = "|Impressora " + imp.getName() + "| Cliente "+doc.socket.getPort()+"| Data: " + LocalTime.now().toString() + "| ERRO";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
