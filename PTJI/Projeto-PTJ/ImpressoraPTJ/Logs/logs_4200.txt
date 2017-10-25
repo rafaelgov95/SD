@@ -4,3 +4,59 @@ Impressão: 0 Cliente Erro Data: 09:23:41.180  ERRO
 Impressora 4200 está Off-line
 Impressora 4200 está On-line
 Impressão: 1 Cliente 45342 Data: 09:23:42.254  OK
+Impressão: 0 Cliente Erro Data: 13:22:52.259  OK
+Impressora 4200 está Off-line
+Impressora 4200 está On-line
+Impressão: 1 Cliente 19192 Data: 13:22:55.234  OK
+Impressão: 0 Cliente Erro Data: 13:27:41.471  ERRO
+Impressão: 1 Cliente 19292 Data: 13:27:41.484  OK
+Impressora 4200 está Off-line
+Impressora 4200 está On-line
+Impressão: 2 Cliente Erro Data: 13:27:42.862  OK
+Impressão: 3 Cliente 19304 Data: 13:27:42.864  OK
+Impressão: 4 Cliente Erro Data: 13:27:45.928  OK
+Impressão: 5 Cliente 19320 Data: 13:27:46.029  OK
+Impressão: 6 Cliente Erro Data: 13:27:54.244  OK
+Impressão: 7 Cliente 19338 Data: 13:27:54.250  OK
+Impressora 4200 está Off-line
+Impressora 4200 está On-line
+Impressão: 0 Cliente Erro Data: 13:29:20.884  OK
+Impressão: 1 Cliente 19392 Data: 13:29:20.886  OK
+Impressão: 2 Cliente Erro Data: 13:29:22.838  OK
+Impressão: 3 Cliente 19404 Data: 13:29:22.839  OK
+Impressão: 4 Cliente Erro Data: 13:29:24.514  OK
+Impressão: 5 Cliente 19416 Data: 13:29:24.533  OK
+Impressão: 6 Cliente Erro Data: 13:29:28.422  ERRO
+Impressão: 7 Cliente 19430 Data: 13:29:28.425  OK
+Impressora 4200 está Off-line | Data: 13:31:25.154
+Impressora 4200 está On-line | Data: 13:31:27.560
+Impressão: 0 Cliente Erro Data: 13:32:00.925  ERRO
+Impressão: 1 Cliente 19486 Data: 13:32:01.135  OK
+Impressora 4200 está Off-line | Data: 13:32:01.135
+Impressora 4200 está On-line | Data: 13:32:03.338
+Impressora 4200 está Off-line | Data: 13:35:41.234
+Impressora 4200 está On-line | Data: 13:35:43.964
+Impressão: 0 Cliente Erro Data: 13:37:36.424  OK
+Impressora 4200 está Off-line | Data: 13:37:36.424
+Impressora 4200 está On-line | Data: 13:37:38.825
+Impressão: 0 Cliente Erro Data: 13:39:22.561  OK
+Impressora 4200 está Off-line | Data: 13:39:22.562
+Impressora 4200 está On-line | Data: 13:39:24.612
+Impressora 4200 está Off-line | Data: 13:42:23.861
+Impressora 4200 está On-line | Data: 13:42:26.649
+Impressão: 0 Cliente Erro Data: 13:43:54.433  OK
+Impressão: 1 Cliente 19872 Data: 13:43:54.445  OK
+Impressora 4200 está Off-line | Data: 13:43:54.445
+Impressora 4200 está On-line | Data: 13:43:56.184
+Impressão: 2 Cliente Erro Data: 13:43:56.185  OK
+Impressão: 3 Cliente 19884 Data: 13:43:56.185  OK
+Impressora 4200 está Off-line | Data: 13:43:56.186
+Impressora 4200 está On-line | Data: 13:43:57.825
+Impressão: 4 Cliente Erro Data: 13:43:57.826  OK
+Impressão: 5 Cliente 19892 Data: 13:43:57.826  OK
+Impressora 4200 está Off-line | Data: 13:43:57.827
+Impressora 4200 está On-line | Data: 13:43:59.712
+Impressão: 6 Cliente Erro Data: 13:48:51.174  OK
+Impressora 4200 está Off-line | Data: 13:48:51.174
+Impressora 4200 está On-line | Data: 13:48:53.607
+Impressão: 7 Cliente 51062 Data: 13:48:53.609  OK

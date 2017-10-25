@@ -5,3 +5,72 @@ Impressora 2324 está Off-line
 Impressora 2324 está On-line
 Impressora 2324 está Off-line
 Impressora 2324 está On-line
+Impressão: 0 Cliente Erro Data: 13:15:42.323  ERRO
+Impressão: 1 Cliente 18990 Data: 13:15:42.337  OK
+Impressão: 2 Cliente Erro Data: 13:15:42.681  OK
+Impressão: 3 Cliente 18996 Data: 13:15:42.691  OK
+Impressão: 4 Cliente Erro Data: 13:15:43.399  OK
+Impressora 4300 está Off-line
+Impressora 4300 está On-line
+Impressão: 5 Cliente 19002 Data: 13:15:45.856  OK
+Impressora 4300 está Off-line
+Impressora 4300 está On-line
+Impressão: 0 Cliente Erro Data: 13:22:52.654  ERRO
+Impressora 4300 está Off-line
+Impressora 4300 está On-line
+Impressão: 1 Cliente 19198 Data: 13:22:54.654  OK
+Impressão: 0 Cliente Erro Data: 13:27:41.990  OK
+Impressão: 1 Cliente 19298 Data: 13:27:41.998  OK
+Impressão: 2 Cliente Erro Data: 13:27:43.652  OK
+Impressão: 3 Cliente 19310 Data: 13:27:43.665  ERRO
+Impressão: 4 Cliente 19310 Data: 13:27:43.667  ERRO
+Impressão: 5 Cliente 19310 Data: 13:27:43.670  OK
+Impressão: 6 Cliente Erro Data: 13:27:53.446  ERRO
+Impressão: 7 Cliente 19332 Data: 13:27:53.454  OK
+Impressão: 0 Cliente Erro Data: 13:29:21.896  OK
+Impressão: 1 Cliente 19398 Data: 13:29:21.897  OK
+Impressão: 2 Cliente Erro Data: 13:29:24.087  ERRO
+Impressão: 3 Cliente 19410 Data: 13:29:24.088  OK
+Impressão: 4 Cliente Erro Data: 13:29:25.993  ERRO
+Impressão: 5 Cliente 19422 Data: 13:29:26.001  OK
+Impressora 4300 está Off-line | Data: 13:31:25.153
+Impressora 4300 está On-line | Data: 13:31:27.476
+Impressão: 0 Cliente Erro Data: 13:32:00.343  OK
+Impressão: 1 Cliente 19480 Data: 13:32:00.345  OK
+Impressão: 2 Cliente Erro Data: 13:32:01.707  OK
+Impressão: 3 Cliente 19492 Data: 13:32:01.709  OK
+Impressora 4300 está Off-line | Data: 13:32:01.710
+Impressora 4300 está On-line | Data: 13:32:03.481
+Impressão: 4 Cliente Erro Data: 13:32:03.971  OK
+Impressora 4300 está Off-line | Data: 13:32:03.971
+Impressora 4300 está On-line | Data: 13:32:05.303
+Impressora 4300 está Off-line | Data: 13:36:23.651
+Impressora 4300 está On-line | Data: 13:36:26.216
+Impressão: 0 Cliente Erro Data: 13:37:36.897  OK
+Impressora 4300 está Off-line | Data: 13:37:36.897
+Impressora 4300 está On-line | Data: 13:37:39.558
+Impressora 4300 está Off-line | Data: 13:38:52.211
+Impressora 4300 está On-line | Data: 13:38:54.451
+Impressão: 0 Cliente Erro Data: 13:39:24.010  OK
+Impressão: 1 Cliente 19750 Data: 13:39:24.017  OK
+Impressão: 2 Cliente Erro Data: 13:39:25.467  OK
+Impressão: 3 Cliente 19756 Data: 13:39:25.475  OK
+Impressão: 4 Cliente Erro Data: 13:39:28.271  OK
+Impressora 4300 está Off-line | Data: 13:39:28.272
+Impressora 4300 está On-line | Data: 13:39:31.225
+Impressão: 0 Cliente Erro Data: 13:43:55.147  OK
+Impressora 4300 está Off-line | Data: 13:43:55.148
+Impressora 4300 está On-line | Data: 13:43:57.174
+Impressão: 1 Cliente 19878 Data: 13:43:57.175  ERRO
+Impressão: 2 Cliente 19878 Data: 13:43:57.176  OK
+Impressão: 3 Cliente Erro Data: 13:47:41.126  OK
+Impressora 4300 está Off-line | Data: 13:47:41.127
+Impressora 4300 está On-line | Data: 13:47:42.876
+Impressão: 4 Cliente 50936 Data: 13:47:42.877  ERRO
+Impressão: 5 Cliente 50936 Data: 13:47:42.878  OK
+Impressora 4300 está Off-line | Data: 13:47:42.879
+Impressora 4300 está On-line | Data: 13:47:44.645
+Impressora 4300 está Off-line | Data: 13:58:24.616
+Impressora 4300 está On-line | Data: 13:58:27.387
+Impressora 4300 está Off-line | Data: 13:58:56.828
+Impressora 4300 está On-line | Data: 13:58:59.723

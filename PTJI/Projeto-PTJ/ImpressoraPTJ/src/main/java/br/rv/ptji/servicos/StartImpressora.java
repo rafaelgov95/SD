@@ -35,13 +35,17 @@ public class StartImpressora implements Runnable {
         Random r = new Random();
         System.out.println("Entro: " + this.porta);
         while (true) {
-            if (r.nextInt(100) < 15) {
-                String log = "Impressora " + this.porta + " está Off-line";
+            if (r.nextInt(100) < 9) {
+                String log = "Impressora " + this.porta + " está Off-line | Data: "+LocalTime.now();
                 Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
                 Thread.sleep(r.nextInt(2000) + 1000);
-                log = "Impressora " + this.porta + " está On-line";
+                log = "Impressora " + this.porta + " está On-line | Data: "+LocalTime.now();
                 Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
                 System.out.println("Volto: " + this.porta);
+                if(servidor.isClosed()){
+                    servidor.close();
+                    servidor = new ServerSocket(this.porta);
+                }
             }
             Socket cliente = servidor.accept();
             PrintStream ps = new PrintStream(cliente.getOutputStream());

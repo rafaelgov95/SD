@@ -60,11 +60,12 @@ Uma pool de impressão permite que várias impressoras físicas possam ser contr
 
 \begin{figure}[H]
  	\centering
- 	\includegraphics[width=0.7\linewidth]{imagens/screenshot001}
+ 	\includegraphics[width=0.7\linewidth]{imagens/proposta}
  	\caption{Proposta do exercício computacional.}
  	\label{fig:screenshot001}
  \end{figure}
  
+ O objetivo deste relatório é espor as dificultades e descobertas que a implementação de uma pool de impressão, 
 \section{Fundamentação Téorica} 
 	Nesta seção serão tratadas, soluçoes de problemas pertinentes que foram utilizadas neste documento.
 
@@ -80,7 +81,7 @@ O problema de concorrência existem em diversos cenários em que, um pedaço de 
 \subsection{Socket}
 
  Segundo \cite{socket}.\cite{conc}.
- Os sockets são compostos por um conjunto de primitivas do sistema operacional e foram originalmente desenvolvidos para o BSD Unix. Sockets são suportados em Java desde o JDK 1.0, para sua utilização devemos fazer uso das classes contidas no pacote java.net.\ref{fluxoSocket}.
+ Os sockets são compostos por um conjunto de primitivas do sistema operacional e foram originalmente desenvolvidos para o BSD Unix. Sockets são suportados em Java desde o JDK 1.0, para sua utilização devemos fazer uso das classes contidas no pacote java.net.\ref{fluxoSocket}. Podemos observar na figura \ref{fluxoSocket}, o funcionamento de dois tipos de Sockets  \textit{Servidor} e \textit{Cliente}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1]{imagens/fluxoSocket.JPG}
@@ -167,11 +168,14 @@ Após a criação, as Threads que representam as impressoras, as mesmas ficam ag
 \section{Comandos da Implementação }
 	Nesta seção será apresnetado os comandos para poder utilizar o Pool de Impressão. 
  
-	\subsection{Cliente}
-	
-	\subsection{Servidor}
-	
-	\subsection{Impressoras}
+
+\subsection{Cliente}
+O cliente já está configurado para porta 3000, com endereço svgov.ddns.net que, redireciona para o endereço IP dinâmico da Oi Velox residencial, onde está a pool de impressão. 
+\subsection{Servidor}
+O servidor de pool, já possui suas impressoras configuradas nas portas 4200 e 4300 com endereço sdufms2017.ddns.net, que redireciona para o endereço IP da virtual machine da Google. 
+\subsection{Impressoras}
+As impressoras já estão configuradas como Sockets servidores, aguardando mensgens encaminhadas para o endereço IP sdufms2017.ddns.net as portas 4200 e 4300.
+
  
  \section{Testes e Resultados }
  Nesta seção será demonstrado os logs das impressoras e do servidor após a conexão de 4 clientes, com o servidor.

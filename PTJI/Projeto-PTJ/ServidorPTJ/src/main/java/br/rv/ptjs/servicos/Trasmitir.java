@@ -40,7 +40,7 @@ public class Trasmitir implements Runnable {
 
         String confirma = s.nextLine();
         if (confirma.equals("OK")) {
-            doc.getToast().println("Impressão Concluida pela Impressora " + imp.getName() + " OK  ");
+            doc.getToast().println("Impressão Concluida pela Impressora " + imp.getName() + "em "+minutosEmBigDecimal+" OK  " );
             String log = "A Impressora " + imp.getName() + " concluiu, a impressão do  Cliente " + doc.getSocket().getPort() + "| Data: " + t.toString() + "| OK | Duração em Milissegundos: " + minutosEmBigDecimal;
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);

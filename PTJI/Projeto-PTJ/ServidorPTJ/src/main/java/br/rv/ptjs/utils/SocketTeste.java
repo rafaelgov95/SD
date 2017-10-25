@@ -17,8 +17,10 @@ public class SocketTeste {
         try {
             if(imp==null){
                 System.out.println("impressora null");
+
+            }else{
+                socket = new Socket(imp.getIp(), imp.getPorta());
             }
-            socket = new Socket(imp.getIp(), imp.getPorta());
         } catch (IOException e) {
             return false;
         } finally {

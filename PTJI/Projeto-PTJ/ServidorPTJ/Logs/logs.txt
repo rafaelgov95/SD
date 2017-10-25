@@ -4,3 +4,86 @@
 A Impressora 4200 concluiu, a impressão do  Cliente 45342| Data: 09:23:40.689466| OK | Duração em Milissegundos: 9
 |Cliente       45818     | Data: 09:38:16.932| 
 A Impressora 4200 concluiu, a impressão do  Cliente 45818| Data: 09:38:17.795| OK | Duração em Milissegundos: 863
+|Cliente       18990     | Data: 13:15:42.168| 
+Impressora 4200 indisponível no momento
+A Impressora 4300 concluiu, a impressão do  Cliente 18990| Data: 13:15:42.225| OK | Duração em Milissegundos: 57
+|Cliente       18996     | Data: 13:15:42.679| 
+A Impressora 4300 concluiu, a impressão do  Cliente 18996| Data: 13:15:42.691| OK | Duração em Milissegundos: 12
+|Cliente       19002     | Data: 13:15:43.398| 
+|Cliente       19008     | Data: 13:15:44.477| 
+|Cliente       19010     | Data: 13:15:45.068| 
+|Cliente       19012     | Data: 13:15:45.776| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19002| Data: 13:15:43.401| OK | Duração em Milissegundos: 3
+|Cliente       19192     | Data: 13:22:52.089| 
+|Cliente       19198     | Data: 13:22:52.653| 
+|Cliente       19204     | Data: 13:22:53.506| 
+|Cliente       19206     | Data: 13:22:54.284| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19198| Data: 13:22:52.655| OK | Duração em Milissegundos: 3
+|Cliente       19208     | Data: 13:22:55.188| 
+Impressora 4300 indisponível no momento
+A Impressora 4200 concluiu, a impressão do  Cliente 19192| Data: 13:22:52.104| OK | Duração em Milissegundos: 15
+|Cliente       19292     | Data: 13:27:41.309| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19292| Data: 13:27:41.325| OK | Duração em Milissegundos: 16
+|Cliente       19298     | Data: 13:27:41.988| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19298| Data: 13:27:41.999| OK | Duração em Milissegundos: 11
+|Cliente       19304     | Data: 13:27:42.708| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19304| Data: 13:27:42.719| OK | Duração em Milissegundos: 18
+|Cliente       19310     | Data: 13:27:43.651| 
+|Impressora 4300| Cliente 19310| Data: 13:27:43.666| ERRO AO ENCAMINHAR
+|Impressora 4300| Cliente 19310| Data: 13:27:43.668| ERRO AO ENCAMINHAR
+A Impressora 4300 concluiu, a impressão do  Cliente 19310| Data: 13:27:43.670| OK | Duração em Milissegundos: 21
+|Cliente       19320     | Data: 13:27:45.927| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19320| Data: 13:27:46.029| OK | Duração em Milissegundos: 103
+|Cliente       19332     | Data: 13:27:53.443| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19332| Data: 13:27:53.455| OK | Duração em Milissegundos: 12
+|Cliente       19338     | Data: 13:27:54.243| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19338| Data: 13:27:54.251| OK | Duração em Milissegundos: 10
+|Cliente       19392     | Data: 13:29:20.726| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19392| Data: 13:29:20.743| OK | Duração em Milissegundos: 18
+|Cliente       19398     | Data: 13:29:21.894| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19398| Data: 13:29:21.896| OK | Duração em Milissegundos: 2
+|Cliente       19404     | Data: 13:29:22.837| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19404| Data: 13:29:22.838| OK | Duração em Milissegundos: 2
+|Cliente       19410     | Data: 13:29:24.086| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19410| Data: 13:29:24.087| OK | Duração em Milissegundos: 1
+|Cliente       19416     | Data: 13:29:24.512| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19416| Data: 13:29:24.533| OK | Duração em Milissegundos: 21
+|Cliente       19422     | Data: 13:29:25.992| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19422| Data: 13:29:26.002| OK | Duração em Milissegundos: 15
+|Cliente       19430     | Data: 13:29:28.418| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19430| Data: 13:29:28.426| OK | Duração em Milissegundos: 8
+|Cliente       19480     | Data: 13:32:00.309| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19480| Data: 13:32:00.315| OK | Duração em Milissegundos: 6
+|Cliente       19486     | Data: 13:32:00.923| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19486| Data: 13:32:01.135| OK | Duração em Milissegundos: 212
+|Cliente       19492     | Data: 13:32:01.705| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19492| Data: 13:32:01.710| OK | Duração em Milissegundos: 5
+|Cliente       19498     | Data: 13:32:02.726| 
+|Cliente       19504     | Data: 13:32:03.970| 
+|Cliente       19510     | Data: 13:32:04.722| 
+|Cliente       19686     | Data: 13:37:36.399| 
+|Cliente       19692     | Data: 13:37:36.896| 
+|Cliente       19698     | Data: 13:37:37.619| 
+|Cliente       19700     | Data: 13:37:38.195| 
+|Cliente       19702     | Data: 13:37:38.826| 
+|Cliente       19704     | Data: 13:37:39.425| 
+|Cliente       19744     | Data: 13:39:22.532| 
+|Cliente       19750     | Data: 13:39:24.009| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19750| Data: 13:39:24.018| OK | Duração em Milissegundos: 9
+|Cliente       19756     | Data: 13:39:25.466| 
+A Impressora 4300 concluiu, a impressão do  Cliente 19756| Data: 13:39:25.476| OK | Duração em Milissegundos: 14
+|Cliente       19764     | Data: 13:39:28.266| 
+|Cliente       19872     | Data: 13:43:54.334| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19872| Data: 13:43:54.342| OK | Duração em Milissegundos: 8
+|Cliente       19878     | Data: 13:43:55.145| 
+|Cliente       19884     | Data: 13:43:56.137| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19884| Data: 13:43:56.139| OK | Duração em Milissegundos: 2
+|Impressora 4300| Cliente 19878| Data: 13:43:57.175| ERRO AO ENCAMINHAR
+A Impressora 4300 concluiu, a impressão do  Cliente 19878| Data: 13:43:57.176| OK | Duração em Milissegundos: 2031
+|Cliente       19892     | Data: 13:43:57.288| 
+A Impressora 4200 concluiu, a impressão do  Cliente 19892| Data: 13:43:57.301| OK | Duração em Milissegundos: 13
+|Cliente       50936     | Data: 13:47:41.125| 
+|Impressora 4300| Cliente 50936| Data: 13:47:42.878| ERRO AO ENCAMINHAR
+A Impressora 4300 concluiu, a impressão do  Cliente 50936| Data: 13:47:42.878| OK | Duração em Milissegundos: 1753
+|Cliente       51062     | Data: 13:48:51.172| 
+A Impressora 4200 concluiu, a impressão do  Cliente 51062| Data: 13:48:51.275| OK | Duração em Milissegundos: 105
