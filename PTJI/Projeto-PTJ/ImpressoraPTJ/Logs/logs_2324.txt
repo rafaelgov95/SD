@@ -1,23 +1,7 @@
-Impressão: 6 Cliente 39754 Data: 15:22:05.105  ERRO
-Impressão: 7 Cliente 39754 Data: 15:22:06.107  OK
-Impressão: 8 Cliente 39774 Data: 15:22:08.114  OK
-Impressão: 0 Cliente Erro Data: 15:25:04.759  OK
-Impressão: 1 Cliente 39828 Data: 15:25:05.870  OK
-Impressão: 2 Cliente Erro Data: 15:25:08.011  ERRO
-Impressão: 3 Cliente 39826 Data: 15:25:08.053  ERRO
-Impressão: 4 Cliente 39826 Data: 15:25:08.801  ERRO
-Impressão: 5 Cliente 39826 Data: 15:25:09.852  ERRO
-Impressão: 6 Cliente 39826 Data: 15:25:10.115  OK
-Impressão: 7 Cliente Erro Data: 15:27:29.679  ERRO
-Impressão: 8 Cliente 39888 Data: 15:27:30.438  ERRO
-Impressão: 9 Cliente 39888 Data: 15:27:32.037  ERRO
-Impressão: 10 Cliente 39888 Data: 15:27:33.470  ERRO
-Impressão: 11 Cliente 39888 Data: 15:27:35.063  ERRO
-Impressão: 12 Cliente 39888 Data: 15:27:35.458  OK
-Impressão: 13 Cliente Erro Data: 15:34:23.328  OK
-Impressão: 14 Cliente 39980 Data: 15:34:23.821  OK
-Impressão: 15 Cliente Erro Data: 15:34:27.750  ERRO
-Impressão: 16 Cliente 39994 Data: 15:34:29.434  ERRO
-Impressão: 17 Cliente 39994 Data: 15:34:30.768  ERRO
-Impressão: 18 Cliente 39994 Data: 15:34:32.025  ERRO
-Impressão: 19 Cliente 39994 Data: 15:34:32.236  OK
+Impressora 2324 está Off-line
+Impressora 2324 está On-line
+Impressão: 0 Cliente Erro Data: 04:35:48.485  OK
+Impressora 2324 está Off-line
+Impressora 2324 está On-line
+Impressora 2324 está Off-line
+Impressora 2324 está On-line

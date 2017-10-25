@@ -11,10 +11,13 @@ import java.net.Socket;
  */
 
 public class SocketTeste {
-    public static boolean available(Impressora imp) {
+    public synchronized static boolean available(Impressora imp) {
         boolean portTaken = false;
         Socket socket = null;
         try {
+            if(imp==null){
+                System.out.println("impressora null");
+            }
             socket = new Socket(imp.getIp(), imp.getPorta());
         } catch (IOException e) {
             return false;

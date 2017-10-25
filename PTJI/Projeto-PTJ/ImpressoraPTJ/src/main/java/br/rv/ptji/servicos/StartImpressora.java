@@ -10,47 +10,57 @@ import java.net.Socket;
 import java.time.LocalTime;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class StartImpressora implements Runnable {
     private int porta;
     private int cont;
+
     public StartImpressora(int porta) {
-        this.cont=0;
+        this.cont = 0;
         this.porta = porta;
     }
 
 
     public static synchronized String Port(Socket cliente) throws IOException {
         Scanner leia = new Scanner(cliente.getInputStream());
-        if(leia.hasNextLine()) {
+        if (leia.hasNextLine()) {
             return leia.nextLine();
         }
         return "Erro";
     }
 
     public void FakeImpressoras() throws InterruptedException, IOException {
+
+
         ServerSocket servidor = new ServerSocket(this.porta);
-        System.out.println(this.porta);
         Random r = new Random();
+        System.out.println("Entro: " + this.porta);
         while (true) {
 
-            Thread.sleep(r.nextInt(2000));
+            if (r.nextInt(100) < 15) {
+                String log = "Impressora " + this.porta + " está Off-line";
+                Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
+                Thread.sleep(r.nextInt(2000) + 1000);
+                log = "Impressora " + this.porta + " está On-line";
+                Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
+
+                System.out.println("Volto: " + this.porta);
+            }
             Socket cliente = servidor.accept();
             PrintStream ps = new PrintStream(cliente.getOutputStream());
             String localPort = Port(cliente);
-            Thread.sleep(r.nextInt(100));
-            int proba = 6;
-            String status ="  OK" ;
-            if (proba > r.nextInt(10)) {
-                status="  ERRO";
+            Thread.sleep(r.nextInt(1000));
+
+            String status;
+            if (r.nextInt(100) < 15) {
+                status = "  ERRO";
                 ps.println("ERRO");
             } else {
-                status="  OK";
+                status = "  OK";
                 ps.println("OK");
             }
-            if(!localPort.equals("Estralho")) {
-                String log = "Impressão: " +(cont++)+" Cliente " + localPort + " Data: " + LocalTime.now().toString()+status;
+            if (!localPort.equals("Estralho")) {
+                String log = "Impressão: " + (cont++) + " Cliente " + localPort + " Data: " + LocalTime.now().toString() + status;
                 Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
             }
 

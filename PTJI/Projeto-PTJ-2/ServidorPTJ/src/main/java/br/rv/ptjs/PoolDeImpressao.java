@@ -19,7 +19,7 @@ public class PoolDeImpressao {
     private int porta;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        new PoolDeImpressao(2222).executa();
+        new PoolDeImpressao(3000).executa();
     }
 
 

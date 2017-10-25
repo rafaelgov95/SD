@@ -2,6 +2,7 @@ package br.rv.ptjs.model;
 
 import java.io.PrintStream;
 import java.net.Socket;
+import java.time.LocalTime;
 
 /**
  *
@@ -9,9 +10,10 @@ import java.net.Socket;
  */
 
 public class Documento {
-    public Socket socket;
-    public String mensagem;
-    public PrintStream toast;
+    private Socket socket;
+    private String mensagem;
+    private PrintStream toast;
+    private LocalTime tempo;
     public Documento(Documento doc){
         this.socket =doc.socket;
         this.mensagem = doc.mensagem;
@@ -45,5 +47,13 @@ public class Documento {
 
     public void setToast(PrintStream toast) {
         this.toast = toast;
+    }
+
+    public LocalTime getTempo() {
+        return tempo;
+    }
+
+    public void setTempo(LocalTime tempo) {
+        this.tempo = tempo;
     }
 }

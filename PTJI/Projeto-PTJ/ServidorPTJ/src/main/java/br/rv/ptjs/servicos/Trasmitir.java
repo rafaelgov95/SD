@@ -7,7 +7,9 @@ import br.rv.ptjs.utils.Arquivos;
 
 import java.io.IOException;
 import java.io.PrintStream;
+import java.math.BigDecimal;
 import java.net.Socket;
+import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Random;
 import java.util.Scanner;
@@ -19,42 +21,46 @@ import java.util.Scanner;
 public class Trasmitir implements Runnable {
     private Impressora imp;
     private Documento doc;
-
-    public Trasmitir(Impressora imp, Documento doc) {
+    private Buffer b;
+    public Trasmitir(Impressora imp, Buffer b) throws InterruptedException {
         this.imp = imp;
-        this.doc = new Documento(doc);
+        this.b = b;
+        this.doc = this.b.getDocumento();
+
     }
 
-    private static void enviar(Impressora imp, Documento doc) throws IOException {
+    private void enviar(Impressora imp, Documento doc) throws IOException {
         Socket servidor = new Socket(imp.getIp(), imp.getPorta());
         Scanner s = new Scanner(servidor.getInputStream());
         PrintStream ps = new PrintStream(servidor.getOutputStream());
-        ps.println(doc.socket.getPort());
+        ps.println(doc.getSocket().getPort());
+        LocalTime t = LocalTime.now();
+        Duration duracao = Duration.between(doc.getTempo(), t);
+        BigDecimal minutosEmBigDecimal = new BigDecimal(duracao.toMillis());
+
         String confirma = s.nextLine();
         if (confirma.equals("OK")) {
-
-            doc.toast.println("Impressão Concluida pela Impressora " +imp.getName() +" OK  ");
-            String log = "|Impressora " + imp.getName() + "| Cliente "+doc.socket.getPort()+"| Data: " + LocalTime.now().toString() + "| OK";
+            doc.getToast().println("Impressão Concluida pela Impressora " + imp.getName() + " OK  ");
+            String log = "A Impressora " + imp.getName() + " concluiu, a impressão do  Cliente " + doc.getSocket().getPort() + "| Data: " + t.toString() + "| OK | Duração em Milissegundos: " + minutosEmBigDecimal;
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
-            doc.socket.close();
+            doc.getToast().close();
             s.close();
             servidor.close();
-        }else{
-            doc.toast.println("Ocorreu um erro de impressão, na impressora "+imp.getName()+" o documento será reenviado!!!! ");
-            String log = "|Impressora " + imp.getName() + "| Cliente "+doc.socket.getPort()+"| Data: " + LocalTime.now().toString() + "| ERRO";
+        } else {
+            doc.getToast().println("Ocorreu um erro, ao encaminha para impressora " + imp.getName() + ", uma nova tentativa será realizada !!!! ");
+            String log = "|Impressora " + imp.getName() + "| Cliente " + doc.getSocket().getPort() + "| Data: " + LocalTime.now().toString() + "| ERRO AO ENCAMINHAR";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
             s.close();
             servidor.close();
-            enviar(imp,doc);
+            enviar(imp, doc);
         }
     }
 
     public void probabilidadeDeEnvio() throws IOException, InterruptedException {
         Random r = new Random();
-        int proba = Buffer.getR()-1;
-        if (proba > r.nextInt(Buffer.getR())) {
+        if (r.nextInt(100) >= b.getR()) {
             enviar(imp, doc);
         } else {
             Thread.sleep(100);
@@ -72,7 +78,7 @@ public class Trasmitir implements Runnable {
             e.printStackTrace();
         }
         synchronized (this) {
-            Buffer.addImpressora(imp);
+            b.addImpressora(imp);
         }
     }
 }

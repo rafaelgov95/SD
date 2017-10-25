@@ -6,6 +6,7 @@ import br.rv.ptjs.model.Impressora;
 import java.io.IOException;
 import java.time.LocalTime;
 import java.util.*;
+import java.util.concurrent.Semaphore;
 
 /**
  *
@@ -15,86 +16,98 @@ import java.util.*;
 public class Buffer {
 
 
-    private static int r;
-    private static int t;
-    private static int m;
+    private  int r;
+    private  int t;
+    private  int m;
+
+    private boolean available = false;
     private final static List<Documento> Documentos = new ArrayList<Documento>();
     private final static List<Impressora> Impressoras = new ArrayList<Impressora>();
 
-    public Buffer(int r, int t, int m) {
+    public Buffer(int r,int t,int m) {
         this.r = r;
+        this.t =t;
+        this.m =m;
+    }
+
+    public int getR() {
+        return r;
+    }
+
+    public void setR(int r) {
+        this.r = r;
+    }
+
+    public int getT() {
+        return t;
+    }
+
+    public void setT(int t) {
         this.t = t;
+    }
+
+    public int getM() {
+        return m;
+    }
+
+    public void setM(int m) {
         this.m = m;
-
     }
 
-    public synchronized static boolean isDocumentos() {
-        return Documentos.isEmpty();
+    public synchronized void EscalonadorDormi() {
+        while (!available) {
+            try {
+                wait();
+            } catch (InterruptedException e) { }
+        }
+        available = false;
+        notifyAll();
     }
 
-    public synchronized static boolean isImpressoras() {
-
-        return Impressoras.isEmpty();
+    public synchronized void EscalonadorAcordar( ) {
+        while (available) {
+            try {
+                wait();
+            } catch (InterruptedException e) { }
+        }
+        available = true;
+        notifyAll();
     }
 
-    public static synchronized void addImpressora(Impressora imp){
-
+    public  synchronized void addImpressora(Impressora imp){
         Impressoras.add(imp);
     }
 
-    public static void addDocumento(Documento novo) throws InterruptedException, IOException {
+    public  void  addDocumento(Documento novo) throws InterruptedException, IOException {
         synchronized (Documentos) {
             Documentos.add(novo);
 
         }
 
     }
-    public static void addLevelPDocumento(Documento novo) throws InterruptedException, IOException {
+    public  void addLevelPDocumento(Documento novo) throws InterruptedException, IOException {
         synchronized (Documentos) {
             Documentos.add(0,novo);
 
         }
 
     }
-    public static synchronized Documento getDocumento() throws InterruptedException {
+    public  synchronized Documento getDocumento() throws InterruptedException {
         if (!Documentos.isEmpty()) {
             return Documentos.remove(0);
         }
         return null;
     }
-    public static synchronized int getDocumentosSize() throws InterruptedException {
+    public  synchronized int getDocumentosSize() throws InterruptedException {
       return Documentos.size();
     }
 
-    public static synchronized Impressora getImpressora() {
+    public  synchronized Impressora getImpressora() {
         if (!Impressoras.isEmpty()) {
             return Impressoras.remove(0);
         }
         return null;
     }
 
-    public static int getR() {
-        return r;
-    }
-
-    public static void setR(int r) {
-        Buffer.r = r;
-    }
-
-    public static int getT() {
-        return t;
-    }
-
-    public static void setT(int t) {
-        Buffer.t = t;
-    }
-
-    public static int getM() {
-        return m;
-    }
-
-    public static void setM(int m) {
-        Buffer.m = m;
-    }
 
 }

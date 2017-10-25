@@ -1,0 +1,10 @@
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/model/Documento.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/PoolDeImpressao.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/buffer/Buffer.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/servicos/Recebedor.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/utils/SocketTeste.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/model/Impressora.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/servicos/Trasmitir.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/utils/Arquivos.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/servicos/ChegadaDocumento.java
+/home/rafael/Documentos/SD/PTJI/Projeto-PTJ/ServidorPTJ/src/main/java/br/rv/ptjs/servicos/SaidaDocumento.java

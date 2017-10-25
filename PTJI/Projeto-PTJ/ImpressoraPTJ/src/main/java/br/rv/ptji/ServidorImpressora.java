@@ -21,8 +21,8 @@ public class ServidorImpressora {
     }
 
     public void executa() throws IOException, InterruptedException {
-        StartImpressora imp1 = new StartImpressora(2323);
-        StartImpressora imp2 = new StartImpressora(2324);
+        StartImpressora imp1 = new StartImpressora(3000);
+        StartImpressora imp2 = new StartImpressora(3001);
         Thread t1 = new Thread(imp1);
         t1.start();
         Thread t2 = new Thread(imp2);

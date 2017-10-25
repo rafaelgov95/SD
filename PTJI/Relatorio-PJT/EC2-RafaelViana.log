@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  23 OCT 2017 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  24 OCT 2017 11:39
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -829,44 +829,115 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 
-<imagens/fluxoSocket.JPG, id=1, 466.74374pt x 260.47313pt>
-File: imagens/fluxoSocket.JPG Graphic file (type jpg)
+<imagens/screenshot001.png, id=1, 622.57594pt x 228.855pt>
+File: imagens/screenshot001.png Graphic file (type png)
 
-<use imagens/fluxoSocket.JPG>
-Package pdftex.def Info: imagens/fluxoSocket.JPG used on input line 69.
-(pdftex.def)             Requested size: 466.7426pt x 260.47249pt.
+<use imagens/screenshot001.png>
+Package pdftex.def Info: imagens/screenshot001.png used on input line 62.
+(pdftex.def)             Requested size: 298.75264pt x 109.82121pt.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 63.
 
-Overfull \hbox (39.95125pt too wide) in paragraph at lines 69--70
- [][] 
- []
-
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 70.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 70.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 63.
 
-Underfull \vbox (badness 8094) has occurred while \output is active []
+<imagens/fluxoSocket.JPG, id=3, 466.74374pt x 260.47313pt>
+File: imagens/fluxoSocket.JPG Graphic file (type jpg)
 
- [1
+<use imagens/fluxoSocket.JPG>
+Package pdftex.def Info: imagens/fluxoSocket.JPG used on input line 75.
+(pdftex.def)             Requested size: 466.7426pt x 260.47249pt.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 73.
-
-Overfull \hbox (18.01297pt too wide) in paragraph at lines 86--87
-[][][][][][][][][][][][]  
+Overfull \hbox (39.95125pt too wide) in paragraph at lines 75--76
+ [][] 
  []
 
-[2 <./imagens/fluxoSocket.JPG>]
-<imagens/fluxo.png, id=17, 686.565pt x 556.0775pt>
-File: imagens/fluxo.png Graphic file (type png)
- <use imagens/fluxo.png>
-Package pdftex.def Info: imagens/fluxo.png used on input line 99.
-(pdftex.def)             Requested size: 96.11844pt x 77.85031pt.
+[1
 
-(./EC2-RafaelViana.bbl
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagens/screenshot001.pn
+g>] <imagens/screenshot005.png, id=17, 853.68938pt x 254.45062pt>
+File: imagens/screenshot005.png Graphic file (type png)
+
+<use imagens/screenshot005.png>
+Package pdftex.def Info: imagens/screenshot005.png used on input line 94.
+(pdftex.def)             Requested size: 426.79135pt x 127.21335pt.
+ [2 <./imagens/fluxoSocket.JPG>]
+<imagens/screenshot006.png, id=21, 756.57657pt x 304.88907pt>
+File: imagens/screenshot006.png Graphic file (type png)
+
+<use imagens/screenshot006.png>
+Package pdftex.def Info: imagens/screenshot006.png used on input line 115.
+(pdftex.def)             Requested size: 298.75264pt x 120.3903pt.
+
+<imagens/screenshot008.png, id=22, 269.50688pt x 273.27094pt>
+File: imagens/screenshot008.png Graphic file (type png)
+
+<use imagens/screenshot008.png>
+Package pdftex.def Info: imagens/screenshot008.png used on input line 122.
+(pdftex.def)             Requested size: 170.71393pt x 173.09978pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./imagens/screenshot005.png> <./imagens/screenshot006.png>]
+<imagens/screenshot002.png, id=28, 471.26062pt x 157.33781pt>
+File: imagens/screenshot002.png Graphic file (type png)
+
+<use imagens/screenshot002.png>
+Package pdftex.def Info: imagens/screenshot002.png used on input line 137.
+(pdftex.def)             Requested size: 298.75264pt x 99.74513pt.
+
+<imagens/screenshot004.png, id=29, 268.75406pt x 33.12375pt>
+File: imagens/screenshot004.png Graphic file (type png)
+
+<use imagens/screenshot004.png>
+Package pdftex.def Info: imagens/screenshot004.png used on input line 147.
+(pdftex.def)             Requested size: 298.75264pt x 36.82135pt.
+
+<imagens/screenshot003.png, id=30, 832.61063pt x 345.54094pt>
+File: imagens/screenshot003.png Graphic file (type png)
+
+<use imagens/screenshot003.png>
+Package pdftex.def Info: imagens/screenshot003.png used on input line 155.
+(pdftex.def)             Requested size: 298.75264pt x 123.98338pt.
+ [4 <./imagens/screenshot008.png> <./imagens/screenshot002.png> <./imagens/scre
+enshot004.png>]
+<imagens/screenshot014.png, id=37, 423.08063pt x 316.18124pt>
+File: imagens/screenshot014.png Graphic file (type png)
+
+<use imagens/screenshot014.png>
+Package pdftex.def Info: imagens/screenshot014.png used on input line 166.
+(pdftex.def)             Requested size: 298.75264pt x 223.27446pt.
+
+<imagens/screenshot013.png, id=38, 372.64218pt x 164.11313pt>
+File: imagens/screenshot013.png Graphic file (type png)
+
+<use imagens/screenshot013.png>
+Package pdftex.def Info: imagens/screenshot013.png used on input line 176.
+(pdftex.def)             Requested size: 298.75264pt x 131.57614pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5 <./imagens/screenshot003.png> <./imagens/screenshot014.png>]
+<imagens/screenshot012.png, id=44, 355.3275pt x 150.5625pt>
+File: imagens/screenshot012.png Graphic file (type png)
+
+<use imagens/screenshot012.png>
+Package pdftex.def Info: imagens/screenshot012.png used on input line 184.
+(pdftex.def)             Requested size: 298.75264pt x 126.59338pt.
+
+<imagens/screenshot015.png, id=45, 551.81157pt x 131.74219pt>
+File: imagens/screenshot015.png Graphic file (type png)
+
+<use imagens/screenshot015.png>
+Package pdftex.def Info: imagens/screenshot015.png used on input line 193.
+(pdftex.def)             Requested size: 298.75264pt x 71.32867pt.
+ (./EC2-RafaelViana.bbl
+LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+ [6 <./imagens/screenshot013.png> <./imagens/screenshot012.png> <./imagens/scre
+enshot015.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 10--14
 []\OT1/ptm/m/n/12 Caelum, ``Ap[]endice - Soc-kets.'' $\OT1/zi4/m/n/12 https : /
  / www . caelum . com . br /
@@ -896,28 +967,28 @@ Underfull \hbox (badness 2368) in paragraph at lines 16--20
 17.  [On-line; acesso em 20-
  []
 
-[3 <./imagens/fluxo.png>]) [4] (./EC2-RafaelViana.aux) ) 
+) [7] (./EC2-RafaelViana.aux) ) 
 Here is how much of TeX's memory you used:
- 6580 strings out of 493013
- 92500 string characters out of 6135682
- 192622 words of memory out of 5000000
- 9993 multiletter control sequences out of 15000+600000
+ 6297 strings out of 493013
+ 91204 string characters out of 6135682
+ 177622 words of memory out of 5000000
+ 9700 multiletter control sequences out of 15000+600000
  20922 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,72p,632b,1120s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/tex
-mf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dv
-ips/inconsolata/i4-ot1-0.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
-inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
-c/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on EC2-RafaelViana.pdf (4 pages, 179303 bytes).
+ 43i,10n,72p,724b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-z
+i4r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on EC2-RafaelViana.pdf (7 pages, 398941 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

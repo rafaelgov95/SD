@@ -2,38 +2,52 @@ package br.rv.ptjs.servicos;
 
 import br.rv.ptjs.buffer.Buffer;
 import br.rv.ptjs.model.Impressora;
+import br.rv.ptjs.utils.Arquivos;
 import br.rv.ptjs.utils.SocketTeste;
 
 import java.io.IOException;
+import java.util.Random;
 
 
 /**
- *
  * @author rafael
  */
 
 public class SaidaDocumento implements Runnable {
-    public SaidaDocumento() {
+    private Buffer b;
+    private Random r;
 
+    public SaidaDocumento(Buffer b) {
+        this.b = b;
+        this.r = new Random();
     }
-    static void trasmitir() throws IOException, InterruptedException {
-        String nome = Thread.currentThread().getName();
-        if (!Buffer.isImpressoras() && !Buffer.isDocumentos()) {
-            Impressora imp;
-                imp = Buffer.getImpressora();
+
+    void trasmitir() throws IOException, InterruptedException {
+        Impressora imp;
+        imp = b.getImpressora();
+        if (r.nextInt(100) < 10) {
+        } else {
             if (SocketTeste.available(imp)) {
-                Trasmitir tf = new Trasmitir(imp,Buffer.getDocumento());
+                Trasmitir tf = new Trasmitir(imp, b);
                 Thread enviar = new Thread(tf);
                 enviar.start();
+
+            } else {
+                String log = "Impressora " + imp.getName() + " indisponível no momento";
+                Arquivos.CriarArquioX("logs", "./Logs", log);
+                System.out.println(log);
+                trasmitir();
+
             }
         }
+
     }
 
 
     public void run() {
-
         while (true) {
             try {
+                b.EscalonadorDormi();
                 trasmitir();
             } catch (IOException e) {
                 e.printStackTrace();
