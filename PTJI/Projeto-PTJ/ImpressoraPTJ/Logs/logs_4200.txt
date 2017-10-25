@@ -1,0 +1,6 @@
+Impressora 4200 está Off-line
+Impressora 4200 está On-line
+Impressão: 0 Cliente Erro Data: 09:23:41.180  ERRO
+Impressora 4200 está Off-line
+Impressora 4200 está On-line
+Impressão: 1 Cliente 45342 Data: 09:23:42.254  OK

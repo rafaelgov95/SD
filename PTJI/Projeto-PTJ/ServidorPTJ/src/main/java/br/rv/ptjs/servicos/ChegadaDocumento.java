@@ -28,7 +28,7 @@ public class ChegadaDocumento implements Runnable {
 
         if (b.getM() > b.getDocumentosSize()) {
             b.addDocumento(documento);
-            documento.getToast().println("Mensagem adicionada a Fila.");
+            documento.getToast().println("Adicionada á Fila.");
             String log = "|Cliente       " + documento.getSocket().getPort() + "     | Data: " + LocalTime.now().toString() + "| ";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
@@ -44,7 +44,7 @@ public class ChegadaDocumento implements Runnable {
 
         if (b.getM() > b.getDocumentosSize()) {
             b.addLevelPDocumento(documento);
-            documento.getToast().println("Mensagem adicionada a Fila com prioridade");
+            documento.getToast().println("Adicionada á Fila com prioridade");
             String log = "|Cliente       " + documento.getSocket().getPort() + "     | Data: " + LocalTime.now().toString() + "| P";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);

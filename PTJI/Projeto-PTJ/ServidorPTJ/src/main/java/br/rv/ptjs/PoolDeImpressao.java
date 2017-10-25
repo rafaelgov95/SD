@@ -4,8 +4,7 @@ import br.rv.ptjs.buffer.Buffer;
 import br.rv.ptjs.model.Impressora;
 import br.rv.ptjs.servicos.ChegadaDocumento;
 import br.rv.ptjs.servicos.SaidaDocumento;
-import br.rv.ptjs.utils.Arquivos;
-import br.rv.ptjs.utils.SocketTeste;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,7 +22,7 @@ import java.util.Scanner;
 public class PoolDeImpressao {
     private int porta;
     public static void main(String[] args) throws IOException, InterruptedException {
-        new PoolDeImpressao(4200).executa();
+        new PoolDeImpressao(3000).executa();
     }
 
 
@@ -33,13 +32,19 @@ public class PoolDeImpressao {
 
     public void executa() throws IOException {
         BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("#### BEMVINDO AO POOL DE IMPRESSÂO RAFAEL VIANA ####");
-        System.out.println("Informe em sequência R M T separados por espaço entre os valores!");
+
+        System.out.println("#### BEM VINDO AO POOL DE IMPRESSÂO RAFAEL VIANA ####\n" +
+                "Exemplos de valores de entrada\n"+
+                "R = (0 a 100), 0 representando 0% e 100 represetando 100% de probabiliadde de erro de impressão.\n" +
+                "M = (1 a N>1) Valor inteiro  do Tamanho Buffer do Servidor.\n" +
+                "T = (1 a 3) Valor inteiro\n" +
+                "Informe em sequência R M T , separados por espaço entre os valores!");
+
         String[] linha = rd.readLine().split(" ");
         Buffer b = new Buffer(Integer.parseInt(linha[0]),Integer.parseInt(linha[1]),Integer.parseInt(linha[2]));
         System.out.println("Servidor Rodando na Porta "+ porta+ "!");
-        b.addImpressora(new Impressora("127.0.0.1",3000,"3000"));
-        b.addImpressora(new Impressora("127.0.0.1",3001,"3001"));
+        b.addImpressora(new Impressora("sdufms2017.ddns.net",4200,"4200"));
+        b.addImpressora(new Impressora("sdufms2017.ddns.net",4300,"4300"));
         SaidaDocumento escalonador = new SaidaDocumento(b);
         Thread esc = new Thread(escalonador);
         esc.start();

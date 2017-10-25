@@ -26,18 +26,17 @@ public class SaidaDocumento implements Runnable {
         Impressora imp;
         imp = b.getImpressora();
         if (r.nextInt(100) < 10) {
+            String log = "Impressora " + imp.getName() + " indisponível no momento";
+            Arquivos.CriarArquioX("logs", "./Logs", log);
+            System.out.println(log);
+            trasmitir();
         } else {
             if (SocketTeste.available(imp)) {
                 Trasmitir tf = new Trasmitir(imp, b);
                 Thread enviar = new Thread(tf);
                 enviar.start();
-
-            } else {
-                String log = "Impressora " + imp.getName() + " indisponível no momento";
-                Arquivos.CriarArquioX("logs", "./Logs", log);
-                System.out.println(log);
-                trasmitir();
-
+            }else{
+                System.out.println("Erro ao carregar impressora");
             }
         }
 

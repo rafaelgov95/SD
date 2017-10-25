@@ -1,34 +1,6 @@
-|Cliente       56104     | Data: 04:15:38.139951| 
-|Cliente       56110     | Data: 04:15:38.912234| 
-A Impressora 2324 concluiu, a impressão do  Cliente 56110| Data: 04:15:38.914370| OK | Duração em Milissegundos: 2
-|Impressora 2323| Cliente 56104| Data: 04:15:39.466655| ERRO AO ENCAMINHAR
-|Impressora 2323| Cliente 56104| Data: 04:15:39.916903| ERRO AO ENCAMINHAR
-|Cliente       56120     | Data: 04:15:40.024963| 
-A Impressora 2323 concluiu, a impressão do  Cliente 56104| Data: 04:15:39.917724| OK | Duração em Milissegundos: 1777
-|Cliente       56126     | Data: 04:15:41.025320| 
-|Impressora 2324| Cliente 56120| Data: 04:15:41.173497| ERRO AO ENCAMINHAR
-|Impressora 2324| Cliente 56120| Data: 04:15:41.276143| ERRO AO ENCAMINHAR
-A Impressora 2323 concluiu, a impressão do  Cliente 56126| Data: 04:15:41.027022| OK | Duração em Milissegundos: 1
-A Impressora 2324 concluiu, a impressão do  Cliente 56120| Data: 04:15:41.278537| OK | Duração em Milissegundos: 1254
-|Cliente       56170     | Data: 04:18:24.303941| 
-|Cliente       56176     | Data: 04:18:25.300928| 
-|Impressora 2323| Cliente 56170| Data: 04:18:25.925774| ERRO AO ENCAMINHAR
-|Impressora 2324| Cliente 56176| Data: 04:18:26.189022| ERRO AO ENCAMINHAR
-|Cliente       56186     | Data: 04:18:26.333630| 
-|Impressora 2324| Cliente 56176| Data: 04:18:26.580428| ERRO AO ENCAMINHAR
-A Impressora 2323 concluiu, a impressão do  Cliente 56170| Data: 04:18:25.944717| OK | Duração em Milissegundos: 1640
-|Cliente       56190     | Data: 04:18:27.339970| 
-|Impressora 2324| Cliente 56176| Data: 04:18:27.548698| ERRO AO ENCAMINHAR
-A Impressora 2324 concluiu, a impressão do  Cliente 56176| Data: 04:18:27.549383| OK | Duração em Milissegundos: 2248
-|Cliente       56384     | Data: 04:33:15.074784| 
-|Cliente       56386     | Data: 04:33:16.174270| 
-|Cliente       56390     | Data: 04:33:17.187790| 
-|Cliente       56392     | Data: 04:33:18.340354| 
-|Cliente       56422     | Data: 04:34:24.727827| 
-|Cliente       56424     | Data: 04:34:26.174687| 
-|Cliente       56426     | Data: 04:34:27.217655| 
-|Cliente       56428     | Data: 04:34:28.632553| 
-|Cliente       56460     | Data: 04:35:47.085711| 
-|Cliente       56466     | Data: 04:35:48.240443| 
-|Cliente       56472     | Data: 04:35:49.577294| 
-|Cliente       56474     | Data: 04:35:50.621705| 
+|Cliente       45260     | Data: 09:18:22.330462| 
+|Cliente       45318     | Data: 09:22:47.755368| 
+|Cliente       45342     | Data: 09:23:40.680538| 
+A Impressora 4200 concluiu, a impressão do  Cliente 45342| Data: 09:23:40.689466| OK | Duração em Milissegundos: 9
+|Cliente       45818     | Data: 09:38:16.932| 
+A Impressora 4200 concluiu, a impressão do  Cliente 45818| Data: 09:38:17.795| OK | Duração em Milissegundos: 863

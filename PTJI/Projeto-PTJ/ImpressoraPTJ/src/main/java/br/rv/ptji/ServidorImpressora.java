@@ -12,17 +12,17 @@ public class ServidorImpressora {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        new ServidorImpressora(2324).executa();
+        new ServidorImpressora().executa();
 
     }
 
-    public ServidorImpressora(int porta) {
-        this.porta = porta;
+    public ServidorImpressora() {
+
     }
 
     public void executa() throws IOException, InterruptedException {
-        StartImpressora imp1 = new StartImpressora(3000);
-        StartImpressora imp2 = new StartImpressora(3001);
+        StartImpressora imp1 = new StartImpressora(4200);
+        StartImpressora imp2 = new StartImpressora(4300);
         Thread t1 = new Thread(imp1);
         t1.start();
         Thread t2 = new Thread(imp2);

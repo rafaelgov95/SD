@@ -7,7 +7,7 @@ import java.util.Random;
 public class Cliente {
     public static void main(String[] args)
             throws UnknownHostException, IOException, InterruptedException {
-        new Cliente("127.0.0.1", 2222).executa();
+        new Cliente("svgov.ddns.net", 3000).executa();
     }
 
     private String host;
