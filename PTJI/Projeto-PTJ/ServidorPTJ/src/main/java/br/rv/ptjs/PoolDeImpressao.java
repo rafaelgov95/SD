@@ -43,8 +43,11 @@ public class PoolDeImpressao {
         String[] linha = rd.readLine().split(" ");
         Buffer b = new Buffer(Integer.parseInt(linha[0]),Integer.parseInt(linha[1]),Integer.parseInt(linha[2]));
         System.out.println("Servidor Rodando na Porta "+ porta+ "!");
-        b.addImpressora(new Impressora("sdufms2017.ddns.net",4200,"4200"));
-        b.addImpressora(new Impressora("sdufms2017.ddns.net",4300,"4300"));
+//        String url ="sdufms2017.ddns.net";
+        String url ="localhost";
+
+        b.addImpressora(new Impressora(url,4200,"4200"));
+        b.addImpressora(new Impressora(url,4300,"4300"));
         SaidaDocumento escalonador = new SaidaDocumento(b);
         Thread esc = new Thread(escalonador);
         esc.start();

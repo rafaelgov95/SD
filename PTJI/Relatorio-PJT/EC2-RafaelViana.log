@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  25 OCT 2017 14:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.7.31)  25 OCT 2017 00:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -646,6 +646,26 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \zifour@ocount=\count95
 )
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip45
+\subfigcapskip=\skip46
+\subfigcaptopadj=\dimen128
+\subfigbottomskip=\skip47
+\subfigcapmargin=\dimen129
+\subfiglabelskip=\skip48
+\c@subfigure=\count96
+\c@lofdepth=\count97
+\c@subtable=\count98
+\c@lotdepth=\count99
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip49
+\subfig@bottom=\skip50
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
@@ -655,23 +675,23 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count96
+\lst@mode=\count100
 \lst@gtempboxa=\box29
 \lst@token=\toks23
-\lst@length=\count97
-\lst@currlwidth=\dimen128
-\lst@column=\count98
-\lst@pos=\count99
-\lst@lostspace=\dimen129
-\lst@width=\dimen130
-\lst@newlines=\count100
-\lst@lineno=\count101
-\lst@maxwidth=\dimen131
+\lst@length=\count101
+\lst@currlwidth=\dimen130
+\lst@column=\count102
+\lst@pos=\count103
+\lst@lostspace=\dimen131
+\lst@width=\dimen132
+\lst@newlines=\count104
+\lst@lineno=\count105
+\lst@maxwidth=\dimen133
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count102
-\lst@skipnumbers=\count103
+\c@lstnumber=\count106
+\lst@skipnumbers=\count107
 \lst@framebox=\box30
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -685,25 +705,25 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (./EC2-RafaelViana.aux)
 \openout1 = `EC2-RafaelViana.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 48.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 46.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 48.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -745,16 +765,16 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen132
+\scratchcounter=\count108
+\scratchdimen=\dimen134
 \scratchbox=\box31
-\nofMPsegments=\count105
-\nofMParguments=\count106
+\nofMPsegments=\count109
+\nofMParguments=\count110
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen133
-\MPnumerator=\count108
-\makeMPintoPDFobject=\count109
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen135
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
 \everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -806,200 +826,230 @@ e
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@lstlisting=\count110
+\c@lstlisting=\count114
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 48.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 48.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 48.
-LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 48.
+(Font)              <6> on input line 50.
+LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 50.
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
 File: ot1zi4.fd 2016/12/29 OT1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 48.
+(Font)              scaled to size 10.0pt on input line 50.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 53.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
 
 <imagens/proposta.png, id=1, 702.625pt x 351.3125pt>
 File: imagens/proposta.png Graphic file (type png)
 
 <use imagens/proposta.png>
-Package pdftex.def Info: imagens/proposta.png used on input line 63.
+Package pdftex.def Info: imagens/proposta.png used on input line 65.
 (pdftex.def)             Requested size: 298.75264pt x 149.37819pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 64.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 64.
- [1
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 66.
+
+Underfull \hbox (badness 2837) in paragraph at lines 70--71
+[]\OT1/ptm/m/n/12 O ob-je-tivo deste re-lat[]orio []e ex-por as di-fi-cul-da-de
+s e des-co-ber-tas que a
+ []
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagens/proposta.png>]
+Underfull \hbox (badness 7379) in paragraph at lines 84--85
+[]\OT1/ptm/m/n/12 O java re-a-liza a sincroniza[][]ao das th-re-ads co-lo-cando
+ a pa-la-vra re-
+ []
+
+
+Underfull \hbox (badness 3769) in paragraph at lines 84--85
+\OT1/ptm/m/n/12 ser-vada syncronyza[][]ao nos m[]etodos ou uti-li-zando um ob-j
+eto como par[]ametro
+ []
+
 <imagens/fluxoSocket.JPG, id=16, 466.74374pt x 260.47313pt>
 File: imagens/fluxoSocket.JPG Graphic file (type jpg)
 
 <use imagens/fluxoSocket.JPG>
-Package pdftex.def Info: imagens/fluxoSocket.JPG used on input line 86.
+Package pdftex.def Info: imagens/fluxoSocket.JPG used on input line 105.
 (pdftex.def)             Requested size: 466.7426pt x 260.47249pt.
 
-Overfull \hbox (39.95125pt too wide) in paragraph at lines 86--87
+Overfull \hbox (39.95125pt too wide) in paragraph at lines 105--106
  [][] 
  []
 
-[2 <./imagens/fluxoSocket.JPG>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
 <imagens/screenshot005.png, id=20, 891.33pt x 440.39531pt>
 File: imagens/screenshot005.png Graphic file (type png)
 
 <use imagens/screenshot005.png>
-Package pdftex.def Info: imagens/screenshot005.png used on input line 106.
+Package pdftex.def Info: imagens/screenshot005.png used on input line 125.
 (pdftex.def)             Requested size: 426.79135pt x 210.8699pt.
 
-<imagens/screenshot017.png, id=21, 791.95876pt x 344.78813pt>
+Underfull \vbox (badness 7907) has occurred while \output is active []
+
+ [3 <./imagens/fluxoSocket.JPG>]
+<imagens/screenshot017.png, id=24, 791.95876pt x 344.78813pt>
 File: imagens/screenshot017.png Graphic file (type png)
 
 <use imagens/screenshot017.png>
-Package pdftex.def Info: imagens/screenshot017.png used on input line 130.
+Package pdftex.def Info: imagens/screenshot017.png used on input line 149.
 (pdftex.def)             Requested size: 426.79135pt x 185.80928pt.
 
-Underfull \vbox (badness 1107) has occurred while \output is active []
 
- [3 <./imagens/screenshot005.png>]
-<imagens/screenshot016.png, id=26, 249.93375pt x 315.42844pt>
-File: imagens/screenshot016.png Graphic file (type png)
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<use imagens/screenshot016.png>
-Package pdftex.def Info: imagens/screenshot016.png used on input line 139.
-(pdftex.def)             Requested size: 170.71393pt x 215.45592pt.
-
-<imagens/screenshot002.png, id=27, 459.21562pt x 160.34906pt>
+<imagens/screenshot002.png, id=25, 459.21562pt x 160.34906pt>
 File: imagens/screenshot002.png Graphic file (type png)
 
 <use imagens/screenshot002.png>
-Package pdftex.def Info: imagens/screenshot002.png used on input line 155.
+Package pdftex.def Info: imagens/screenshot002.png used on input line 168.
 (pdftex.def)             Requested size: 426.79135pt x 149.03499pt.
- [4 <./imagens/screenshot017.png> <./imagens/screenshot016.png>] <imagens/scree
-nshot003.png, id=33, 884.55469pt x 379.4175pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagens/screenshot003.png, id=26, 884.55469pt x 379.4175pt>
 File: imagens/screenshot003.png Graphic file (type png)
 
 <use imagens/screenshot003.png>
-Package pdftex.def Info: imagens/screenshot003.png used on input line 163.
+Package pdftex.def Info: imagens/screenshot003.png used on input line 176.
 (pdftex.def)             Requested size: 426.79135pt x 183.0678pt.
- [5 <./imagens/screenshot002.png> <./imagens/screenshot003.png>] <imagens/scree
-nshot014.png, id=39, 423.08063pt x 316.18124pt>
-File: imagens/screenshot014.png Graphic file (type png)
+ [4 <./imagens/screenshot005.png>]
 
-<use imagens/screenshot014.png>
-Package pdftex.def Info: imagens/screenshot014.png used on input line 206.
-(pdftex.def)             Requested size: 298.75264pt x 223.27446pt.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[5 <./imagens/screenshot017.png> <./imagens/screenshot002.png>] [6 <./imagens/s
+creenshot003.png>] <screenshot009.png, id=40, 1137.4997pt x 421.575pt>
+File: screenshot009.png Graphic file (type png)
 
- [6]
-<imagens/screenshot013.png, id=43, 372.64218pt x 164.11313pt>
-File: imagens/screenshot013.png Graphic file (type png)
+<use screenshot009.png>
+Package pdftex.def Info: screenshot009.png used on input line 220.
+(pdftex.def)             Requested size: 426.79135pt x 158.17386pt.
+ <screenshot003.png, id=41, 366.61969pt x 432.86719pt>
+File: screenshot003.png Graphic file (type png)
 
-<use imagens/screenshot013.png>
-Package pdftex.def Info: imagens/screenshot013.png used on input line 216.
-(pdftex.def)             Requested size: 298.75264pt x 131.57614pt.
+<use screenshot003.png>
+Package pdftex.def Info: screenshot003.png used on input line 233.
+(pdftex.def)             Requested size: 179.25244pt x 211.64442pt.
+ <screenshot012.png, id=42, 383.93437pt x 408.02437pt>
+File: screenshot012.png Graphic file (type png)
 
-<imagens/screenshot012.png, id=44, 355.3275pt x 150.5625pt>
-File: imagens/screenshot012.png Graphic file (type png)
+<use screenshot012.png>
+Package pdftex.def Info: screenshot012.png used on input line 235.
+(pdftex.def)             Requested size: 199.16928pt x 211.66959pt.
 
-<use imagens/screenshot012.png>
-Package pdftex.def Info: imagens/screenshot012.png used on input line 224.
-(pdftex.def)             Requested size: 298.75264pt x 126.59338pt.
- [7 <./imagens/screenshot014.png> <./imagens/screenshot013.png> <./imagens/scre
-enshot012.png>]
-<imagens/screenshot015.png, id=52, 551.81157pt x 131.74219pt>
+<imagens/screenshot015.png, id=43, 655.69969pt x 55.70813pt>
 File: imagens/screenshot015.png Graphic file (type png)
 
 <use imagens/screenshot015.png>
-Package pdftex.def Info: imagens/screenshot015.png used on input line 233.
-(pdftex.def)             Requested size: 298.75264pt x 71.32867pt.
- (./EC2-RafaelViana.bbl
+Package pdftex.def Info: imagens/screenshot015.png used on input line 247.
+(pdftex.def)             Requested size: 426.79135pt x 36.26pt.
+
+Underfull \hbox (badness 1331) in paragraph at lines 251--252
+[]\OT1/ptm/m/n/12 O c[]odigo com-pleto, in-cluindo to-das as clas-ses, est[]ao 
+dis-pon[]^^Pveis no link
+ []
+
+[7 <./screenshot009.png> <./screenshot003.png> <./screenshot012.png> <./imagens
+/screenshot015.png>] (./EC2-RafaelViana.bbl
 LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 5.
 
-Underfull \hbox (badness 4429) in paragraph at lines 10--14
+Underfull \hbox (badness 4279) in paragraph at lines 10--14
+[]\OT1/ptm/m/n/12 Wikipedia, ``Th-re-ads.'' $\OT1/zi4/m/n/12 https : / / pt . w
+ikipedia . org / wiki / Thread[](ci % C3 % AAncia[]
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 16--20
 []\OT1/ptm/m/n/12 Jacques, ``Sincroniza[][]ao de Th-re-ads.'' $\OT1/zi4/m/n/12 
 http : / / www . dsc . ufcg . edu . br / []jacques /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--20
+Underfull \hbox (badness 10000) in paragraph at lines 22--26
 []\OT1/ptm/m/n/12 Caelum, ``Ap[]endice - Soc-kets.'' $\OT1/zi4/m/n/12 https : /
  / www . caelum . com . br /
  []
 
 
-Underfull \hbox (badness 4084) in paragraph at lines 16--20
+Underfull \hbox (badness 4084) in paragraph at lines 22--26
 \OT1/zi4/m/n/12 apostila-[]java-[]orientacao-[]objetos / apendice-[]sockets/$\O
 T1/ptm/m/n/12 , 2017.  [On-line;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--26
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
 []\OT1/ptm/m/n/12 Caelum, ``Ap[]endice - Pro-ble-mas com con-corr[]encia.'' $\O
 T1/zi4/m/n/12 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--26
+Underfull \hbox (badness 10000) in paragraph at lines 28--32
 \OT1/zi4/m/n/12 / / www . caelum . com . br / apostila-[]java-[]orientacao-[]ob
 jetos /
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 22--26
+Underfull \hbox (badness 2368) in paragraph at lines 28--32
 \OT1/zi4/m/n/12 apendice-[]problemas-[]com-[]concorrencia/$\OT1/ptm/m/n/12 , 20
 17.  [On-line; acesso em 20-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--31
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
 []\OT1/ptm/m/n/12 MC514{Sistemas, ``Pro-du-to-res e Con-su-mi-do-res.'' $\OT1/z
 i4/m/n/12 http : / / www . ic . unicamp . br /
  []
 
 
-Underfull \hbox (badness 1460) in paragraph at lines 28--31
+Underfull \hbox (badness 1460) in paragraph at lines 34--37
 []\OT1/zi4/m/n/12 islene / mc514 / prod-[]cons / prod-[]cons . pdf$\OT1/ptm/m/n
 /12 , 2017.  [On-line; acesso em 22-
  []
 
-) [8 <./imagens/screenshot015.png>] (./EC2-RafaelViana.aux) ) 
+) [8] (./EC2-RafaelViana.aux) ) 
 Here is how much of TeX's memory you used:
- 6311 strings out of 493013
- 91303 string characters out of 6135682
- 176622 words of memory out of 5000000
- 9715 multiletter control sequences out of 15000+600000
- 20922 words of font info for 44 fonts, out of 8000000 for 9000
+ 6426 strings out of 493013
+ 92830 string characters out of 6135682
+ 179440 words of memory out of 5000000
+ 9825 multiletter control sequences out of 15000+600000
+ 22000 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,10n,72p,444b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texliv
-e/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/e
-nc/dvips/inconsolata/i4-ot1-0.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on EC2-RafaelViana.pdf (8 pages, 455541 bytes).
+ 43i,10n,72p,444b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.
+enc}</usr/share/texlive/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-z
+i4r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on EC2-RafaelViana.pdf (8 pages, 600627 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

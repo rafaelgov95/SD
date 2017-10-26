@@ -6,6 +6,12 @@ E.~Software, ``{Pool de impressão – você sabe sua finalidade?}.''
   2017.
 \newblock [Online; acesso em 22-Outubro-2017].
 
+\bibitem{thred}
+Wikipedia, ``{Threads}.''
+  \url{https://pt.wikipedia.org/wiki/Thread_(ci%C3%AAncia_da_computa%C3%A7%C3%A3o)},
+  2017.
+\newblock [Online; acesso em 22-Outubro-2017].
+
 \bibitem{ct}
 Jacques, ``{Sincronização de Threads}.'' \url{
   http://www.dsc.ufcg.edu.br/~jacques/cursos/map/html/threads/sincronizacao.html},

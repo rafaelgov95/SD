@@ -29,7 +29,7 @@ public class ChegadaDocumento implements Runnable {
         if (b.getM() > b.getDocumentosSize()) {
             b.addDocumento(documento);
             documento.getToast().println("Adicionada á Fila.");
-            String log = "|Cliente  IP:" + documento.getSocket().getLocalAddress()+ " |Porta:"+ documento.getSocket().getPort()+"  | Data: " + LocalTime.now().toString() + "| ";
+            String log = "| Cliente  IP:" + documento.getSocket().getInetAddress().getHostAddress()+ " | Porta:"+ documento.getSocket().getPort()+"  | Data: " + LocalTime.now().toString() + "| ";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
             b.EscalonadorAcordar();
@@ -45,7 +45,7 @@ public class ChegadaDocumento implements Runnable {
         if (b.getM() > b.getDocumentosSize()) {
             b.addLevelPDocumento(documento);
             documento.getToast().println("Adicionada á Fila com prioridade");
-            String log = "|Cliente  IP:" + documento.getSocket().getLocalAddress()+ " |Porta:"+ documento.getSocket().getPort()+"  | Data: " + LocalTime.now().toString() + "| P ";
+            String log = "| Cliente  IP:" + documento.getSocket().getInetAddress().getHostAddress()+ " | Porta:"+ documento.getSocket().getPort()+"  | Data: " + LocalTime.now().toString() + "| P ";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
         } else {

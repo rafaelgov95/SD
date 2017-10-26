@@ -1,14 +1,9 @@
 package br.rv.ptji;
 
 import br.rv.ptji.servicos.StartImpressora;
-
 import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.util.Scanner;
 
 public class ServidorImpressora {
-    private int porta;
 
     public static void main(String[] args) throws IOException, InterruptedException {
 

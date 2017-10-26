@@ -25,7 +25,7 @@ public class SaidaDocumento implements Runnable {
     void trasmitir() throws IOException, InterruptedException {
         Impressora imp;
         imp = b.getImpressora();
-        if (SocketTeste.available(imp)) {
+        if (SocketTeste.available(imp)){
             Trasmitir tf = new Trasmitir(imp, b);
             Thread enviar = new Thread(tf);
             enviar.start();

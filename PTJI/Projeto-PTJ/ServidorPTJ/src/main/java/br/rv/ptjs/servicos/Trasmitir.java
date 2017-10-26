@@ -40,8 +40,8 @@ public class Trasmitir implements Runnable {
 
         String confirma = s.nextLine();
         if (confirma.equals("OK")) {
-            doc.getToast().println("Impressão Concluida pela Impressora " + imp.getName() + "em "+minutosEmBigDecimal+" OK  " );
-            String log = "A Impressora " + imp.getName() + " concluiu, a impressão do  Cliente " + doc.getSocket().getPort() + "| Data: " + t.toString() + "| OK | Duração em Milissegundos: " + minutosEmBigDecimal;
+            doc.getToast().println("Impressão Concluida pela Impressora " + imp.getName() + " em "+minutosEmBigDecimal+" Milisegundos OK  " );
+            String log = "|A Impressora " + imp.getName() + " concluiu, a impressão do  Cliente IP:" + doc.getSocket().getInetAddress().getHostName() + " Porta TCP:"+doc.getSocket().getLocalPort()+" | Data: " + t.toString() + " | OK | Duração em Milissegundos: " + minutosEmBigDecimal;
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
             doc.getToast().close();
@@ -49,7 +49,7 @@ public class Trasmitir implements Runnable {
             servidor.close();
         } else {
             doc.getToast().println("Ocorreu um erro, ao encaminha para impressora " + imp.getName() + ", uma nova tentativa será realizada !!!! ");
-            String log = "|Impressora " + imp.getName() + "| Cliente " + doc.getSocket().getPort() + "| Data: " + LocalTime.now().toString() + "| ERRO AO ENCAMINHAR";
+            String log = "|Impressora " + imp.getName() + "| Cliente IP:" +doc.getSocket().getInetAddress().getHostName()+" Porta TCP:"+ doc.getSocket().getPort() + "| Data: " + LocalTime.now().toString() + "| ERRO AO ENCAMINHAR";
             Arquivos.CriarArquioX("logs", "./Logs", log);
             System.out.println(log);
             s.close();

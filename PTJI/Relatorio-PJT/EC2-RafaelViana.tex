@@ -6,9 +6,11 @@
 \usepackage[utf8]{inputenc}  
 \usepackage{url}
 \bibliographystyle{ieeetr}
-
+%\usepackage{subfig}
+%\usepackage[demo]{graphicx}
 \usepackage{inconsolata}
-
+\usepackage{graphicx}
+\usepackage{subfigure}
 \usepackage{color}
 
 \definecolor{pblue}{rgb}{0.13,0.13,1}
@@ -65,23 +67,39 @@ Uma pool de impressão permite que várias impressoras físicas possam ser contr
  	\label{fig:screenshot001}
  \end{figure}
  
- O objetivo deste relatório é espor as dificultades e descobertas que a implementação de uma pool de impressão, 
+ O objetivo deste relatório é expor as dificuldades e descobertas que a implementação de uma pool de impressão, ofertou para a vida acadêmica.
+
 \section{Fundamentação Téorica} 
 	Nesta seção serão tratadas, soluçoes de problemas pertinentes que foram utilizadas neste documento.
 
 
+
+\subsection{Threads}
+Segundo \cite{thred}. Cada thread é processado de forma aparentemente simultânea, uma vez que a mudança entre um segmento e outro é feita tão rapidamente que para o usuário, isso está acontecendo em paralelo. Em hardware multi-CPU ou multi-cores, os threads são realizados de forma simultânea.
+Os sistemas que suportam um único segmento (na execução real) são chamados monothread, enquanto os sistemas que suportam múltiplos threads são chamados multithread.
+
 \subsection{Problema de Concorrência}
 O problema de concorrência existem em diversos cenários em que, um pedaço de código que definimos como crítico não pode ser executado por duas threads ou mais, ao mesmo tempo. Apenas uma thread por vez consegue entrar em alguma região crítica e realizar determina função.
 
-	O java realiza a syncronyzação das threasd
+O java realiza a sincronização das threads colocando a palavra reservada syncronyzação nos métodos ou utilizando um objeto como parâmetro syncronyzação(Objeto).
+
 	
-	Para mais informações referente a sincronização de threads na linguagem java consultar a referência \cite{ct}.
+Para mais informações referente a sincronização de threads na linguagem java consultar a referência \cite{ct}.
 
  
 \subsection{Socket}
 
  Segundo \cite{socket}.\cite{conc}.
+ Sockets são estruturas que permitem que funções de software se interconectem. O conceito
+ é o mesmo de um soquete (elétrico, telefônico, etc ...), que serve para interconectar
+ elementos diferentes. O termo é usado para especificar uma estrutura que faz com que
+ rotinas de software na mesma máquina ou em máquinas diferentes possam se comunicar.
+ Mais especificamente, o termo é usado para softwares usados na internet, para especificar a
+ conexão entre o software da camada de aplicação (protocolos HTTP, FTP, TELNET,
+ POP3, etc...) e a camada de transporte (protocolos TCP ou UDP).
+ 
  Os sockets são compostos por um conjunto de primitivas do sistema operacional e foram originalmente desenvolvidos para o BSD Unix. Sockets são suportados em Java desde o JDK 1.0, para sua utilização devemos fazer uso das classes contidas no pacote java.net.\ref{fluxoSocket}. Podemos observar na figura \ref{fluxoSocket}, o funcionamento de dois tipos de Sockets  \textit{Servidor} e \textit{Cliente}.
+ 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1]{imagens/fluxoSocket.JPG}
@@ -93,12 +111,12 @@ O problema de concorrência existem em diversos cenários em que, um pedaço de 
  	
  Para mais informações referente a espera ocupada de threads na linguagem java consultar as referências \cite{conc} \cite{wait}.
 \section{Desenvolvimento}
-Para resolver o trabalho proposto, foi desenvolvido uma aplicação java que simula, uma pool de impressões que as ordena e envia para uma impressora.
+Para resolver o trabalho proposto, no qual foi desenvolvido uma aplicação java que simula, uma pool de impressões que as ordena e envia para uma impressora.
 Foram criadas 3 classes Javas sendo elas: Cliente , Pool de Impressão e Impressora.
 As mesmas serão comentadas nas próximas seções.
 \subsection{Cliente}
-	Essa classe  se conecta a classe servidor, repassando informações via Socket, em uma via de mão dupla.
-Os dados serão aceitos na memória e posteriormente serão alocados no pelo escalonador da pool de impressão, em alguma impressora disponível, onde mais tarde será notificado com o resultado da processamento da impressão.
+	Essa classe  se conecta a classe servidor, repassando informações via Socket, em uma via de mão dupla TCP.
+Os dados serão aceitos no buffer e posteriormente serão alocados no pelo escalonador da pool de impressão, em alguma impressora disponível, onde mais tarde será notificado com o resultado do processamento da impressão.
 
 O código responsável pela chamada de impressão no cliente e simples, podemos observar o método na figura  \ref{fig:screenshot005}.
 
@@ -123,24 +141,18 @@ O código responsável pela chamada de impressão no cliente e simples, podemos 
 	
 	A figura \ref{fig:screenshot006} demonstra a função que inicializa as variáveis proposta no exercício computacional, além de iniciar as Threads do servidor. 
 O responsável por determinar quais impressoras estão disponíveis, e alocar trabalho para as mesmas, é o escalonador de impressão que é desenvolvido na classe \textit{Chegada de Documento}.
-O escalonador ao perceber que não tem tarefas a realizar vai dormir wait(), quando um processo chega para ser escalonado ele acorda e realiza o repasse para a primeira impressora disponível, e volta a dormi.
+O escalonador ao perceber que não tem tarefas a realizar vai dormir wait(), quando uma mensagem chega para ser escalonada, ela acorda o escalonador, e ele realiza o repasse para a primeira impressora disponível, e volta a dormi.
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{imagens/screenshot017}
 	\caption{}
 	\label{fig:screenshot006}
 \end{figure}
-O código completo, incluindo todas as classes como na figura \ref{fig:screenshot008}, estão disponíveis no link https://github.com/rafaelgov95/SD/tree/master/PTJI/Projeto-PTJ
 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.4\linewidth]{imagens/screenshot016}
-	\caption{Classes do Servidor de pool de Impressão}
-	\label{fig:screenshot008}
-\end{figure}
+
 
 
 
@@ -151,7 +163,7 @@ Ela trabalha junto ao escalonador do servidor, que é responsável por notificar
 
 A figura \ref{fig:screenshot002}, apresenta o método que realiza a criação das Threads.
 Elas executam em modo servidor aguardando o escalonador alocar alguma tarefa.
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{imagens/screenshot002}
 	\caption{Criação de duas impressoras pelo método StartImpressora.}
@@ -159,13 +171,13 @@ Elas executam em modo servidor aguardando o escalonador alocar alguma tarefa.
 \end{figure}
 
 Após a criação, as Threads que representam as impressoras, as mesmas ficam aguardando no while(true), que não gera espera ocupada, por causa do método de servidor, \textit{servidor.accept}, como na figura  \ref{fig:screenshot003}.
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{imagens/screenshot003}
 	\caption{}
 	\label{fig:screenshot003}
 \end{figure}
-\section{Comandos da Implementação }
+\section{Visão geral da implementação }
 	Nesta seção será apresnetado os comandos para poder utilizar o Pool de Impressão. 
  
 
@@ -173,69 +185,70 @@ Após a criação, as Threads que representam as impressoras, as mesmas ficam ag
 O cliente já está configurado para porta 3000, com endereço svgov.ddns.net que, redireciona para o endereço IP dinâmico da Oi Velox residencial, onde está a pool de impressão. 
 \subsection{Servidor}
 O servidor de pool, já possui suas impressoras configuradas nas portas 4200 e 4300 com endereço sdufms2017.ddns.net, que redireciona para o endereço IP da virtual machine da Google. 
+Quando o servidor inicia ele necessita de 3 parametros,  R (Porcentagem de erros que vai de 0\% a 100\%), M (Tamanho do Buffer) e T (Milisegundos Default).
 \subsection{Impressoras}
-As impressoras já estão configuradas como Sockets servidores, aguardando mensgens encaminhadas para o endereço IP sdufms2017.ddns.net as portas 4200 e 4300.
+As impressoras já estão configuradas como Sockets servidores, aguardando mensgens encaminhadas para o endereço IP sdufms2017.ddns.net nas portas 4200 e 4300.
 
  
  \section{Testes e Resultados }
- Nesta seção será demonstrado os logs das impressoras e do servidor após a conexão de 4 clientes, com o servidor.
+ Nesta seção será demonstrado os logs das impressoras e do servidor após a conexão de 40 clientes, com o servidor.
  Para realizar os testes foram utilizado um Raspberry Pi3 e uma Virtual Machine da Google Developers.
  \subsubsection{Distribuição de Recursos}
  \begin{enumerate}
  	
- 	\item Como servidor da pool de impressão ficou o Raspberry Pi3, demonstrando que a classe Servidor não precisa de um grande poder computacional para ser executada \ref{pool}.
- 	\item Como impressoras virtuais da pool de impressão, que se encontra no Raspberry Pi3, foi utilizado uma Virtual Machine da Google Developer, com o código de impressoras virtuais.\ref{impre}
+ 	\item Como servidor da pool de impressão ficou o Raspberry Pi3, demonstrando que a classe Servidor não precisa de um grande poder computacional para ser executada.
+ 	\item Como impressoras virtuais da pool de impressão, que se encontra no Raspberry Pi3, foi utilizado uma Virtual Machine da Google Developer, executando o código de impressoras virtuais relatado nesse artigo.
  \end{enumerate}
 
  \subsubsection{Passos}
  \begin{enumerate}
 
-\item Primeiramente a requisição de algum cliente se conecta ao pool de impressão, presente no Raspberry Pi3, por meio do Socket.
+\item Primeiramente a requisição de algum cliente, se conecta ao pool de impressão, presente no Raspberry Pi3, por meio de um Socket.
 
 \item Ao receber a requisição de impressão, a pool adiciona o documento ao Buffer, e acorda o escalonador de impressão que envia a impressão para, alguma impressora disponível na virtual machine da Google developers.
 
-\item Ao receber o documento a impressora responde um "OK" para o pool, porém ela pode perder o documento e então envia uma mensagem de ERRO, o que provocaria o reenvio da mesma, até que consiga realizar a impressão.
+\item Ao receber o documento a impressora responde um "OK" para o pool, porém ela pode perder o documento e então envia uma mensagem "ERRO", o que provocaria o reenvio da mesma, até que consiga realizar a impressão.
 
 \item Durante todos esses passos mensagens como "Adicionada à Fila" ou mensagens de erros, são encaminhadas para os clientes em tempo real.
 
 \end{enumerate}
-Agora que já entendemos como funciona a comunicação, podemos visualizar os relatórios, comecaremos pelo do escalonador, que após a execução dos 4 clientes é demonstrado na figura \ref{fig:screenshot009}.
+Agora que já entendemos como funciona a comunicação, podemos visualizar os relatórios. Começaremos pelo do escalonador, que após a execução dos 40 clientes tem um log equivalente ao demonstrado na figura \ref{fig:screenshot009}.
 
 
- \begin{figure}[H]
+ \begin{figure}[h]
  	\centering
- 	\includegraphics[width=0.7\linewidth]{imagens/screenshot014}
+  	\includegraphics[width=1\linewidth]{screenshot009.png}
  	\caption{Relatório de impressões, registrado pelo escalonador presente no servidor.}
  	\label{fig:screenshot009}
  \end{figure}
 
- 
- O relatório da impressora 4200, pode ser observado na figura \ref{fig:screenshot010}.
 
- \begin{figure}[H]
- 	\centering
- 	\includegraphics[width=0.7\linewidth]{imagens/screenshot013}
- 	\caption{Relatório da impressora 4200, após execução dos 4 clientes.}
- 	\label{fig:screenshot010}
- \end{figure}
+
+
+
+
+\begin{figure}[H]
+	
+	\center
+	\subfigure[ref1][Impressora 4200]{	\includegraphics[width=6.3cm]{screenshot003}}
+	\qquad
+	\subfigure[ref2][Impressora 4300]{\includegraphics[width=7cm]{screenshot012}}
+	\caption{Relatório parcial das impressoras.}
+	\label{figures:impre}
+\end{figure}
+
  
-  O relatório da impressora 4300, pode ser observado na figura \ref{fig:screenshot012}.
-  \begin{figure}[H]
-  	\centering
-  	\includegraphics[width=0.7\linewidth]{imagens/screenshot012}
-  	\caption{Relatório da impressora 4300, após execução dos 4 clientes.}
-  	\label{fig:screenshot012}
-  \end{figure}
-  
+ Os relatórios das impressoras 4200 e 4300, pode ser observado na figura \ref{figures:impre}.
   O cliente após  o envio do documento, aguarda a impressão do mesmo, enquanto isso recebe notificações  a respeito de sua impressão em tempo real, podemos ver  na figura  \ref{fig:screenshot015}, o resultado final de notificações do cliente.
   
+  
   \begin{figure}[H]
   	\centering
-  	\includegraphics[width=0.7\linewidth]{imagens/screenshot015}
+  	\includegraphics[width=1\linewidth]{imagens/screenshot015}
   	\caption{Notificações em tempo real de impressão para o Cliente.}
   	\label{fig:screenshot015}
   \end{figure}
-  
+  O código completo, incluindo todas as classes, estão disponíveis no link https://github.com/rafaelgov95/SD/tree/master/PTJI/Projeto-PTJ
 \section{Conclusão}
 
 Neste relatório foi demonstrado o desenvolvimento de uma pool de impressão, enfrentando problemáticas como: região crítica de memória compartilhada entre Threads, comunicação via Sockets geograficamente distantes , espera ocupada do escalonadores, e apontando suas soluções utilizando  o \textit{synchronized}, \textit{SocketJava} e \textit{Wait()/Notify} respectivamente.

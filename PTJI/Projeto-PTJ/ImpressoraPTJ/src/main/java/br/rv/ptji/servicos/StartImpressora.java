@@ -59,7 +59,7 @@ public class StartImpressora implements Runnable {
                 ps.println("OK");
             }
             if (!localPort.equals("Estralho")) {
-                String log = "Impressão: " + (cont++) + " Cliente " + localPort + " Data: " + LocalTime.now().toString() + status;
+                String log = "Impressão: " + (cont++) + " POOL TCP:" + cliente.getPort() + " Data: " + LocalTime.now().toString() + status;
                 Arquivos.CriarArquioX("logs_" + porta, "./Logs", log);
             }
 
