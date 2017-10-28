@@ -1,0 +1,35 @@
+| Cliente  IP:127.0.0.1 | Porta:17890  | Data: 19:18:31.896| 
+| Cliente  IP:127.0.0.1 | Porta:17896  | Data: 19:18:32.597| 
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:18:32.607 | OK | Duração em Milissegundos: 11
+| Cliente  IP:127.0.0.1 | Porta:17904  | Data: 19:18:33.691| 
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:18:33.801 | OK | Duração em Milissegundos: 111
+| Cliente  IP:127.0.0.1 | Porta:17910  | Data: 19:18:34.861| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:18:32.270 | OK | Duração em Milissegundos: 375
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:18:34.867 | OK | Duração em Milissegundos: 6
+| Cliente  IP:127.0.0.1 | Porta:17944  | Data: 19:19:56.960| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:19:56.966 | OK | Duração em Milissegundos: 7
+| Cliente  IP:127.0.0.1 | Porta:17954  | Data: 19:20:03.243| 
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:20:03.252 | OK | Duração em Milissegundos: 9
+| Cliente  IP:127.0.0.1 | Porta:17964  | Data: 19:20:09.746| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:20:09.753 | OK | Duração em Milissegundos: 8
+| Cliente  IP:127.0.0.1 | Porta:17974  | Data: 19:20:14.762| 
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:20:14.763 | OK | Duração em Milissegundos: 2
+| Cliente  IP:127.0.0.1 | Porta:17984  | Data: 19:20:19.504| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:20:19.508 | OK | Duração em Milissegundos: 4
+| Cliente  IP:127.0.0.1 | Porta:18000  | Data: 19:20:41.011| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:20:41.224 | OK | Duração em Milissegundos: 213
+| Cliente  IP:127.0.0.1 | Porta:18010  | Data: 19:20:47.893| 
+|Impressora 4300| Cliente IP:localhost Porta TCP:18010| Data: 19:20:47.901| ERRO AO ENCAMINHAR
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:20:47.902 | OK | Duração em Milissegundos: 15
+| Cliente  IP:127.0.0.1 | Porta:18024  | Data: 19:21:01.640| 
+|Impressora 4200| Cliente IP:localhost Porta TCP:18024| Data: 19:21:02.447| ERRO AO ENCAMINHAR
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:21:02.450 | OK | Duração em Milissegundos: 811
+| Cliente  IP:127.0.0.1 | Porta:18036  | Data: 19:21:07.541| 
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:21:07.652 | OK | Duração em Milissegundos: 112
+| Cliente  IP:127.0.0.1 | Porta:18046  | Data: 19:21:11.785| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:21:11.892 | OK | Duração em Milissegundos: 111
+| Cliente  IP:127.0.0.1 | Porta:18056  | Data: 19:21:15.855| 
+|Impressora 4300| Cliente IP:localhost Porta TCP:18056| Data: 19:21:15.967| ERRO AO ENCAMINHAR
+|A Impressora 4300 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:21:15.968 | OK | Duração em Milissegundos: 119
+| Cliente  IP:127.0.0.1 | Porta:18070  | Data: 19:21:22.306| 
+|A Impressora 4200 concluiu, a impressão do  Cliente IP:localhost Porta TCP:3000 | Data: 19:21:22.313 | OK | Duração em Milissegundos: 8
