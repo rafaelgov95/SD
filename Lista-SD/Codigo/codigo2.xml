@@ -1,0 +1,34 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header>
+        <X-OPNET-Transaction-Trace:X-OPNET-Transaction-Trace xmlns:X-OPNET-Transaction-Trace="http://opnet.com">pid=131564,requestid=6039e4d6630ff66f79faef6849a968e0177c404c7e65d86e</X-OPNET-Transaction-Trace:X-OPNET-Transaction-Trace>
+    </soapenv:Header>
+    <soapenv:Body>
+        <ns2:buscaEventosResponse xmlns:ns2="http://resource.webservice.correios.com.br/">
+            <return>
+                <versao>2.0</versao>
+                <qtd>1</qtd>
+                <objeto>
+                    <numero>RY907728402SG</numero>
+                    <sigla>RY</sigla>
+                    <nome>REM ECON TALAO/CARTAO COM AR DIGITAL</nome>
+                    <categoria>REMESSA ECONOICA TALAO/CARTAO</categoria>
+                    <evento>
+                        <tipo>RO</tipo>
+                        <status>01</status>
+                        <data>02/10/2017</data>
+                        <hora>13:49</hora>
+                        <descricao>Objeto encaminhado </descricao>
+                        <local>CENTRO INTERNACIONAL</local>
+                        <codigo>81010971</codigo>
+                        <cidade>CURITIBA</cidade>
+                        <uf>PR</uf>
+                        <destino>
+                            <local>Fiscalizacao Receita Federal Do Brasil</local>
+                            <codigo>00002991</codigo>
+                        </destino>
+                    </evento>
+                </objeto>
+            </return>
+        </ns2:buscaEventosResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

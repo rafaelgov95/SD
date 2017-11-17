@@ -1,0 +1,226 @@
+\documentclass[12pt]{article}
+\usepackage{sbc-template}
+\usepackage{graphicx,url}
+\usepackage{float}
+\usepackage[brazil]{babel}   
+%\usepackage[latin1]{inputenc}  
+\usepackage[utf8]{inputenc}  
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{xcolor}
+% Definindo novas cores
+\definecolor{verde}{rgb}{0.25,0.5,0.35}
+\definecolor{jpurple}{rgb}{0.5,0,0.35}
+% Configurando layout para mostrar codigos Java
+\usepackage{listings}
+\bibliographystyle{ieeetr}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\sloppy
+	\title{ Lista de Exercício I - Sistemas Distribuídos}
+
+\author{Rafael Gonçalves de Oliveira Viana\inst{1} \\\vspace*{10pt} \normalsize  \today{} }
+
+
+\address{Sistemas de Informação -- Universidade Federal do Mato Grosso do Sul
+	(UFMS)\\
+  	Caixa Postal 79400-000 -- Coxim -- MS -- Brazil
+  \email{rafael.viana@aluno.ufms.br}
+}
+
+\begin{document} 
+
+\maketitle
+
+     
+%\begin{resumo} 	
+%\end{resumo}
+
+
+
+\section{Quais são as propriedades que identificam os Sistemas Distribuídos. Quais são as
+	vantagens e desvantagens em relação a sistemas não distribuídos.}
+	\begin{enumerate}
+		\item As propriedades de um sd são as seguintes:
+		\begin{enumerate}
+		\item Acesso a recursos	
+			\begin{enumerate}
+				\item Recursos antes monopolizados podem ser compartilhados entre usuários.
+			\end{enumerate}
+		\item Transparência da distribuição
+			\begin{enumerate}
+				\item Capacidade de se anunciar na rede, sendo ocultando ou não sua existência. 
+			\end{enumerate}
+		\item Abertura
+			\begin{enumerate}
+				\item Divulgam os servios na rede por IDL
+				\item Interoperável
+				\item Portável
+				\item Extensível: facilidade em configurar e evoluir.
+			\end{enumerate}
+		\item Escalabilidade
+			\begin{enumerate}
+				\item Facil integração com outros sistemas.
+				\item facil evolução do sistema.
+			\end{enumerate}
+		\end{enumerate}
+		\item Vantagens VS Desvantagens
+		\begin{enumerate}
+			\item Vantagens
+				\begin{enumerate}
+					\item Acesso a recurso como poder computacional, informação ou recursos compartilhados como impressoras.
+					\item Disponobilidade por replicas.
+					\item Portátil,Escalável, Extensível.
+					\item Ocultar parcialmente a transparência.
+				\end{enumerate}
+			\item Desvantagens
+				\begin{enumerate}
+					\item Ocultar totalmente a transparência, nem sempre é uma boa ideia.
+					\item A relação entre desempenho e transparência esta diretamente ligadas.
+					\item Segurança fica menos eficênte 
+					\item Nivel de complexidade alto.
+					
+				\end{enumerate}
+		\end{enumerate}
+
+	\end{enumerate}
+
+%	  \bibliography{bibli}
+
+\section{Por que pode ser necessário projetar a arquitetura do sistema antes da fase de
+	especificação?}
+	A especificação está ligado a como executar o serviço através de interfaces, em determinado ambiente arquitetônico, mediante atender o serviço pretendido. 
+Quando um projeto tem sua arquitetura definida antes da especificação, fica claro quais definições de interface serão tomadas pelo projeto, removendo algumas definições que a arquitetura pretendida não oferta, antes de chegar na etapa de especificação.
+
+
+
+	
+	
+	
+\section{Escreva sobre cada uma das arquiteturas abaixo.}
+\begin{enumerate}
+\item \textbf{Centrado em dados}:
+\begin{enumerate}
+	\item Visa o acesso e atualização de repositorio  .
+	\item Os componentes se cominicam apenas por meio do repositorio compartilhado.
+	\item Se comunicam por conectores como banco de dados ou arquivo diretório.
+	\item Podem ser passivos (repossitorios) ou
+	\begin{enumerate}
+		\item tem a desvantagem  no modelo de dados padronizado, evolução é dificial para outro modelo.
+		\item vantegem em grande repositorios de dados.
+	\end{enumerate}
+	\item Ativos(surgiiu na IA);
+		\begin{enumerate}
+		\item baseados em agentes, inteligentes 
+		\item Podem organizar em sociedade complexas para realiza determinada tarefa1.
+		\item um exemplo seria o quadro negro.
+		\item quando um especialista tem uma poderação ele adiciona a mesma.
+	\end{enumerate}
+	\item o modelo pode ser definido unicamente pelo reposiório.
+	\item tem a desvantagem de lidar com um modelo unico de sistema,dificil evolucao e custosa, dificil implementar algo eficiênte, politicas de gerenciamento mais dificil de ser criada.
+	
+\end{enumerate}
+
+\item \textbf{Cliente-servidor}:
+\begin{enumerate}
+	\item É derivado do estilo em camadas, é separado entre uma maquina sendo o cliente e outra o servidor, essa separação pode ser fisica ou logicamente.
+	\item cont
+	\item O cliente requisita informações e o Servidor responde as requisições.
+	\item Contem as caracteriscas do modelo em cadamadas.
+\end{enumerate}
+
+\item \textbf{Em camadas}:
+\begin{enumerate}
+
+\item O sistema de camadas é um exemplo de sistema de componentes que interagem, entre si hierarquicamente. Requisições descem as camadas e respostas sobem as camadas.
+
+\item Cada componente 'L' comunicasse somente com L-1.
+
+\item unica desvantagem é atravessar todas camadas par fazer o processamento
+\item Baixo acoplamento entre os componentes.
+\end{enumerate}
+\item \textbf{Call-return}:
+
+	Um exemplo de conector. 
+\item \textbf{Pipes and filters}:
+
+	\item O sistema é visto como uma série de transformações complementares
+	\item Possui o objetivo de maximizar a reutilização de funcionalidades pequenas e muito bem definidas;
+	\item 
+\item \textbf{Baseados em eventos}:
+	\begin{enumerate}
+		\item Componentes: Unidades de processamento de dados que produzem e tratam eventos que acontecem no sistema
+		\item Conectores: Elementos que disseminam os eventos entre os componentes do sistema.
+		 Não fazem ligação entre componentes ponto-a-ponto.
+		 
+		\item Restrições
+		 \begin{enumerate}
+	
+		\item A comunicação entre os componentes deve acontecer exclusivamente através dos eventos do sistema
+		\item Os conectores apenas comunicam eventos, não executam transformação de dados
+			\end{enumerate}
+		\item É possível um componente gerar um evento para todos os componentes, ou para alguns. 
+		\item Componente publique um evento em um middleware de controle. Somente os componentes que estiverem subscritos no middleware poderão receber a mensagem.
+		\item Permite combinar outros estilos arquitetônicos no middleware.
+	\end{enumerate}
+\item \textbf{ Orientado a agentes}:
+	
+		
+\item \textbf{Máquina virtual}:
+\begin{enumerate}
+\item Estilo arquitetural também conhecido como máquina abstrata. 
+\item Este estilo arquitetural é indicado quando é necessário executar atividades intermediárias, antes da execução da funcionalidade propriamente dita
+\item Maquina como java container.
+\item desaclopamento 
+\end{enumerate}
+\end{enumerate}
+
+\section{Analisando os enunciados de sistemas de software apresentados a seguir, recomende um
+	estilo arquitetural para cada um deles, justificando a sua opção:}
+
+\begin{enumerate}
+
+	\item Funcionarios processamento de salario
+	 
+\textbf{		Batch}
+	
+	\item Sistema de comunicação tipo walkie-talkie para smartphones.
+	
+\textbf{		per-to-perto ou pipe}
+	
+	\item Uma loja virtual no ramo de calçados. Em que usuários possam efetuar compras a partir de dispositivos móveis e computadores, de acesso à Internet.
+\textbf{	
+	cliente servidor}
+	
+	\item Um sistema de vídeoconferência entre vários usuários localizados em locais distintos. Esse
+	sistema deve permitir a exibição de áudio e vídeo (em “tempo real”) para vários participantes ao
+	mesmo tempo.
+	
+\textbf{	Per-to-Per ou MCU}
+
+\item Terminal rio de janeiro
+
+\textbf{} 
+\end{enumerate}
+
+
+
+\section{Os requisitos abaixo correspondem a um sistema distribuído a ser implementado. Descreva
+uma solução arquitetônica que contemple tais requisitos. Justifique sua resposta de acordo com os
+requisitos de qualidade. Observação: a solução pode agregar um ou mais estilos arquitetônicos.}
+
+\begin{enumerate}
+\item É um sistema WEB;
+\item O acesso deve ser feito de maneira segura;
+\item A interface gráfica deve ser desacoplada do restante da aplicação;
+\item A interface gráfica deve ser facilmente personalizável;
+\item  O sistema deve implementar persistência de dados;
+\item As regras do negócio devem ser facilmente evoluídas;
+\item	 O sistema deve ser escalável, de acordo com o número de acessos simultâneos.
+\end{enumerate}
+
+\textbf{Cliente Servidor}
+\end{document}
+
