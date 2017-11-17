@@ -39,41 +39,58 @@
 
 
 \section{Introdução}
- Pavlou em seu artigo, propõe logo em suas primeiras linhas a análise histórica da evolução das abordagens ligadas ao gerenciamento de rede, sendo elas frameworks e protocolos de gestão, dos últimos 20 anos, propondo uma taxonomia relevante, que a constante busca por melhores abordagens, vem possibilitando. contudo o mesmo propõe a análise detralhada da evolução que essas abordagens tomaram.
+ Pavlou em seu artigo, propõe logo em suas primeiras linhas a análise histórica da evolução das abordagens ligadas ao gerenciamento de rede, sendo elas frameworks e protocolos de gestão, dos últimos 20 anos. Propondo uma taxonomia relevante, que a constante busca por melhores abordagens, vem possibilitando. Contudo o mesmo faz uma análise detalhada da evolução que essas abordagens tomaram.
 \subsection{Análise}
  Apoś o autor apresentar seus objetivos, o mesmo começa a fazer uma contextualização das tecnologias estudadas, e dividi assim os principais aspectos de gestão de rede, em 3 tópicos sendo eles;
 
 	 \begin{enumerate}
-	 	\item Arquiteutra
+	 	\item Arquitetura
 	 	\item Modelagem encima do recurso utilizado.
 	 	\item Lógica de resolução de problemas e os algoritmos de aplicativos de gerenciamento.
 	 \end{enumerate}
  
-	Pavlou utilizou 6 seções para formular sua proposta, e relatar suas considerações futuras, a estrutura ficou dividida em; 
+	Pavlou utilizou 6 sessões para formular sua proposta, e relatar suas considerações futuras, a estrutura ficou dividida em; 
   \begin{enumerate}
- 	\item Intodução;
- 	\item Analise e Evolução da tenologia;
- 	\item Apresentação dos modelos gerente-agente, interface objeto/serviço distriubido;
- 	\item Aspectos fundamentais das principais tecnologias, incluindo OSI-SM, SNMP, Common Object Request Broker Architecture (CORBA) e Web Services;
- 	\item Discute o trabalho restrito;
- 	\item Resumo e perspectivas para o futuro.
- 	
+  	\item Introdução;
+  	\item Análise e Evolução da tecnologia;
+  	\item Apresentação dos modelos gerente-agente, interface objeto/serviço distribuído;
+  	\item Aspectos fundamentais das principais tecnologias, incluindo OSI-SM, SNMP, Common Object Request Broker Architecture (CORBA) e Web Services;
+  	\item Discute o trabalho restrito;
+  	\item Resumo e perspectivas para o futuro. 	
  	
  \end{enumerate}
+\section{Analise de fundamentação}
 
-Em sua contestualização da evoluçãa da tenlogia, Pavlou segue uma linha do tempo, passando pela primeira abordagem por orientação a objeto, ao nascimento do protocolo leve e facil implementação o SNMP, que após alguns anos se mostrou ineficiente, sendo abandonado pela IETF, e substituido por modelos conhecidos por PIBs \textit{Policy Information Base}.
+Em sua contextualização da evolução da tecnologia, Pavlou segue uma linha do tempo iniciando-se no ano de 1980, com a tecnologia baseadas em procedimento, passando pela primeira abordagem por orientação a objeto, ao nascimento do protocolo leve e fácil implementação o SNMP, que após alguns anos se mostrou ineficiente, sendo abandonado pela IETF, e substituído por modelos conhecidos por PIBs \textit{Policy Information Base}.
 
-Em sua introdução da tecnologia CORBA podemos observar que a falta de recuperção de dados pela mesma, foi seu caocanhar de aquiris, tornando-se inviavel para evolução da mesmo, e sendo subistituida por abordagens como o Java Remote Method Invocation (JRMI), que também foi desafiada pela tecnologia emergente dos Serviços da Web.
+Em sua introdução da tecnologia CORBA podemos observar que a falta de recuperação de dados pela mesma, foi seu calcanhar de aquiles, tornando-se inviável para evolução da mesmo, e sendo substituída por abordagens como o Java Remote Method Invocation (JRMI), que também foi desafiada pela tecnologia emergente dos Serviços da Web.
 
-O autor segue o racicionio da sobrepossição de tenologia com o passar do tempo e aborda os códigos moveis, que era uma abordagem totalmente diferente, iniciada no início dos anos 90.
+O autor segue o raciocínio da sobreposição de tecnologia com o passar do tempo e aborda os códigos móveis, que era uma abordagem totalmente diferente, iniciada no início dos anos 90.
 
-O autor finaliza seu levantamento de tecnologia falando das abordagens baseadas em XML e na Web, primeiramente apresenta a primira versão do XML em 90, e após suas considerações apresenta a segunda parte da evolução do XML em 2000 pela IETF, para utilização do NetConf, nesta mesma data Web Services utilizavam o idioma XML para comunicação via SOAP ou HTTP.      
-\section{M}
-	Nos objetivos 
-	\subsection{Teste}
+O autor finaliza seu levantamento de tecnologia, apresentando as evoluções baseadas em XML e na Web. Primeiramente apresenta a primeira versão do XML em 90, após suas considerações continua, a segunda parte da evolução do XML em 2000 pela IETF, para utilização do NetConf. O autor é perspicaz, introduz um sentimento de sincronia temporal, dando-se por entender que nesta mesma data de 2000, os Web Services utilizavam o idioma XML para comunicação via SOAP ou HTTP, o que impulsionou a arquitetura Web Service.      
+
+
+\section{Analise de Modelos de Gestão}
+	Após o levantamento das tecnologias Pavlou, pretende demonstrar os modelos de gestão existentes e utilizados pelos protocolos e frameworks estudos no artigo.
 	
+	Entre os modelos, Pavlou apresenta o modelo Gerente-Agente e o modelo de Interface Serviço ou Objeto Distribuído, assim como seus melhores cenários.
+	
+	Em sua apresentação do modelo gerente-agente, relata sua padronização, que resultar em implementações altamente otimizadas, dado que não há APIs internas padronizadas a serem aderidas.
+	
+	Pavlou demonstra em seus fundamentação do modelo distribuído, que o mesmo foi uma consequência criada pela intercomunicação entre aplicações, o que convergiu para sistemas interoperáveis, concluindo que as abordagens processuais foram desaparecendo com a entrada de orientação a objetos de uma forma natural impulsionada pela necessidade de comunicação. 
+	
+\section{ Analise de Tecnologias}
+	 Pavlou, apresentar as principais características das principais tecnologias e discutir as questões por trás de seus sucessos, assim como falhas ou potenciais para o futuro. As tecnologias selecionadas a serem apresentadas são as seguintes: OSI-SM, porque é uma tecnologia bastante abrangente e ainda é usada em ambientes de telecomunicações; SNMP devido à sua ampla implantação e simplicidade; CORBA como uma tecnologia representativa de objetos distribuídos, embora não tenha visto muita implantação para gerenciamento de rede; e Web Services que atualmente  é considerada a futura tecnologia.
+	
+\section{Trabalho relatado}
+	O trabalho relatado no artigo foi fruto de uma serie de pesquisa realizada por Pavlou e seus colegas, sendo que entre as trinta publicações utilizadas como referências cinco eram de Pavlou, demonstrando o grau de pesquisa apresentada no artigo. 
+
+\section{Resumo e perspectivas}
+	O autor conseguiu trazer a tona seus esforços em busca de um sistema heterogêneo de gestão, porém como a necessidade de utilização do protocolo SNMP em sistemas de monitoramento, e as estruturas WS, JRMI / J2EE e CORBA, em sistemas distribuídos, a evolução das tecnologias não pode ser mensurada ou estipulada, Pavlou conclui que isso já era, esperado por que, dados os diferentes requisitos de diferentes domínios de gerenciamento, o investimento significativo em abordagens atuais e anteriores não podem ser negligenciadas e a constante evolução para tecnologias novas e melhores deve ser analisadas.
+		
 \section*{Conclusão}
-Neste relatório foi apresentado a estrutura básica de um \textit{Web Service}, e como o pŕoprio pode ser utilizado para consumir serviços de outros \textit{Web Services} disponíveis por outras empresas, outra abordagem exposta seria utilizar os mesmos para criação de um novo serviço, em seu próprio \textit{Web Server}, para atender as mais diversas necessidades, como exemplo o rastreiamento de encomendas ou obter a cidade e o bairro através de um CEP, a partir de dispositivos diferentes, porém do mesmo \textit{Web Servece}.	  	
+	O artigo de Pavlou não é apenas um levantamento histórico da evolução da tecnologia e protocolos em gestão de rede, mas é um elo, que conecta a um vasto e extenso estudo, que ele e seus colegas vem se dedicando nos últimos anos.
+Este não é o primeiro artigo que Pavlou tenta prever futuras tendências, e nem será o último. Como mencionado por ele em seu resumo: \textbf{Devemos simplesmente estar preparados para lidar com tecnologias ainda mais coexistentes no futuro}. Portanto, o estudo da evolução da tecnologia nunca chegará ao seu fim.
 
 	  %\bibliography{bibli}
 
